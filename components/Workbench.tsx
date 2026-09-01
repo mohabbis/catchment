@@ -1,30 +1,47 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { VERIFIED_CLINICS, type WorkflowState } from "@/lib/verified-clinics";
+import { useEffect, useMemo, useRef, useState } from "react";
+import CatchmentMap from "@/components/CatchmentMap";
+import IcBriefPrint from "@/components/IcBriefPrint";
+import { linkStatusHeadline } from "@/lib/clinic-links";
+import {
+  LICENSE_STATUS_LABELS,
+  REJECTED_RECORDS,
+  SOS_STATUS_LABELS,
+  VERIFIED_CLINICS,
+  type WorkflowState,
+} from "@/lib/verified-clinics";
+import {
+  hydrateWorkspace,
+  notesFromWorkspace,
+  persistWorkspaceEntry,
+  writeLocalWorkspace,
+  type WorkspaceEntry,
+  type WorkspaceMap,
+} from "@/lib/workspace";
 import {
   buildDiligenceQueue,
   buildExecutiveConclusion,
   buildIcBrief,
   consolidationReadout,
   isMetroMarket,
+  licenseCheckLine,
   ownershipHeadline,
   rejectedForMarket,
+  sosCheckLine,
   supplyGapReadout,
   type DiligenceItem,
   type DiligenceStatus,
   type ShortlistMarket,
 } from "@/lib/workbench";
-import { REJECTED_RECORDS } from "@/lib/verified-clinics";
 
 type PipelineFilter = "all" | DiligenceStatus;
-type CenterView = "thesis" | "compare" | "passes";
+type CenterView = "thesis" | "compare" | "passes" | "map";
 type MobilePane = "markets" | "thesis" | "pipeline";
 type DetailSelection =
   | { kind: "verified"; item: Extract<DiligenceItem, { kind: "verified" }> }
   | { kind: "registry"; item: Extract<DiligenceItem, { kind: "registry" }> };
 
-const WORKFLOW_KEY = "catchment-clinic-workflow";
 const WORKFLOW_ORDER: WorkflowState[] = [
   "identified",
   "verified",
@@ -78,15 +95,6 @@ function itemKey(item: DiligenceItem) {
   return item.kind === "verified" ? item.id : item.npi;
 }
 
-function loadWorkflowOverrides(): Record<string, WorkflowState> {
-  try {
-    const raw = window.localStorage.getItem(WORKFLOW_KEY);
-    return raw ? (JSON.parse(raw) as Record<string, WorkflowState>) : {};
-  } catch {
-    return {};
-  }
-}
-
 function downloadMarkdown(filename: string, content: string) {
   const blob = new Blob([content], { type: "text/markdown;charset=utf-8" });
   const url = URL.createObjectURL(blob);
@@ -114,19 +122,32 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
   const [showAllRejected, setShowAllRejected] = useState(false);
   const [detail, setDetail] = useState<DetailSelection | null>(null);
   const [exported, setExported] = useState(false);
-  const [workflowOverrides, setWorkflowOverrides] = useState<Record<string, WorkflowState>>({});
+  const [printOpen, setPrintOpen] = useState(false);
+  const [workspace, setWorkspace] = useState<WorkspaceMap>({});
+  const persistTimers = useRef<Record<string, number>>({});
 
   useEffect(() => {
-    setWorkflowOverrides(loadWorkflowOverrides());
+    let cancelled = false;
+    hydrateWorkspace().then((map) => {
+      if (!cancelled) setWorkspace(map);
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
-      if (event.key === "Escape") setDetail(null);
+      if (event.key !== "Escape") return;
+      if (printOpen) {
+        setPrintOpen(false);
+        return;
+      }
+      setDetail(null);
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, []);
+  }, [printOpen]);
 
   const conclusion = useMemo(() => buildExecutiveConclusion(shortlist), [shortlist]);
   const selected = shortlist.find((market) => market.county_name === selectedCounty) ?? shortlist[0];
@@ -184,20 +205,42 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
   }
 
   function clinicWorkflow(item: Extract<DiligenceItem, { kind: "verified" }>): WorkflowState {
-    return workflowOverrides[item.id] ?? item.defaultWorkflow;
+    return workspace[item.id]?.workflow ?? item.defaultWorkflow;
+  }
+
+  function clinicNote(clinicId: string): string {
+    return workspace[clinicId]?.note ?? "";
+  }
+
+  function patchWorkspace(clinicId: string, patch: Partial<WorkspaceEntry>) {
+    const nextEntry: WorkspaceEntry = {
+      note: workspace[clinicId]?.note ?? "",
+      workflow: workspace[clinicId]?.workflow,
+      ...patch,
+      updatedAt: new Date().toISOString(),
+    };
+    const next = { ...workspace, [clinicId]: nextEntry };
+    setWorkspace(next);
+    writeLocalWorkspace(next);
+    window.clearTimeout(persistTimers.current[clinicId]);
+    persistTimers.current[clinicId] = window.setTimeout(() => {
+      void persistWorkspaceEntry(clinicId, nextEntry);
+    }, 400);
   }
 
   function setClinicWorkflow(clinicId: string, state: WorkflowState) {
-    const next = { ...workflowOverrides, [clinicId]: state };
-    setWorkflowOverrides(next);
-    window.localStorage.setItem(WORKFLOW_KEY, JSON.stringify(next));
+    patchWorkspace(clinicId, { workflow: state });
+  }
+
+  function briefNotes() {
+    return notesFromWorkspace(workspace);
   }
 
   function exportBrief() {
     if (!selected) return;
     downloadMarkdown(
       `catchment-ic-brief-${selected.county_fips || selected.county_name.toLowerCase().replace(/\s+/g, "-")}.md`,
-      buildIcBrief(selected, buildDiligenceQueue([selected]), rejected)
+      buildIcBrief(selected, buildDiligenceQueue([selected]), rejected, briefNotes())
     );
     setExported(true);
     window.setTimeout(() => setExported(false), 2200);
@@ -226,7 +269,8 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
   }
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col">
+    <>
+    <div className="workbench-chrome flex min-h-0 flex-1 flex-col">
       <div className="flex items-center gap-1 border-b border-[var(--line)] px-3 py-2 lg:hidden">
         {(
           [
@@ -257,7 +301,7 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
               Markets
             </h2>
             <p className="mt-1 text-xs leading-5 text-[var(--ink-soft)]">
-              One metro, then the county cuts.
+              Three metros, then the county cuts.
             </p>
           </div>
           <nav className="min-h-0 flex-1 overflow-y-auto px-2 py-2">
@@ -297,6 +341,7 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                   ["thesis", "Thesis"],
                   ["compare", "Compare"],
                   ["passes", "Pass log"],
+                  ["map", "Map"],
                 ] as const
               ).map(([value, label]) => (
                 <button
@@ -337,7 +382,15 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                 onClick={exportBrief}
                 className="btn btn-primary"
               >
-                {exported ? "Brief saved" : "Export IC brief"}
+                {exported ? "Brief saved" : "Download .md"}
+              </button>
+              <button
+                type="button"
+                data-testid="print-brief"
+                onClick={() => setPrintOpen(true)}
+                className="btn btn-ghost"
+              >
+                Print / Save PDF
               </button>
             </div>
           </div>
@@ -353,6 +406,11 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
               rejected={rejected}
               showAll={showAllRejected}
               onToggleAll={() => setShowAllRejected((value) => !value)}
+            />
+          ) : centerView === "map" ? (
+            <CatchmentMap
+              selectedClinicId={detail?.kind === "verified" ? detail.item.id : null}
+              onOpenClinic={openClinic}
             />
           ) : (
             <div className={`grid gap-4 ${compare ? "xl:grid-cols-2" : ""}`}>
@@ -465,15 +523,32 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
         <ClinicDetail
           selection={detail}
           workflow={detail.kind === "verified" ? clinicWorkflow(detail.item) : undefined}
+          note={detail.kind === "verified" ? clinicNote(detail.item.id) : ""}
           onWorkflowChange={
             detail.kind === "verified"
               ? (state) => setClinicWorkflow(detail.item.id, state)
               : undefined
           }
+          onNoteChange={
+            detail.kind === "verified"
+              ? (value) => patchWorkspace(detail.item.id, { note: value })
+              : undefined
+          }
           onClose={() => setDetail(null)}
         />
       ) : null}
+
     </div>
+      {printOpen ? (
+        <IcBriefPrint
+          selected={selected}
+          queue={diligenceQueue}
+          rejected={rejected}
+          notes={briefNotes()}
+          onClose={() => setPrintOpen(false)}
+        />
+      ) : null}
+    </>
   );
 }
 
@@ -597,8 +672,9 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
         </div>
         {isMetroMarket(market) ? (
           <p className="mt-3 text-xs leading-5 text-[var(--ink-faint)]">
-            DFW is one deal market. County rows stay so you can see thick evidence (Tarrant)
-            versus a thinner Dallas-city cut.
+            DFW, Houston, and Austin are deal markets. County rows stay so you can see thick
+            evidence versus a thinner city cut. Fort Bend, Montgomery, Williamson, and Hays add
+            children to the metro totals but are not shortlist rows.
           </p>
         ) : null}
       </details>
@@ -829,12 +905,16 @@ function PipelineGroup({
 function ClinicDetail({
   selection,
   workflow,
+  note,
   onWorkflowChange,
+  onNoteChange,
   onClose,
 }: {
   selection: DetailSelection;
   workflow?: WorkflowState;
+  note?: string;
   onWorkflowChange?: (state: WorkflowState) => void;
+  onNoteChange?: (note: string) => void;
   onClose: () => void;
 }) {
   const item = selection.item;
@@ -881,6 +961,9 @@ function ClinicDetail({
                 </h3>
                 <p className="mt-1 font-medium">{ownershipHeadline(selection.item)}</p>
                 <p className="mt-1 leading-6 text-[var(--ink-soft)]">{selection.item.ownershipSignal}</p>
+                <p className="mt-2 text-xs leading-5 text-[var(--ink-faint)]" data-testid="sos-check">
+                  {sosCheckLine(selection.item.sosCheck)}. {selection.item.sosCheck.note}
+                </p>
                 <p className="mt-2 text-xs leading-5 text-[var(--ink-faint)]">{selection.item.peSignal}</p>
               </section>
 
@@ -910,32 +993,62 @@ function ClinicDetail({
                 >
                   {selection.item.websiteUrl}
                 </a>
+                {linkStatusHeadline(selection.item.id) ? (
+                  <p className="mt-2 text-xs text-[var(--ink-faint)]" data-testid="site-live-check">
+                    {linkStatusHeadline(selection.item.id)}
+                  </p>
+                ) : (
+                  <p className="mt-2 text-xs text-[var(--ink-faint)]">
+                    Live-check not run yet. Use scripts/check-clinic-sites.mjs.
+                  </p>
+                )}
               </section>
 
-              {selection.item.licenseLookups.length > 0 ? (
-                <section>
-                  <h3 className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
-                    4. License / SOS lookups
-                  </h3>
-                  <ul className="mt-2 space-y-1.5">
-                    {selection.item.licenseLookups.map((lookup) => (
-                      <li key={lookup.url}>
-                        <a
-                          href={lookup.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-medium text-[var(--forest)] hover:text-[var(--forest-deep)]"
-                        >
-                          {lookup.label}
-                        </a>
+              <section data-testid="license-checks">
+                <h3 className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
+                  4. License / SOS
+                </h3>
+                {selection.item.licenseChecks.length ? (
+                  <ul className="mt-2 space-y-2">
+                    {selection.item.licenseChecks.map((check) => (
+                      <li key={`${selection.item.id}-${check.board}`}>
+                        <p className="font-medium">
+                          {check.board}: {LICENSE_STATUS_LABELS[check.status]}
+                        </p>
+                        <p className="mt-0.5 text-xs leading-5 text-[var(--ink-faint)]">
+                          {licenseCheckLine(check)}. {check.note}
+                        </p>
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-2 text-xs text-[var(--ink-faint)]">
-                    Lookups, not pulled filings.
+                ) : (
+                  <p className="mt-2 text-xs leading-5 text-[var(--ink-faint)]">
+                    No board row in this pass. {SOS_STATUS_LABELS[selection.item.sosCheck.status]}.
                   </p>
-                </section>
-              ) : null}
+                )}
+                {selection.item.licenseLookups.length > 0 ? (
+                  <>
+                    <ul className="mt-3 space-y-1.5">
+                      {selection.item.licenseLookups.map((lookup) => (
+                        <li key={lookup.url}>
+                          <a
+                            href={lookup.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-[var(--forest)] hover:text-[var(--forest-deep)]"
+                          >
+                            {lookup.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-2 text-xs text-[var(--ink-faint)]">
+                      Lookup links stay so the next person can re-check. Rows above are the recorded
+                      pass — not invented numbers.
+                    </p>
+                  </>
+                ) : null}
+              </section>
 
               <section>
                 <h3 className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
@@ -956,6 +1069,19 @@ function ClinicDetail({
                         </option>
                       ))}
                     </select>
+                  </label>
+                ) : null}
+                {onNoteChange ? (
+                  <label className="mt-3 block text-xs text-[var(--ink-faint)]">
+                    Workspace note
+                    <textarea
+                      data-testid="clinic-note"
+                      value={note ?? ""}
+                      onChange={(event) => onNoteChange(event.target.value)}
+                      rows={4}
+                      placeholder="Call notes stay on this laptop. Not a CRM."
+                      className="mt-1 w-full rounded-md border border-[var(--line-strong)] bg-[var(--card)] px-2 py-1.5 text-xs leading-5 text-[var(--ink)]"
+                    />
                   </label>
                 ) : null}
               </section>

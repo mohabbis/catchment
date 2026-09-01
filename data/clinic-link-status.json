@@ -1,0 +1,162 @@
+{
+  "checkedOn": "2026-09-01",
+  "sites": {
+    "therapedia": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.therapediacenter.com/"
+    },
+    "frisco-feeding": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://friscofeedingslp.com/"
+    },
+    "synaptic": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://synapticpediatrictherapies.com/"
+    },
+    "pta-sa": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.pediatrictherapyassoc.com/"
+    },
+    "kids-developmental-clinic": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.kidsdevelopmentalclinic.com/"
+    },
+    "ptc-kids": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.ptckids.com/"
+    },
+    "wishing-well": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://wishingwellpediatrics.com/"
+    },
+    "kidworks": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://kidworkstherapy.com/"
+    },
+    "ctoa": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "http://childrenstherapeutics.com/"
+    },
+    "line-leader": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.lineleadertherapy.com/"
+    },
+    "therapy-spot": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.thetherapyspottx.com/"
+    },
+    "anchor-pediatric-therapy": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.anchortherapytx.com/"
+    },
+    "cowtown-pediatrix": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://cowtownpediatrixclinic.com/"
+    },
+    "jump-start": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.jumpstartcenter.com/"
+    },
+    "pediatric-therapy-specialists": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://pedts.com/"
+    },
+    "kidspeak": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.kidspeakdallas.com/"
+    },
+    "speech-wings": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://speechwingstherapy.com/"
+    },
+    "therapy-at-the-zone": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.therapyatthezone.com/"
+    },
+    "cole-houston": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.colehealth.com/"
+    },
+    "cole-san-antonio": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.colehealth.com/"
+    },
+    "cole-austin": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.colehealth.com/"
+    },
+    "cole-frisco": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.colehealth.com/"
+    },
+    "napa-austin": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://napacenter.org/locations/napa-center-austin/"
+    },
+    "brighton-center": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://brightonsa.org/"
+    },
+    "healthlink-pediatric-clinic": {
+      "ok": false,
+      "status": 403,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.baptisthealthsystem.com/locations/detail/healthlink-pediatric-clinic?c=BBHHP",
+      "error": "HTTP 403"
+    },
+    "oaklin-lane": {
+      "ok": true,
+      "status": 200,
+      "checkedOn": "2026-09-01",
+      "url": "https://www.oaklinlane.com/"
+    }
+  }
+}

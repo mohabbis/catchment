@@ -114,8 +114,8 @@ export default async function Home() {
               </summary>
               <div className="absolute right-0 z-20 mt-2 w-80 rounded-lg border border-[var(--line)] bg-[var(--card)] p-4 text-xs leading-5 text-[var(--ink-soft)] shadow-lg">
                 <p>
-                  Start on DFW. Open a target. Export a brief. NPPES is a screen, not a clinic
-                  census. Ownership is web/NPI research, not a pulled SOS filing.
+                  Start on a metro. Open a target. Download or print a brief. NPPES is a screen,
+                  not a clinic census. SOS and license rows are dated checks, not pulled filings.
                 </p>
                 <p className="mt-2">
                   Registry source: {source === "local" ? "checked-in extract" : "Supabase"}.
