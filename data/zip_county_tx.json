@@ -1,0 +1,7970 @@
+{
+  "73949": {
+    "county_fips": "48421",
+    "county_name": "Sherman County"
+  },
+  "73960": {
+    "county_fips": "48421",
+    "county_name": "Sherman County"
+  },
+  "75001": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75002": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75006": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75007": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75009": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75010": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75013": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75019": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75020": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75021": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75022": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75023": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75024": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75025": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75028": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75032": {
+    "county_fips": "48397",
+    "county_name": "Rockwall County"
+  },
+  "75033": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75034": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75035": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75036": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75038": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75039": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75040": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75041": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75042": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75043": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75044": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75048": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75050": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75051": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75052": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75054": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "75056": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75057": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75058": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75060": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75061": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75062": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75063": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75065": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75067": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75068": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75069": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75070": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75071": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75072": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75074": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75075": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75076": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75077": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "75078": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75080": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75081": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75082": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75087": {
+    "county_fips": "48397",
+    "county_name": "Rockwall County"
+  },
+  "75088": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75089": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75090": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75092": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75093": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75094": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75098": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75101": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "75102": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "75103": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75104": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75105": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "75109": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "75110": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "75114": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75115": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75116": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75117": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75119": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "75124": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75125": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "75126": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75127": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75132": {
+    "county_fips": "48397",
+    "county_name": "Rockwall County"
+  },
+  "75134": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75135": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75137": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75140": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75141": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75142": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75143": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75144": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "75146": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75147": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75148": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75149": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75150": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75152": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "75153": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "75154": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "75155": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "75156": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75157": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75158": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75159": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75160": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75161": {
+    "county_fips": "48257",
+    "county_name": "Kaufman County"
+  },
+  "75163": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75164": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75165": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "75166": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75167": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "75169": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75172": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75173": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75180": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75181": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75182": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75189": {
+    "county_fips": "48397",
+    "county_name": "Rockwall County"
+  },
+  "75201": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75202": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75203": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75204": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75205": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75206": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75207": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75208": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75209": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75210": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75211": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75212": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75214": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75215": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75216": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75217": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75218": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75219": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75220": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75223": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75224": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75225": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75226": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75227": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75228": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75229": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75230": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75231": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75232": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75233": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75234": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75235": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75236": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75237": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75238": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75240": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75241": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75243": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75244": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75246": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75247": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75248": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75249": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75251": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75252": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75253": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75254": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75261": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "75270": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75287": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75390": {
+    "county_fips": "48113",
+    "county_name": "Dallas County"
+  },
+  "75401": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75402": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75407": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75409": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75410": {
+    "county_fips": "48499",
+    "county_name": "Wood County"
+  },
+  "75411": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75412": {
+    "county_fips": "48387",
+    "county_name": "Red River County"
+  },
+  "75413": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75414": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75415": {
+    "county_fips": "48119",
+    "county_name": "Delta County"
+  },
+  "75416": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75417": {
+    "county_fips": "48387",
+    "county_name": "Red River County"
+  },
+  "75418": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75420": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75421": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75422": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75423": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75424": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75426": {
+    "county_fips": "48387",
+    "county_name": "Red River County"
+  },
+  "75428": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75429": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75431": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75432": {
+    "county_fips": "48119",
+    "county_name": "Delta County"
+  },
+  "75433": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75434": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75435": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75436": {
+    "county_fips": "48387",
+    "county_name": "Red River County"
+  },
+  "75437": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75438": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75439": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75440": {
+    "county_fips": "48379",
+    "county_name": "Rains County"
+  },
+  "75441": {
+    "county_fips": "48119",
+    "county_name": "Delta County"
+  },
+  "75442": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75446": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75447": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75448": {
+    "county_fips": "48119",
+    "county_name": "Delta County"
+  },
+  "75449": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75450": {
+    "county_fips": "48119",
+    "county_name": "Delta County"
+  },
+  "75451": {
+    "county_fips": "48063",
+    "county_name": "Camp County"
+  },
+  "75452": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75453": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75454": {
+    "county_fips": "48085",
+    "county_name": "Collin County"
+  },
+  "75455": {
+    "county_fips": "48449",
+    "county_name": "Titus County"
+  },
+  "75457": {
+    "county_fips": "48159",
+    "county_name": "Franklin County"
+  },
+  "75459": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75460": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75462": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75468": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75469": {
+    "county_fips": "48119",
+    "county_name": "Delta County"
+  },
+  "75470": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75471": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75472": {
+    "county_fips": "48379",
+    "county_name": "Rains County"
+  },
+  "75473": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75474": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75475": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75476": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75477": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75478": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75479": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75480": {
+    "county_fips": "48159",
+    "county_name": "Franklin County"
+  },
+  "75481": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75482": {
+    "county_fips": "48223",
+    "county_name": "Hopkins County"
+  },
+  "75486": {
+    "county_fips": "48277",
+    "county_name": "Lamar County"
+  },
+  "75487": {
+    "county_fips": "48159",
+    "county_name": "Franklin County"
+  },
+  "75488": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75489": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75490": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75491": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75492": {
+    "county_fips": "48147",
+    "county_name": "Fannin County"
+  },
+  "75493": {
+    "county_fips": "48449",
+    "county_name": "Titus County"
+  },
+  "75494": {
+    "county_fips": "48499",
+    "county_name": "Wood County"
+  },
+  "75495": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "75496": {
+    "county_fips": "48231",
+    "county_name": "Hunt County"
+  },
+  "75497": {
+    "county_fips": "48499",
+    "county_name": "Wood County"
+  },
+  "75501": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75503": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75550": {
+    "county_fips": "48387",
+    "county_name": "Red River County"
+  },
+  "75551": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75554": {
+    "county_fips": "48387",
+    "county_name": "Red River County"
+  },
+  "75555": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75556": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75558": {
+    "county_fips": "48449",
+    "county_name": "Titus County"
+  },
+  "75559": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75560": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75561": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75562": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75563": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75564": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75565": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75566": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75567": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75568": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75569": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75570": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75571": {
+    "county_fips": "48343",
+    "county_name": "Morris County"
+  },
+  "75572": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75573": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75574": {
+    "county_fips": "48037",
+    "county_name": "Bowie County"
+  },
+  "75601": {
+    "county_fips": "48183",
+    "county_name": "Gregg County"
+  },
+  "75602": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75603": {
+    "county_fips": "48183",
+    "county_name": "Gregg County"
+  },
+  "75604": {
+    "county_fips": "48183",
+    "county_name": "Gregg County"
+  },
+  "75605": {
+    "county_fips": "48183",
+    "county_name": "Gregg County"
+  },
+  "75630": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75631": {
+    "county_fips": "48365",
+    "county_name": "Panola County"
+  },
+  "75633": {
+    "county_fips": "48365",
+    "county_name": "Panola County"
+  },
+  "75638": {
+    "county_fips": "48343",
+    "county_name": "Morris County"
+  },
+  "75639": {
+    "county_fips": "48365",
+    "county_name": "Panola County"
+  },
+  "75640": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75641": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75642": {
+    "county_fips": "48365",
+    "county_name": "Panola County"
+  },
+  "75643": {
+    "county_fips": "48365",
+    "county_name": "Panola County"
+  },
+  "75644": {
+    "county_fips": "48459",
+    "county_name": "Upshur County"
+  },
+  "75645": {
+    "county_fips": "48459",
+    "county_name": "Upshur County"
+  },
+  "75647": {
+    "county_fips": "48183",
+    "county_name": "Gregg County"
+  },
+  "75650": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75651": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75652": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75654": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75656": {
+    "county_fips": "48067",
+    "county_name": "Cass County"
+  },
+  "75657": {
+    "county_fips": "48315",
+    "county_name": "Marion County"
+  },
+  "75658": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75659": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75661": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75662": {
+    "county_fips": "48183",
+    "county_name": "Gregg County"
+  },
+  "75667": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75668": {
+    "county_fips": "48343",
+    "county_name": "Morris County"
+  },
+  "75669": {
+    "county_fips": "48365",
+    "county_name": "Panola County"
+  },
+  "75670": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75671": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75672": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75680": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75681": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75682": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75683": {
+    "county_fips": "48459",
+    "county_name": "Upshur County"
+  },
+  "75684": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75686": {
+    "county_fips": "48063",
+    "county_name": "Camp County"
+  },
+  "75687": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75689": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75691": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75692": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75693": {
+    "county_fips": "48183",
+    "county_name": "Gregg County"
+  },
+  "75694": {
+    "county_fips": "48203",
+    "county_name": "Harrison County"
+  },
+  "75701": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75702": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75703": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75704": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75705": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75706": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75707": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75708": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75709": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75711": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75750": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75751": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75752": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75754": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75755": {
+    "county_fips": "48459",
+    "county_name": "Upshur County"
+  },
+  "75756": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75757": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75758": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75759": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75760": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75762": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75763": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75764": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75765": {
+    "county_fips": "48499",
+    "county_name": "Wood County"
+  },
+  "75766": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75770": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75771": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75773": {
+    "county_fips": "48499",
+    "county_name": "Wood County"
+  },
+  "75778": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75779": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75780": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75782": {
+    "county_fips": "48213",
+    "county_name": "Henderson County"
+  },
+  "75783": {
+    "county_fips": "48499",
+    "county_name": "Wood County"
+  },
+  "75784": {
+    "county_fips": "48401",
+    "county_name": "Rusk County"
+  },
+  "75785": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75788": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75789": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75790": {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County"
+  },
+  "75791": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75792": {
+    "county_fips": "48423",
+    "county_name": "Smith County"
+  },
+  "75801": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75803": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75831": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "75833": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "75835": {
+    "county_fips": "48225",
+    "county_name": "Houston County"
+  },
+  "75838": {
+    "county_fips": "48161",
+    "county_name": "Freestone County"
+  },
+  "75839": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75840": {
+    "county_fips": "48161",
+    "county_name": "Freestone County"
+  },
+  "75844": {
+    "county_fips": "48225",
+    "county_name": "Houston County"
+  },
+  "75845": {
+    "county_fips": "48455",
+    "county_name": "Trinity County"
+  },
+  "75846": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "75847": {
+    "county_fips": "48225",
+    "county_name": "Houston County"
+  },
+  "75848": {
+    "county_fips": "48161",
+    "county_name": "Freestone County"
+  },
+  "75849": {
+    "county_fips": "48225",
+    "county_name": "Houston County"
+  },
+  "75850": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "75851": {
+    "county_fips": "48225",
+    "county_name": "Houston County"
+  },
+  "75852": {
+    "county_fips": "48313",
+    "county_name": "Madison County"
+  },
+  "75853": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75855": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "75856": {
+    "county_fips": "48225",
+    "county_name": "Houston County"
+  },
+  "75858": {
+    "county_fips": "48225",
+    "county_name": "Houston County"
+  },
+  "75859": {
+    "county_fips": "48161",
+    "county_name": "Freestone County"
+  },
+  "75860": {
+    "county_fips": "48161",
+    "county_name": "Freestone County"
+  },
+  "75861": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75862": {
+    "county_fips": "48455",
+    "county_name": "Trinity County"
+  },
+  "75865": {
+    "county_fips": "48455",
+    "county_name": "Trinity County"
+  },
+  "75884": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75886": {
+    "county_fips": "48001",
+    "county_name": "Anderson County"
+  },
+  "75901": {
+    "county_fips": "48005",
+    "county_name": "Angelina County"
+  },
+  "75903": {
+    "county_fips": "48005",
+    "county_name": "Angelina County"
+  },
+  "75904": {
+    "county_fips": "48005",
+    "county_name": "Angelina County"
+  },
+  "75925": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75926": {
+    "county_fips": "48455",
+    "county_name": "Trinity County"
+  },
+  "75928": {
+    "county_fips": "48351",
+    "county_name": "Newton County"
+  },
+  "75929": {
+    "county_fips": "48405",
+    "county_name": "San Augustine County"
+  },
+  "75930": {
+    "county_fips": "48405",
+    "county_name": "San Augustine County"
+  },
+  "75931": {
+    "county_fips": "48241",
+    "county_name": "Jasper County"
+  },
+  "75932": {
+    "county_fips": "48351",
+    "county_name": "Newton County"
+  },
+  "75933": {
+    "county_fips": "48351",
+    "county_name": "Newton County"
+  },
+  "75934": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "75935": {
+    "county_fips": "48419",
+    "county_name": "Shelby County"
+  },
+  "75936": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "75937": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75938": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "75939": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "75941": {
+    "county_fips": "48005",
+    "county_name": "Angelina County"
+  },
+  "75942": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "75943": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75944": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75946": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75948": {
+    "county_fips": "48403",
+    "county_name": "Sabine County"
+  },
+  "75949": {
+    "county_fips": "48005",
+    "county_name": "Angelina County"
+  },
+  "75951": {
+    "county_fips": "48241",
+    "county_name": "Jasper County"
+  },
+  "75954": {
+    "county_fips": "48419",
+    "county_name": "Shelby County"
+  },
+  "75956": {
+    "county_fips": "48241",
+    "county_name": "Jasper County"
+  },
+  "75959": {
+    "county_fips": "48403",
+    "county_name": "Sabine County"
+  },
+  "75960": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "75961": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75962": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75964": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75965": {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County"
+  },
+  "75966": {
+    "county_fips": "48351",
+    "county_name": "Newton County"
+  },
+  "75968": {
+    "county_fips": "48403",
+    "county_name": "Sabine County"
+  },
+  "75969": {
+    "county_fips": "48005",
+    "county_name": "Angelina County"
+  },
+  "75972": {
+    "county_fips": "48405",
+    "county_name": "San Augustine County"
+  },
+  "75973": {
+    "county_fips": "48419",
+    "county_name": "Shelby County"
+  },
+  "75974": {
+    "county_fips": "48419",
+    "county_name": "Shelby County"
+  },
+  "75975": {
+    "county_fips": "48419",
+    "county_name": "Shelby County"
+  },
+  "75976": {
+    "county_fips": "48073",
+    "county_name": "Cherokee County"
+  },
+  "75977": {
+    "county_fips": "48351",
+    "county_name": "Newton County"
+  },
+  "75979": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "75980": {
+    "county_fips": "48005",
+    "county_name": "Angelina County"
+  },
+  "76001": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76002": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76005": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76006": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76008": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76009": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76010": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76011": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76012": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76013": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76014": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76015": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76016": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76017": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76018": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76020": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76021": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76022": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76023": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76028": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76031": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76033": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76034": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76035": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76036": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76039": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76040": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76041": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "76043": {
+    "county_fips": "48425",
+    "county_name": "Somervell County"
+  },
+  "76044": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76048": {
+    "county_fips": "48221",
+    "county_name": "Hood County"
+  },
+  "76049": {
+    "county_fips": "48221",
+    "county_name": "Hood County"
+  },
+  "76050": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76051": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76052": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76053": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76054": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76055": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76058": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76059": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76060": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76061": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76063": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76064": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "76065": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "76066": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76067": {
+    "county_fips": "48363",
+    "county_name": "Palo Pinto County"
+  },
+  "76070": {
+    "county_fips": "48425",
+    "county_name": "Somervell County"
+  },
+  "76071": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76073": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76077": {
+    "county_fips": "48425",
+    "county_name": "Somervell County"
+  },
+  "76078": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76082": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76084": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76085": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76086": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76087": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76088": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76092": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76093": {
+    "county_fips": "48251",
+    "county_name": "Johnson County"
+  },
+  "76102": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76103": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76104": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76105": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76106": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76107": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76108": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76109": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76110": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76111": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76112": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76114": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76115": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76116": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76117": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76118": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76119": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76120": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76123": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76126": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76127": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76129": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76131": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76132": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76133": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76134": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76135": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76137": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76140": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76148": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76155": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76164": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76177": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76179": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76180": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76182": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76201": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76203": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76205": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76207": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76208": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76209": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76210": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76225": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76226": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76227": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76228": {
+    "county_fips": "48077",
+    "county_name": "Clay County"
+  },
+  "76230": {
+    "county_fips": "48337",
+    "county_name": "Montague County"
+  },
+  "76233": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "76234": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76238": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76239": {
+    "county_fips": "48337",
+    "county_name": "Montague County"
+  },
+  "76240": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76241": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76244": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76245": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "76247": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76248": {
+    "county_fips": "48439",
+    "county_name": "Tarrant County"
+  },
+  "76249": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76250": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76251": {
+    "county_fips": "48337",
+    "county_name": "Montague County"
+  },
+  "76252": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76253": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76255": {
+    "county_fips": "48337",
+    "county_name": "Montague County"
+  },
+  "76258": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76259": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76261": {
+    "county_fips": "48337",
+    "county_name": "Montague County"
+  },
+  "76262": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76263": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76264": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "76265": {
+    "county_fips": "48337",
+    "county_name": "Montague County"
+  },
+  "76266": {
+    "county_fips": "48121",
+    "county_name": "Denton County"
+  },
+  "76267": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76268": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "76270": {
+    "county_fips": "48337",
+    "county_name": "Montague County"
+  },
+  "76271": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "76272": {
+    "county_fips": "48097",
+    "county_name": "Cooke County"
+  },
+  "76273": {
+    "county_fips": "48181",
+    "county_name": "Grayson County"
+  },
+  "76301": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76302": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76305": {
+    "county_fips": "48077",
+    "county_name": "Clay County"
+  },
+  "76306": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76308": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76309": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76310": {
+    "county_fips": "48009",
+    "county_name": "Archer County"
+  },
+  "76311": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76351": {
+    "county_fips": "48009",
+    "county_name": "Archer County"
+  },
+  "76354": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76357": {
+    "county_fips": "48077",
+    "county_name": "Clay County"
+  },
+  "76360": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76363": {
+    "county_fips": "48275",
+    "county_name": "Knox County"
+  },
+  "76364": {
+    "county_fips": "48487",
+    "county_name": "Wilbarger County"
+  },
+  "76365": {
+    "county_fips": "48077",
+    "county_name": "Clay County"
+  },
+  "76366": {
+    "county_fips": "48009",
+    "county_name": "Archer County"
+  },
+  "76367": {
+    "county_fips": "48485",
+    "county_name": "Wichita County"
+  },
+  "76370": {
+    "county_fips": "48009",
+    "county_name": "Archer County"
+  },
+  "76371": {
+    "county_fips": "48275",
+    "county_name": "Knox County"
+  },
+  "76372": {
+    "county_fips": "48447",
+    "county_name": "Throckmorton County"
+  },
+  "76373": {
+    "county_fips": "48487",
+    "county_name": "Wilbarger County"
+  },
+  "76374": {
+    "county_fips": "48503",
+    "county_name": "Young County"
+  },
+  "76377": {
+    "county_fips": "48077",
+    "county_name": "Clay County"
+  },
+  "76379": {
+    "county_fips": "48009",
+    "county_name": "Archer County"
+  },
+  "76380": {
+    "county_fips": "48023",
+    "county_name": "Baylor County"
+  },
+  "76384": {
+    "county_fips": "48487",
+    "county_name": "Wilbarger County"
+  },
+  "76388": {
+    "county_fips": "48207",
+    "county_name": "Haskell County"
+  },
+  "76389": {
+    "county_fips": "48009",
+    "county_name": "Archer County"
+  },
+  "76401": {
+    "county_fips": "48143",
+    "county_name": "Erath County"
+  },
+  "76402": {
+    "county_fips": "48143",
+    "county_name": "Erath County"
+  },
+  "76424": {
+    "county_fips": "48429",
+    "county_name": "Stephens County"
+  },
+  "76426": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76427": {
+    "county_fips": "48237",
+    "county_name": "Jack County"
+  },
+  "76429": {
+    "county_fips": "48429",
+    "county_name": "Stephens County"
+  },
+  "76430": {
+    "county_fips": "48417",
+    "county_name": "Shackelford County"
+  },
+  "76431": {
+    "county_fips": "48497",
+    "county_name": "Wise County"
+  },
+  "76432": {
+    "county_fips": "48049",
+    "county_name": "Brown County"
+  },
+  "76433": {
+    "county_fips": "48143",
+    "county_name": "Erath County"
+  },
+  "76435": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76436": {
+    "county_fips": "48093",
+    "county_name": "Comanche County"
+  },
+  "76437": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76439": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76442": {
+    "county_fips": "48093",
+    "county_name": "Comanche County"
+  },
+  "76443": {
+    "county_fips": "48059",
+    "county_name": "Callahan County"
+  },
+  "76444": {
+    "county_fips": "48093",
+    "county_name": "Comanche County"
+  },
+  "76445": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76446": {
+    "county_fips": "48143",
+    "county_name": "Erath County"
+  },
+  "76448": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76449": {
+    "county_fips": "48363",
+    "county_name": "Palo Pinto County"
+  },
+  "76450": {
+    "county_fips": "48503",
+    "county_name": "Young County"
+  },
+  "76452": {
+    "county_fips": "48093",
+    "county_name": "Comanche County"
+  },
+  "76453": {
+    "county_fips": "48363",
+    "county_name": "Palo Pinto County"
+  },
+  "76454": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76455": {
+    "county_fips": "48093",
+    "county_name": "Comanche County"
+  },
+  "76457": {
+    "county_fips": "48193",
+    "county_name": "Hamilton County"
+  },
+  "76458": {
+    "county_fips": "48237",
+    "county_name": "Jack County"
+  },
+  "76459": {
+    "county_fips": "48237",
+    "county_name": "Jack County"
+  },
+  "76460": {
+    "county_fips": "48503",
+    "county_name": "Young County"
+  },
+  "76462": {
+    "county_fips": "48221",
+    "county_name": "Hood County"
+  },
+  "76463": {
+    "county_fips": "48143",
+    "county_name": "Erath County"
+  },
+  "76464": {
+    "county_fips": "48417",
+    "county_name": "Shackelford County"
+  },
+  "76466": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76469": {
+    "county_fips": "48059",
+    "county_name": "Callahan County"
+  },
+  "76470": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76471": {
+    "county_fips": "48133",
+    "county_name": "Eastland County"
+  },
+  "76472": {
+    "county_fips": "48363",
+    "county_name": "Palo Pinto County"
+  },
+  "76474": {
+    "county_fips": "48093",
+    "county_name": "Comanche County"
+  },
+  "76475": {
+    "county_fips": "48363",
+    "county_name": "Palo Pinto County"
+  },
+  "76476": {
+    "county_fips": "48221",
+    "county_name": "Hood County"
+  },
+  "76481": {
+    "county_fips": "48503",
+    "county_name": "Young County"
+  },
+  "76483": {
+    "county_fips": "48447",
+    "county_name": "Throckmorton County"
+  },
+  "76484": {
+    "county_fips": "48363",
+    "county_name": "Palo Pinto County"
+  },
+  "76486": {
+    "county_fips": "48237",
+    "county_name": "Jack County"
+  },
+  "76487": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76490": {
+    "county_fips": "48367",
+    "county_name": "Parker County"
+  },
+  "76491": {
+    "county_fips": "48447",
+    "county_name": "Throckmorton County"
+  },
+  "76501": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76502": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76504": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76511": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76513": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76518": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "76519": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "76520": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "76522": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76523": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "76524": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76525": {
+    "county_fips": "48193",
+    "county_name": "Hamilton County"
+  },
+  "76527": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "76528": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76530": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "76531": {
+    "county_fips": "48193",
+    "county_name": "Hamilton County"
+  },
+  "76534": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76537": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "76538": {
+    "county_fips": "48193",
+    "county_name": "Hamilton County"
+  },
+  "76539": {
+    "county_fips": "48281",
+    "county_name": "Lampasas County"
+  },
+  "76541": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76542": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76543": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76544": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76548": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76549": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76550": {
+    "county_fips": "48281",
+    "county_name": "Lampasas County"
+  },
+  "76554": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76556": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "76557": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76559": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76561": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76565": {
+    "county_fips": "48193",
+    "county_name": "Hamilton County"
+  },
+  "76566": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76567": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "76569": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76570": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76571": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76573": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "76574": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "76577": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "76578": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "76579": {
+    "county_fips": "48027",
+    "county_name": "Bell County"
+  },
+  "76596": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76597": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76598": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76599": {
+    "county_fips": "48099",
+    "county_name": "Coryell County"
+  },
+  "76621": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76622": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76623": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "76624": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76626": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "76627": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76628": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76629": {
+    "county_fips": "48395",
+    "county_name": "Robertson County"
+  },
+  "76630": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76631": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76632": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76633": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76634": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76635": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76636": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76637": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76638": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76639": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "76640": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76641": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "76642": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76643": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76645": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76648": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76649": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76650": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76651": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "76652": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76653": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76654": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76655": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76656": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76657": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76660": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76661": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76664": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76665": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76666": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76667": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76670": {
+    "county_fips": "48139",
+    "county_name": "Ellis County"
+  },
+  "76671": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76673": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76676": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76678": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76679": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "76680": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76681": {
+    "county_fips": "48349",
+    "county_name": "Navarro County"
+  },
+  "76682": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76685": {
+    "county_fips": "48145",
+    "county_name": "Falls County"
+  },
+  "76686": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76687": {
+    "county_fips": "48293",
+    "county_name": "Limestone County"
+  },
+  "76689": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76690": {
+    "county_fips": "48035",
+    "county_name": "Bosque County"
+  },
+  "76691": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76692": {
+    "county_fips": "48217",
+    "county_name": "Hill County"
+  },
+  "76693": {
+    "county_fips": "48161",
+    "county_name": "Freestone County"
+  },
+  "76701": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76704": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76705": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76706": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76707": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76708": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76710": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76711": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76712": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76798": {
+    "county_fips": "48309",
+    "county_name": "McLennan County"
+  },
+  "76801": {
+    "county_fips": "48049",
+    "county_name": "Brown County"
+  },
+  "76802": {
+    "county_fips": "48049",
+    "county_name": "Brown County"
+  },
+  "76820": {
+    "county_fips": "48319",
+    "county_name": "Mason County"
+  },
+  "76821": {
+    "county_fips": "48399",
+    "county_name": "Runnels County"
+  },
+  "76823": {
+    "county_fips": "48049",
+    "county_name": "Brown County"
+  },
+  "76824": {
+    "county_fips": "48411",
+    "county_name": "San Saba County"
+  },
+  "76825": {
+    "county_fips": "48307",
+    "county_name": "McCulloch County"
+  },
+  "76827": {
+    "county_fips": "48049",
+    "county_name": "Brown County"
+  },
+  "76828": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "76831": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "76832": {
+    "county_fips": "48411",
+    "county_name": "San Saba County"
+  },
+  "76834": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "76836": {
+    "county_fips": "48307",
+    "county_name": "McCulloch County"
+  },
+  "76837": {
+    "county_fips": "48095",
+    "county_name": "Concho County"
+  },
+  "76841": {
+    "county_fips": "48413",
+    "county_name": "Schleicher County"
+  },
+  "76842": {
+    "county_fips": "48319",
+    "county_name": "Mason County"
+  },
+  "76844": {
+    "county_fips": "48333",
+    "county_name": "Mills County"
+  },
+  "76845": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "76848": {
+    "county_fips": "48327",
+    "county_name": "Menard County"
+  },
+  "76849": {
+    "county_fips": "48267",
+    "county_name": "Kimble County"
+  },
+  "76852": {
+    "county_fips": "48307",
+    "county_name": "McCulloch County"
+  },
+  "76853": {
+    "county_fips": "48281",
+    "county_name": "Lampasas County"
+  },
+  "76854": {
+    "county_fips": "48267",
+    "county_name": "Kimble County"
+  },
+  "76856": {
+    "county_fips": "48319",
+    "county_name": "Mason County"
+  },
+  "76857": {
+    "county_fips": "48049",
+    "county_name": "Brown County"
+  },
+  "76858": {
+    "county_fips": "48095",
+    "county_name": "Concho County"
+  },
+  "76859": {
+    "county_fips": "48327",
+    "county_name": "Menard County"
+  },
+  "76861": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76862": {
+    "county_fips": "48095",
+    "county_name": "Concho County"
+  },
+  "76864": {
+    "county_fips": "48333",
+    "county_name": "Mills County"
+  },
+  "76865": {
+    "county_fips": "48399",
+    "county_name": "Runnels County"
+  },
+  "76866": {
+    "county_fips": "48095",
+    "county_name": "Concho County"
+  },
+  "76869": {
+    "county_fips": "48411",
+    "county_name": "San Saba County"
+  },
+  "76870": {
+    "county_fips": "48333",
+    "county_name": "Mills County"
+  },
+  "76871": {
+    "county_fips": "48411",
+    "county_name": "San Saba County"
+  },
+  "76872": {
+    "county_fips": "48307",
+    "county_name": "McCulloch County"
+  },
+  "76873": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "76874": {
+    "county_fips": "48267",
+    "county_name": "Kimble County"
+  },
+  "76875": {
+    "county_fips": "48399",
+    "county_name": "Runnels County"
+  },
+  "76877": {
+    "county_fips": "48411",
+    "county_name": "San Saba County"
+  },
+  "76878": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "76880": {
+    "county_fips": "48333",
+    "county_name": "Mills County"
+  },
+  "76882": {
+    "county_fips": "48399",
+    "county_name": "Runnels County"
+  },
+  "76884": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "76885": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "76887": {
+    "county_fips": "48307",
+    "county_name": "McCulloch County"
+  },
+  "76888": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "76890": {
+    "county_fips": "48049",
+    "county_name": "Brown County"
+  },
+  "76901": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76902": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76903": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76904": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76905": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76908": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76909": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76930": {
+    "county_fips": "48235",
+    "county_name": "Irion County"
+  },
+  "76932": {
+    "county_fips": "48383",
+    "county_name": "Reagan County"
+  },
+  "76933": {
+    "county_fips": "48081",
+    "county_name": "Coke County"
+  },
+  "76934": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76935": {
+    "county_fips": "48413",
+    "county_name": "Schleicher County"
+  },
+  "76936": {
+    "county_fips": "48413",
+    "county_name": "Schleicher County"
+  },
+  "76937": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76939": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76940": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76941": {
+    "county_fips": "48235",
+    "county_name": "Irion County"
+  },
+  "76943": {
+    "county_fips": "48105",
+    "county_name": "Crockett County"
+  },
+  "76945": {
+    "county_fips": "48081",
+    "county_name": "Coke County"
+  },
+  "76950": {
+    "county_fips": "48435",
+    "county_name": "Sutton County"
+  },
+  "76951": {
+    "county_fips": "48431",
+    "county_name": "Sterling County"
+  },
+  "76953": {
+    "county_fips": "48081",
+    "county_name": "Coke County"
+  },
+  "76955": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76957": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "76958": {
+    "county_fips": "48451",
+    "county_name": "Tom Green County"
+  },
+  "77002": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77003": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77004": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77005": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77006": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77007": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77008": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77009": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77010": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77011": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77012": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77013": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77014": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77015": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77016": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77017": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77018": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77019": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77020": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77021": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77022": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77023": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77024": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77025": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77026": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77027": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77028": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77029": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77030": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77031": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77032": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77033": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77034": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77035": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77036": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77037": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77038": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77039": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77040": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77041": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77042": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77043": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77044": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77045": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77046": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77047": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77048": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77049": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77050": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77051": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77053": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77054": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77055": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77056": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77057": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77058": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77059": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77060": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77061": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77062": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77063": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77064": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77065": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77066": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77067": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77068": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77069": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77070": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77071": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77072": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77073": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77074": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77075": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77076": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77077": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77078": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77079": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77080": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77081": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77082": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77083": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77084": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77085": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77086": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77087": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77088": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77089": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77090": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77091": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77092": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77093": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77094": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77095": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77096": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77098": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77099": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77204": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77301": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77302": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77303": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77304": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77306": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77316": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77318": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77320": {
+    "county_fips": "48471",
+    "county_name": "Walker County"
+  },
+  "77326": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "77327": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77328": {
+    "county_fips": "48407",
+    "county_name": "San Jacinto County"
+  },
+  "77331": {
+    "county_fips": "48407",
+    "county_name": "San Jacinto County"
+  },
+  "77334": {
+    "county_fips": "48471",
+    "county_name": "Walker County"
+  },
+  "77335": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "77336": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77338": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77339": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77340": {
+    "county_fips": "48471",
+    "county_name": "Walker County"
+  },
+  "77341": {
+    "county_fips": "48471",
+    "county_name": "Walker County"
+  },
+  "77342": {
+    "county_fips": "48471",
+    "county_name": "Walker County"
+  },
+  "77345": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77346": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77350": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "77351": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "77354": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77355": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77356": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77357": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77358": {
+    "county_fips": "48471",
+    "county_name": "Walker County"
+  },
+  "77359": {
+    "county_fips": "48407",
+    "county_name": "San Jacinto County"
+  },
+  "77360": {
+    "county_fips": "48373",
+    "county_name": "Polk County"
+  },
+  "77362": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77363": {
+    "county_fips": "48185",
+    "county_name": "Grimes County"
+  },
+  "77364": {
+    "county_fips": "48407",
+    "county_name": "San Jacinto County"
+  },
+  "77365": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77367": {
+    "county_fips": "48471",
+    "county_name": "Walker County"
+  },
+  "77368": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77369": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77371": {
+    "county_fips": "48407",
+    "county_name": "San Jacinto County"
+  },
+  "77372": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77373": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77374": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77375": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77376": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77377": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77378": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77379": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77380": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77381": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77382": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77384": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77385": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77386": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77388": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77389": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77396": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77401": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77406": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77407": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77412": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "77414": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77415": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77417": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77418": {
+    "county_fips": "48015",
+    "county_name": "Austin County"
+  },
+  "77419": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77420": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77422": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77423": {
+    "county_fips": "48473",
+    "county_name": "Waller County"
+  },
+  "77426": {
+    "county_fips": "48477",
+    "county_name": "Washington County"
+  },
+  "77428": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77429": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77430": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77431": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77432": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77433": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77434": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "77435": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77436": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77437": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77440": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77441": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77442": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "77443": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77444": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77445": {
+    "county_fips": "48473",
+    "county_name": "Waller County"
+  },
+  "77446": {
+    "county_fips": "48473",
+    "county_name": "Waller County"
+  },
+  "77447": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77448": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77449": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77450": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77451": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77453": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77454": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77455": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77456": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77457": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77458": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77459": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77460": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "77461": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77464": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77465": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77466": {
+    "county_fips": "48473",
+    "county_name": "Waller County"
+  },
+  "77467": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77468": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77469": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77470": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "77471": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77473": {
+    "county_fips": "48015",
+    "county_name": "Austin County"
+  },
+  "77474": {
+    "county_fips": "48015",
+    "county_name": "Austin County"
+  },
+  "77475": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "77476": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77477": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77478": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77479": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77480": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77481": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77482": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77483": {
+    "county_fips": "48321",
+    "county_name": "Matagorda County"
+  },
+  "77484": {
+    "county_fips": "48473",
+    "county_name": "Waller County"
+  },
+  "77485": {
+    "county_fips": "48015",
+    "county_name": "Austin County"
+  },
+  "77486": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77488": {
+    "county_fips": "48481",
+    "county_name": "Wharton County"
+  },
+  "77489": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77493": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77494": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77498": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77502": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77503": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77504": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77505": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77506": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77507": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77510": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77511": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77514": {
+    "county_fips": "48071",
+    "county_name": "Chambers County"
+  },
+  "77515": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77517": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77518": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77519": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77520": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77521": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77523": {
+    "county_fips": "48071",
+    "county_name": "Chambers County"
+  },
+  "77530": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77531": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77532": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77533": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77534": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77535": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77536": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77538": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77539": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77541": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77545": {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County"
+  },
+  "77546": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77547": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77550": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77551": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77554": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77555": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77560": {
+    "county_fips": "48071",
+    "county_name": "Chambers County"
+  },
+  "77561": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77562": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77563": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77564": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77565": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77566": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77568": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77571": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77573": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77575": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77577": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77578": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77580": {
+    "county_fips": "48071",
+    "county_name": "Chambers County"
+  },
+  "77581": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77582": {
+    "county_fips": "48291",
+    "county_name": "Liberty County"
+  },
+  "77583": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77584": {
+    "county_fips": "48039",
+    "county_name": "Brazoria County"
+  },
+  "77585": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77586": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77587": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77590": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77591": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77597": {
+    "county_fips": "48071",
+    "county_name": "Chambers County"
+  },
+  "77598": {
+    "county_fips": "48201",
+    "county_name": "Harris County"
+  },
+  "77611": {
+    "county_fips": "48361",
+    "county_name": "Orange County"
+  },
+  "77612": {
+    "county_fips": "48241",
+    "county_name": "Jasper County"
+  },
+  "77613": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77614": {
+    "county_fips": "48351",
+    "county_name": "Newton County"
+  },
+  "77615": {
+    "county_fips": "48241",
+    "county_name": "Jasper County"
+  },
+  "77616": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "77617": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77619": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77622": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77623": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77624": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "77625": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77627": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77629": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77630": {
+    "county_fips": "48361",
+    "county_name": "Orange County"
+  },
+  "77632": {
+    "county_fips": "48361",
+    "county_name": "Orange County"
+  },
+  "77640": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77642": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77650": {
+    "county_fips": "48167",
+    "county_name": "Galveston County"
+  },
+  "77651": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77655": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77656": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77657": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77659": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77660": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "77661": {
+    "county_fips": "48071",
+    "county_name": "Chambers County"
+  },
+  "77662": {
+    "county_fips": "48361",
+    "county_name": "Orange County"
+  },
+  "77663": {
+    "county_fips": "48199",
+    "county_name": "Hardin County"
+  },
+  "77664": {
+    "county_fips": "48457",
+    "county_name": "Tyler County"
+  },
+  "77665": {
+    "county_fips": "48071",
+    "county_name": "Chambers County"
+  },
+  "77701": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77702": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77703": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77705": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77706": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77707": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77708": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77713": {
+    "county_fips": "48245",
+    "county_name": "Jefferson County"
+  },
+  "77801": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77802": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77803": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77807": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77808": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77830": {
+    "county_fips": "48185",
+    "county_name": "Grimes County"
+  },
+  "77831": {
+    "county_fips": "48185",
+    "county_name": "Grimes County"
+  },
+  "77833": {
+    "county_fips": "48477",
+    "county_name": "Washington County"
+  },
+  "77835": {
+    "county_fips": "48477",
+    "county_name": "Washington County"
+  },
+  "77836": {
+    "county_fips": "48051",
+    "county_name": "Burleson County"
+  },
+  "77837": {
+    "county_fips": "48395",
+    "county_name": "Robertson County"
+  },
+  "77840": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77843": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77845": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77852": {
+    "county_fips": "48051",
+    "county_name": "Burleson County"
+  },
+  "77853": {
+    "county_fips": "48287",
+    "county_name": "Lee County"
+  },
+  "77855": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "77856": {
+    "county_fips": "48395",
+    "county_name": "Robertson County"
+  },
+  "77857": {
+    "county_fips": "48331",
+    "county_name": "Milam County"
+  },
+  "77859": {
+    "county_fips": "48395",
+    "county_name": "Robertson County"
+  },
+  "77861": {
+    "county_fips": "48185",
+    "county_name": "Grimes County"
+  },
+  "77863": {
+    "county_fips": "48051",
+    "county_name": "Burleson County"
+  },
+  "77864": {
+    "county_fips": "48313",
+    "county_name": "Madison County"
+  },
+  "77865": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "77866": {
+    "county_fips": "48041",
+    "county_name": "Brazos County"
+  },
+  "77867": {
+    "county_fips": "48395",
+    "county_name": "Robertson County"
+  },
+  "77868": {
+    "county_fips": "48185",
+    "county_name": "Grimes County"
+  },
+  "77871": {
+    "county_fips": "48289",
+    "county_name": "Leon County"
+  },
+  "77872": {
+    "county_fips": "48313",
+    "county_name": "Madison County"
+  },
+  "77873": {
+    "county_fips": "48339",
+    "county_name": "Montgomery County"
+  },
+  "77875": {
+    "county_fips": "48185",
+    "county_name": "Grimes County"
+  },
+  "77876": {
+    "county_fips": "48185",
+    "county_name": "Grimes County"
+  },
+  "77878": {
+    "county_fips": "48051",
+    "county_name": "Burleson County"
+  },
+  "77879": {
+    "county_fips": "48051",
+    "county_name": "Burleson County"
+  },
+  "77880": {
+    "county_fips": "48477",
+    "county_name": "Washington County"
+  },
+  "77882": {
+    "county_fips": "48395",
+    "county_name": "Robertson County"
+  },
+  "77901": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77904": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77905": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77950": {
+    "county_fips": "48007",
+    "county_name": "Aransas County"
+  },
+  "77951": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77954": {
+    "county_fips": "48123",
+    "county_name": "DeWitt County"
+  },
+  "77957": {
+    "county_fips": "48239",
+    "county_name": "Jackson County"
+  },
+  "77960": {
+    "county_fips": "48175",
+    "county_name": "Goliad County"
+  },
+  "77961": {
+    "county_fips": "48239",
+    "county_name": "Jackson County"
+  },
+  "77962": {
+    "county_fips": "48239",
+    "county_name": "Jackson County"
+  },
+  "77963": {
+    "county_fips": "48175",
+    "county_name": "Goliad County"
+  },
+  "77964": {
+    "county_fips": "48285",
+    "county_name": "Lavaca County"
+  },
+  "77968": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77969": {
+    "county_fips": "48239",
+    "county_name": "Jackson County"
+  },
+  "77970": {
+    "county_fips": "48239",
+    "county_name": "Jackson County"
+  },
+  "77971": {
+    "county_fips": "48239",
+    "county_name": "Jackson County"
+  },
+  "77973": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77974": {
+    "county_fips": "48123",
+    "county_name": "DeWitt County"
+  },
+  "77975": {
+    "county_fips": "48285",
+    "county_name": "Lavaca County"
+  },
+  "77976": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77977": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77978": {
+    "county_fips": "48057",
+    "county_name": "Calhoun County"
+  },
+  "77979": {
+    "county_fips": "48057",
+    "county_name": "Calhoun County"
+  },
+  "77982": {
+    "county_fips": "48057",
+    "county_name": "Calhoun County"
+  },
+  "77983": {
+    "county_fips": "48057",
+    "county_name": "Calhoun County"
+  },
+  "77984": {
+    "county_fips": "48285",
+    "county_name": "Lavaca County"
+  },
+  "77986": {
+    "county_fips": "48285",
+    "county_name": "Lavaca County"
+  },
+  "77987": {
+    "county_fips": "48285",
+    "county_name": "Lavaca County"
+  },
+  "77988": {
+    "county_fips": "48469",
+    "county_name": "Victoria County"
+  },
+  "77990": {
+    "county_fips": "48391",
+    "county_name": "Refugio County"
+  },
+  "77991": {
+    "county_fips": "48239",
+    "county_name": "Jackson County"
+  },
+  "77993": {
+    "county_fips": "48175",
+    "county_name": "Goliad County"
+  },
+  "77994": {
+    "county_fips": "48123",
+    "county_name": "DeWitt County"
+  },
+  "77995": {
+    "county_fips": "48123",
+    "county_name": "DeWitt County"
+  },
+  "78001": {
+    "county_fips": "48283",
+    "county_name": "La Salle County"
+  },
+  "78002": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78003": {
+    "county_fips": "48019",
+    "county_name": "Bandera County"
+  },
+  "78004": {
+    "county_fips": "48259",
+    "county_name": "Kendall County"
+  },
+  "78005": {
+    "county_fips": "48163",
+    "county_name": "Frio County"
+  },
+  "78006": {
+    "county_fips": "48259",
+    "county_name": "Kendall County"
+  },
+  "78007": {
+    "county_fips": "48311",
+    "county_name": "McMullen County"
+  },
+  "78008": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78009": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78010": {
+    "county_fips": "48265",
+    "county_name": "Kerr County"
+  },
+  "78011": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78012": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78013": {
+    "county_fips": "48259",
+    "county_name": "Kendall County"
+  },
+  "78014": {
+    "county_fips": "48283",
+    "county_name": "La Salle County"
+  },
+  "78015": {
+    "county_fips": "48259",
+    "county_name": "Kendall County"
+  },
+  "78016": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78017": {
+    "county_fips": "48163",
+    "county_name": "Frio County"
+  },
+  "78019": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78021": {
+    "county_fips": "48283",
+    "county_name": "La Salle County"
+  },
+  "78022": {
+    "county_fips": "48297",
+    "county_name": "Live Oak County"
+  },
+  "78023": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78024": {
+    "county_fips": "48265",
+    "county_name": "Kerr County"
+  },
+  "78025": {
+    "county_fips": "48265",
+    "county_name": "Kerr County"
+  },
+  "78026": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78027": {
+    "county_fips": "48259",
+    "county_name": "Kendall County"
+  },
+  "78028": {
+    "county_fips": "48265",
+    "county_name": "Kerr County"
+  },
+  "78029": {
+    "county_fips": "48265",
+    "county_name": "Kerr County"
+  },
+  "78039": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78040": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78041": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78043": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78044": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78045": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78046": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78050": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78052": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78055": {
+    "county_fips": "48019",
+    "county_name": "Bandera County"
+  },
+  "78056": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78057": {
+    "county_fips": "48163",
+    "county_name": "Frio County"
+  },
+  "78058": {
+    "county_fips": "48265",
+    "county_name": "Kerr County"
+  },
+  "78059": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78061": {
+    "county_fips": "48163",
+    "county_name": "Frio County"
+  },
+  "78062": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78063": {
+    "county_fips": "48019",
+    "county_name": "Bandera County"
+  },
+  "78064": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78065": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78066": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78067": {
+    "county_fips": "48505",
+    "county_name": "Zapata County"
+  },
+  "78069": {
+    "county_fips": "48013",
+    "county_name": "Atascosa County"
+  },
+  "78070": {
+    "county_fips": "48091",
+    "county_name": "Comal County"
+  },
+  "78071": {
+    "county_fips": "48297",
+    "county_name": "Live Oak County"
+  },
+  "78072": {
+    "county_fips": "48311",
+    "county_name": "McMullen County"
+  },
+  "78073": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78074": {
+    "county_fips": "48259",
+    "county_name": "Kendall County"
+  },
+  "78075": {
+    "county_fips": "48297",
+    "county_name": "Live Oak County"
+  },
+  "78076": {
+    "county_fips": "48505",
+    "county_name": "Zapata County"
+  },
+  "78101": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78102": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78104": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78107": {
+    "county_fips": "48175",
+    "county_name": "Goliad County"
+  },
+  "78108": {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County"
+  },
+  "78109": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78111": {
+    "county_fips": "48255",
+    "county_name": "Karnes County"
+  },
+  "78112": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78113": {
+    "county_fips": "48493",
+    "county_name": "Wilson County"
+  },
+  "78114": {
+    "county_fips": "48493",
+    "county_name": "Wilson County"
+  },
+  "78116": {
+    "county_fips": "48255",
+    "county_name": "Karnes County"
+  },
+  "78117": {
+    "county_fips": "48255",
+    "county_name": "Karnes County"
+  },
+  "78118": {
+    "county_fips": "48255",
+    "county_name": "Karnes County"
+  },
+  "78119": {
+    "county_fips": "48255",
+    "county_name": "Karnes County"
+  },
+  "78121": {
+    "county_fips": "48493",
+    "county_name": "Wilson County"
+  },
+  "78122": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78123": {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County"
+  },
+  "78124": {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County"
+  },
+  "78125": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78130": {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County"
+  },
+  "78132": {
+    "county_fips": "48091",
+    "county_name": "Comal County"
+  },
+  "78133": {
+    "county_fips": "48091",
+    "county_name": "Comal County"
+  },
+  "78140": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78141": {
+    "county_fips": "48123",
+    "county_name": "DeWitt County"
+  },
+  "78142": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78143": {
+    "county_fips": "48493",
+    "county_name": "Wilson County"
+  },
+  "78144": {
+    "county_fips": "48255",
+    "county_name": "Karnes County"
+  },
+  "78145": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78146": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78147": {
+    "county_fips": "48493",
+    "county_name": "Wilson County"
+  },
+  "78148": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78150": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78151": {
+    "county_fips": "48255",
+    "county_name": "Karnes County"
+  },
+  "78152": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78154": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78155": {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County"
+  },
+  "78159": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78160": {
+    "county_fips": "48493",
+    "county_name": "Wilson County"
+  },
+  "78161": {
+    "county_fips": "48493",
+    "county_name": "Wilson County"
+  },
+  "78162": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78163": {
+    "county_fips": "48091",
+    "county_name": "Comal County"
+  },
+  "78164": {
+    "county_fips": "48123",
+    "county_name": "DeWitt County"
+  },
+  "78201": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78202": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78203": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78204": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78205": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78207": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78208": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78209": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78210": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78211": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78212": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78213": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78214": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78215": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78216": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78217": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78218": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78219": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78220": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78221": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78222": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78223": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78224": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78225": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78226": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78227": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78228": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78229": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78230": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78231": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78232": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78233": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78234": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78235": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78236": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78237": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78238": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78239": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78240": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78242": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78243": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78244": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78245": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78247": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78248": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78249": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78250": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78251": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78252": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78253": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78254": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78255": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78256": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78257": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78258": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78259": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78260": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78261": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78263": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78264": {
+    "county_fips": "48029",
+    "county_name": "Bexar County"
+  },
+  "78266": {
+    "county_fips": "48091",
+    "county_name": "Comal County"
+  },
+  "78330": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78332": {
+    "county_fips": "48249",
+    "county_name": "Jim Wells County"
+  },
+  "78336": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78338": {
+    "county_fips": "48261",
+    "county_name": "Kenedy County"
+  },
+  "78339": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78340": {
+    "county_fips": "48391",
+    "county_name": "Refugio County"
+  },
+  "78341": {
+    "county_fips": "48131",
+    "county_name": "Duval County"
+  },
+  "78342": {
+    "county_fips": "48249",
+    "county_name": "Jim Wells County"
+  },
+  "78343": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78344": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78347": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78349": {
+    "county_fips": "48131",
+    "county_name": "Duval County"
+  },
+  "78351": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78352": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78353": {
+    "county_fips": "48047",
+    "county_name": "Brooks County"
+  },
+  "78355": {
+    "county_fips": "48047",
+    "county_name": "Brooks County"
+  },
+  "78357": {
+    "county_fips": "48131",
+    "county_name": "Duval County"
+  },
+  "78358": {
+    "county_fips": "48007",
+    "county_name": "Aransas County"
+  },
+  "78359": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78360": {
+    "county_fips": "48247",
+    "county_name": "Jim Hogg County"
+  },
+  "78361": {
+    "county_fips": "48247",
+    "county_name": "Jim Hogg County"
+  },
+  "78362": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78363": {
+    "county_fips": "48273",
+    "county_name": "Kleberg County"
+  },
+  "78368": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78369": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78370": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78371": {
+    "county_fips": "48479",
+    "county_name": "Webb County"
+  },
+  "78372": {
+    "county_fips": "48249",
+    "county_name": "Jim Wells County"
+  },
+  "78373": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78374": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78375": {
+    "county_fips": "48249",
+    "county_name": "Jim Wells County"
+  },
+  "78376": {
+    "county_fips": "48131",
+    "county_name": "Duval County"
+  },
+  "78377": {
+    "county_fips": "48391",
+    "county_name": "Refugio County"
+  },
+  "78379": {
+    "county_fips": "48273",
+    "county_name": "Kleberg County"
+  },
+  "78380": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78382": {
+    "county_fips": "48007",
+    "county_name": "Aransas County"
+  },
+  "78383": {
+    "county_fips": "48297",
+    "county_name": "Live Oak County"
+  },
+  "78384": {
+    "county_fips": "48131",
+    "county_name": "Duval County"
+  },
+  "78385": {
+    "county_fips": "48261",
+    "county_name": "Kenedy County"
+  },
+  "78387": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78389": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78390": {
+    "county_fips": "48409",
+    "county_name": "San Patricio County"
+  },
+  "78391": {
+    "county_fips": "48025",
+    "county_name": "Bee County"
+  },
+  "78393": {
+    "county_fips": "48391",
+    "county_name": "Refugio County"
+  },
+  "78401": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78402": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78404": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78405": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78406": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78407": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78408": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78409": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78410": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78411": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78412": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78413": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78414": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78415": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78416": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78417": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78418": {
+    "county_fips": "48273",
+    "county_name": "Kleberg County"
+  },
+  "78419": {
+    "county_fips": "48355",
+    "county_name": "Nueces County"
+  },
+  "78501": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78503": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78504": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78516": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78520": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78521": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78526": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78535": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78536": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78537": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78538": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78539": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78540": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78541": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78542": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78543": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78545": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78547": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78548": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78549": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78550": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78552": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78557": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78558": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78559": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78560": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78561": {
+    "county_fips": "48489",
+    "county_name": "Willacy County"
+  },
+  "78562": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78563": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78564": {
+    "county_fips": "48505",
+    "county_name": "Zapata County"
+  },
+  "78565": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78566": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78567": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78569": {
+    "county_fips": "48489",
+    "county_name": "Willacy County"
+  },
+  "78570": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78572": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78573": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78574": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78575": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78576": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78577": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78578": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78579": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78580": {
+    "county_fips": "48489",
+    "county_name": "Willacy County"
+  },
+  "78582": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78583": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78584": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78585": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78586": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78588": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78589": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78590": {
+    "county_fips": "48489",
+    "county_name": "Willacy County"
+  },
+  "78591": {
+    "county_fips": "48427",
+    "county_name": "Starr County"
+  },
+  "78592": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78593": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78594": {
+    "county_fips": "48489",
+    "county_name": "Willacy County"
+  },
+  "78595": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78596": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78597": {
+    "county_fips": "48061",
+    "county_name": "Cameron County"
+  },
+  "78598": {
+    "county_fips": "48489",
+    "county_name": "Willacy County"
+  },
+  "78599": {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County"
+  },
+  "78602": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78605": {
+    "county_fips": "48053",
+    "county_name": "Burnet County"
+  },
+  "78606": {
+    "county_fips": "48031",
+    "county_name": "Blanco County"
+  },
+  "78607": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "78608": {
+    "county_fips": "48053",
+    "county_name": "Burnet County"
+  },
+  "78609": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "78610": {
+    "county_fips": "48209",
+    "county_name": "Hays County"
+  },
+  "78611": {
+    "county_fips": "48053",
+    "county_name": "Burnet County"
+  },
+  "78612": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78613": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78614": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78615": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78616": {
+    "county_fips": "48055",
+    "county_name": "Caldwell County"
+  },
+  "78617": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78618": {
+    "county_fips": "48171",
+    "county_name": "Gillespie County"
+  },
+  "78619": {
+    "county_fips": "48209",
+    "county_name": "Hays County"
+  },
+  "78620": {
+    "county_fips": "48209",
+    "county_name": "Hays County"
+  },
+  "78621": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78622": {
+    "county_fips": "48055",
+    "county_name": "Caldwell County"
+  },
+  "78623": {
+    "county_fips": "48091",
+    "county_name": "Comal County"
+  },
+  "78624": {
+    "county_fips": "48171",
+    "county_name": "Gillespie County"
+  },
+  "78626": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78628": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78629": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78631": {
+    "county_fips": "48267",
+    "county_name": "Kimble County"
+  },
+  "78632": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78633": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78634": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78635": {
+    "county_fips": "48031",
+    "county_name": "Blanco County"
+  },
+  "78636": {
+    "county_fips": "48031",
+    "county_name": "Blanco County"
+  },
+  "78638": {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County"
+  },
+  "78639": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "78640": {
+    "county_fips": "48209",
+    "county_name": "Hays County"
+  },
+  "78641": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78642": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78643": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "78644": {
+    "county_fips": "48055",
+    "county_name": "Caldwell County"
+  },
+  "78645": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78648": {
+    "county_fips": "48055",
+    "county_name": "Caldwell County"
+  },
+  "78650": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78652": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78653": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78654": {
+    "county_fips": "48053",
+    "county_name": "Burnet County"
+  },
+  "78655": {
+    "county_fips": "48055",
+    "county_name": "Caldwell County"
+  },
+  "78656": {
+    "county_fips": "48055",
+    "county_name": "Caldwell County"
+  },
+  "78657": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "78658": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78659": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78660": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78661": {
+    "county_fips": "48055",
+    "county_name": "Caldwell County"
+  },
+  "78662": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78663": {
+    "county_fips": "48031",
+    "county_name": "Blanco County"
+  },
+  "78664": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78665": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78666": {
+    "county_fips": "48209",
+    "county_name": "Hays County"
+  },
+  "78669": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78670": {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County"
+  },
+  "78671": {
+    "county_fips": "48171",
+    "county_name": "Gillespie County"
+  },
+  "78672": {
+    "county_fips": "48299",
+    "county_name": "Llano County"
+  },
+  "78674": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78675": {
+    "county_fips": "48171",
+    "county_name": "Gillespie County"
+  },
+  "78676": {
+    "county_fips": "48209",
+    "county_name": "Hays County"
+  },
+  "78677": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78681": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78701": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78702": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78703": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78704": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78705": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78712": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78717": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78719": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78721": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78722": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78723": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78724": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78725": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78726": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78727": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78728": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78729": {
+    "county_fips": "48491",
+    "county_name": "Williamson County"
+  },
+  "78730": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78731": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78732": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78733": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78734": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78735": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78736": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78737": {
+    "county_fips": "48209",
+    "county_name": "Hays County"
+  },
+  "78738": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78739": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78741": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78742": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78744": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78745": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78746": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78747": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78748": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78749": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78750": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78751": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78752": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78753": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78754": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78756": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78757": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78758": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78759": {
+    "county_fips": "48453",
+    "county_name": "Travis County"
+  },
+  "78801": {
+    "county_fips": "48463",
+    "county_name": "Uvalde County"
+  },
+  "78802": {
+    "county_fips": "48463",
+    "county_name": "Uvalde County"
+  },
+  "78827": {
+    "county_fips": "48127",
+    "county_name": "Dimmit County"
+  },
+  "78828": {
+    "county_fips": "48385",
+    "county_name": "Real County"
+  },
+  "78829": {
+    "county_fips": "48507",
+    "county_name": "Zavala County"
+  },
+  "78830": {
+    "county_fips": "48127",
+    "county_name": "Dimmit County"
+  },
+  "78832": {
+    "county_fips": "48271",
+    "county_name": "Kinney County"
+  },
+  "78833": {
+    "county_fips": "48385",
+    "county_name": "Real County"
+  },
+  "78834": {
+    "county_fips": "48127",
+    "county_name": "Dimmit County"
+  },
+  "78836": {
+    "county_fips": "48127",
+    "county_name": "Dimmit County"
+  },
+  "78837": {
+    "county_fips": "48465",
+    "county_name": "Val Verde County"
+  },
+  "78838": {
+    "county_fips": "48463",
+    "county_name": "Uvalde County"
+  },
+  "78839": {
+    "county_fips": "48507",
+    "county_name": "Zavala County"
+  },
+  "78840": {
+    "county_fips": "48465",
+    "county_name": "Val Verde County"
+  },
+  "78841": {
+    "county_fips": "48465",
+    "county_name": "Val Verde County"
+  },
+  "78842": {
+    "county_fips": "48465",
+    "county_name": "Val Verde County"
+  },
+  "78843": {
+    "county_fips": "48465",
+    "county_name": "Val Verde County"
+  },
+  "78850": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78851": {
+    "county_fips": "48443",
+    "county_name": "Terrell County"
+  },
+  "78852": {
+    "county_fips": "48323",
+    "county_name": "Maverick County"
+  },
+  "78860": {
+    "county_fips": "48323",
+    "county_name": "Maverick County"
+  },
+  "78861": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78870": {
+    "county_fips": "48463",
+    "county_name": "Uvalde County"
+  },
+  "78871": {
+    "county_fips": "48465",
+    "county_name": "Val Verde County"
+  },
+  "78872": {
+    "county_fips": "48507",
+    "county_name": "Zavala County"
+  },
+  "78873": {
+    "county_fips": "48385",
+    "county_name": "Real County"
+  },
+  "78877": {
+    "county_fips": "48323",
+    "county_name": "Maverick County"
+  },
+  "78879": {
+    "county_fips": "48385",
+    "county_name": "Real County"
+  },
+  "78880": {
+    "county_fips": "48137",
+    "county_name": "Edwards County"
+  },
+  "78881": {
+    "county_fips": "48463",
+    "county_name": "Uvalde County"
+  },
+  "78883": {
+    "county_fips": "48019",
+    "county_name": "Bandera County"
+  },
+  "78884": {
+    "county_fips": "48019",
+    "county_name": "Bandera County"
+  },
+  "78885": {
+    "county_fips": "48019",
+    "county_name": "Bandera County"
+  },
+  "78886": {
+    "county_fips": "48325",
+    "county_name": "Medina County"
+  },
+  "78931": {
+    "county_fips": "48015",
+    "county_name": "Austin County"
+  },
+  "78932": {
+    "county_fips": "48477",
+    "county_name": "Washington County"
+  },
+  "78933": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "78934": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "78935": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "78938": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "78940": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "78941": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "78942": {
+    "county_fips": "48287",
+    "county_name": "Lee County"
+  },
+  "78943": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "78944": {
+    "county_fips": "48015",
+    "county_name": "Austin County"
+  },
+  "78945": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "78946": {
+    "county_fips": "48287",
+    "county_name": "Lee County"
+  },
+  "78947": {
+    "county_fips": "48287",
+    "county_name": "Lee County"
+  },
+  "78948": {
+    "county_fips": "48287",
+    "county_name": "Lee County"
+  },
+  "78949": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "78950": {
+    "county_fips": "48015",
+    "county_name": "Austin County"
+  },
+  "78951": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "78953": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78954": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "78956": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "78957": {
+    "county_fips": "48021",
+    "county_name": "Bastrop County"
+  },
+  "78959": {
+    "county_fips": "48177",
+    "county_name": "Gonzales County"
+  },
+  "78962": {
+    "county_fips": "48089",
+    "county_name": "Colorado County"
+  },
+  "78963": {
+    "county_fips": "48149",
+    "county_name": "Fayette County"
+  },
+  "79001": {
+    "county_fips": "48359",
+    "county_name": "Oldham County"
+  },
+  "79002": {
+    "county_fips": "48179",
+    "county_name": "Gray County"
+  },
+  "79003": {
+    "county_fips": "48211",
+    "county_name": "Hemphill County"
+  },
+  "79005": {
+    "county_fips": "48295",
+    "county_name": "Lipscomb County"
+  },
+  "79007": {
+    "county_fips": "48233",
+    "county_name": "Hutchinson County"
+  },
+  "79008": {
+    "county_fips": "48233",
+    "county_name": "Hutchinson County"
+  },
+  "79009": {
+    "county_fips": "48369",
+    "county_name": "Parmer County"
+  },
+  "79010": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79011": {
+    "county_fips": "48483",
+    "county_name": "Wheeler County"
+  },
+  "79012": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79013": {
+    "county_fips": "48341",
+    "county_name": "Moore County"
+  },
+  "79014": {
+    "county_fips": "48211",
+    "county_name": "Hemphill County"
+  },
+  "79015": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79016": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79018": {
+    "county_fips": "48205",
+    "county_name": "Hartley County"
+  },
+  "79019": {
+    "county_fips": "48011",
+    "county_name": "Armstrong County"
+  },
+  "79021": {
+    "county_fips": "48189",
+    "county_name": "Hale County"
+  },
+  "79022": {
+    "county_fips": "48111",
+    "county_name": "Dallam County"
+  },
+  "79024": {
+    "county_fips": "48295",
+    "county_name": "Lipscomb County"
+  },
+  "79025": {
+    "county_fips": "48117",
+    "county_name": "Deaf Smith County"
+  },
+  "79027": {
+    "county_fips": "48069",
+    "county_name": "Castro County"
+  },
+  "79029": {
+    "county_fips": "48341",
+    "county_name": "Moore County"
+  },
+  "79031": {
+    "county_fips": "48279",
+    "county_name": "Lamb County"
+  },
+  "79032": {
+    "county_fips": "48189",
+    "county_name": "Hale County"
+  },
+  "79033": {
+    "county_fips": "48357",
+    "county_name": "Ochiltree County"
+  },
+  "79034": {
+    "county_fips": "48295",
+    "county_name": "Lipscomb County"
+  },
+  "79035": {
+    "county_fips": "48369",
+    "county_name": "Parmer County"
+  },
+  "79036": {
+    "county_fips": "48065",
+    "county_name": "Carson County"
+  },
+  "79039": {
+    "county_fips": "48065",
+    "county_name": "Carson County"
+  },
+  "79040": {
+    "county_fips": "48195",
+    "county_name": "Hansford County"
+  },
+  "79041": {
+    "county_fips": "48189",
+    "county_name": "Hale County"
+  },
+  "79042": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79043": {
+    "county_fips": "48069",
+    "county_name": "Castro County"
+  },
+  "79044": {
+    "county_fips": "48205",
+    "county_name": "Hartley County"
+  },
+  "79045": {
+    "county_fips": "48117",
+    "county_name": "Deaf Smith County"
+  },
+  "79046": {
+    "county_fips": "48295",
+    "county_name": "Lipscomb County"
+  },
+  "79051": {
+    "county_fips": "48111",
+    "county_name": "Dallam County"
+  },
+  "79052": {
+    "county_fips": "48437",
+    "county_name": "Swisher County"
+  },
+  "79053": {
+    "county_fips": "48369",
+    "county_name": "Parmer County"
+  },
+  "79054": {
+    "county_fips": "48179",
+    "county_name": "Gray County"
+  },
+  "79056": {
+    "county_fips": "48295",
+    "county_name": "Lipscomb County"
+  },
+  "79057": {
+    "county_fips": "48179",
+    "county_name": "Gray County"
+  },
+  "79058": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79059": {
+    "county_fips": "48393",
+    "county_name": "Roberts County"
+  },
+  "79061": {
+    "county_fips": "48483",
+    "county_name": "Wheeler County"
+  },
+  "79062": {
+    "county_fips": "48233",
+    "county_name": "Hutchinson County"
+  },
+  "79063": {
+    "county_fips": "48069",
+    "county_name": "Castro County"
+  },
+  "79064": {
+    "county_fips": "48279",
+    "county_name": "Lamb County"
+  },
+  "79065": {
+    "county_fips": "48179",
+    "county_name": "Gray County"
+  },
+  "79066": {
+    "county_fips": "48179",
+    "county_name": "Gray County"
+  },
+  "79068": {
+    "county_fips": "48065",
+    "county_name": "Carson County"
+  },
+  "79070": {
+    "county_fips": "48357",
+    "county_name": "Ochiltree County"
+  },
+  "79072": {
+    "county_fips": "48189",
+    "county_name": "Hale County"
+  },
+  "79073": {
+    "county_fips": "48189",
+    "county_name": "Hale County"
+  },
+  "79078": {
+    "county_fips": "48233",
+    "county_name": "Hutchinson County"
+  },
+  "79079": {
+    "county_fips": "48483",
+    "county_name": "Wheeler County"
+  },
+  "79080": {
+    "county_fips": "48233",
+    "county_name": "Hutchinson County"
+  },
+  "79081": {
+    "county_fips": "48195",
+    "county_name": "Hansford County"
+  },
+  "79082": {
+    "county_fips": "48279",
+    "county_name": "Lamb County"
+  },
+  "79083": {
+    "county_fips": "48233",
+    "county_name": "Hutchinson County"
+  },
+  "79084": {
+    "county_fips": "48421",
+    "county_name": "Sherman County"
+  },
+  "79085": {
+    "county_fips": "48069",
+    "county_name": "Castro County"
+  },
+  "79086": {
+    "county_fips": "48421",
+    "county_name": "Sherman County"
+  },
+  "79087": {
+    "county_fips": "48111",
+    "county_name": "Dallam County"
+  },
+  "79088": {
+    "county_fips": "48437",
+    "county_name": "Swisher County"
+  },
+  "79091": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79092": {
+    "county_fips": "48359",
+    "county_name": "Oldham County"
+  },
+  "79093": {
+    "county_fips": "48357",
+    "county_name": "Ochiltree County"
+  },
+  "79094": {
+    "county_fips": "48011",
+    "county_name": "Armstrong County"
+  },
+  "79095": {
+    "county_fips": "48087",
+    "county_name": "Collingsworth County"
+  },
+  "79096": {
+    "county_fips": "48483",
+    "county_name": "Wheeler County"
+  },
+  "79097": {
+    "county_fips": "48065",
+    "county_name": "Carson County"
+  },
+  "79098": {
+    "county_fips": "48117",
+    "county_name": "Deaf Smith County"
+  },
+  "79101": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79102": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79103": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79104": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79106": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79107": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79108": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79109": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79110": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79111": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79118": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79119": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79121": {
+    "county_fips": "48381",
+    "county_name": "Randall County"
+  },
+  "79124": {
+    "county_fips": "48375",
+    "county_name": "Potter County"
+  },
+  "79201": {
+    "county_fips": "48075",
+    "county_name": "Childress County"
+  },
+  "79220": {
+    "county_fips": "48125",
+    "county_name": "Dickens County"
+  },
+  "79223": {
+    "county_fips": "48101",
+    "county_name": "Cottle County"
+  },
+  "79225": {
+    "county_fips": "48197",
+    "county_name": "Hardeman County"
+  },
+  "79226": {
+    "county_fips": "48129",
+    "county_name": "Donley County"
+  },
+  "79227": {
+    "county_fips": "48155",
+    "county_name": "Foard County"
+  },
+  "79229": {
+    "county_fips": "48125",
+    "county_name": "Dickens County"
+  },
+  "79230": {
+    "county_fips": "48075",
+    "county_name": "Childress County"
+  },
+  "79231": {
+    "county_fips": "48153",
+    "county_name": "Floyd County"
+  },
+  "79233": {
+    "county_fips": "48191",
+    "county_name": "Hall County"
+  },
+  "79234": {
+    "county_fips": "48345",
+    "county_name": "Motley County"
+  },
+  "79235": {
+    "county_fips": "48153",
+    "county_name": "Floyd County"
+  },
+  "79236": {
+    "county_fips": "48269",
+    "county_name": "King County"
+  },
+  "79237": {
+    "county_fips": "48129",
+    "county_name": "Donley County"
+  },
+  "79239": {
+    "county_fips": "48191",
+    "county_name": "Hall County"
+  },
+  "79240": {
+    "county_fips": "48129",
+    "county_name": "Donley County"
+  },
+  "79241": {
+    "county_fips": "48153",
+    "county_name": "Floyd County"
+  },
+  "79243": {
+    "county_fips": "48125",
+    "county_name": "Dickens County"
+  },
+  "79244": {
+    "county_fips": "48345",
+    "county_name": "Motley County"
+  },
+  "79245": {
+    "county_fips": "48191",
+    "county_name": "Hall County"
+  },
+  "79247": {
+    "county_fips": "48487",
+    "county_name": "Wilbarger County"
+  },
+  "79248": {
+    "county_fips": "48101",
+    "county_name": "Cottle County"
+  },
+  "79250": {
+    "county_fips": "48189",
+    "county_name": "Hale County"
+  },
+  "79251": {
+    "county_fips": "48087",
+    "county_name": "Collingsworth County"
+  },
+  "79252": {
+    "county_fips": "48197",
+    "county_name": "Hardeman County"
+  },
+  "79255": {
+    "county_fips": "48045",
+    "county_name": "Briscoe County"
+  },
+  "79256": {
+    "county_fips": "48345",
+    "county_name": "Motley County"
+  },
+  "79257": {
+    "county_fips": "48045",
+    "county_name": "Briscoe County"
+  },
+  "79258": {
+    "county_fips": "48153",
+    "county_name": "Floyd County"
+  },
+  "79259": {
+    "county_fips": "48191",
+    "county_name": "Hall County"
+  },
+  "79261": {
+    "county_fips": "48191",
+    "county_name": "Hall County"
+  },
+  "79311": {
+    "county_fips": "48189",
+    "county_name": "Hale County"
+  },
+  "79312": {
+    "county_fips": "48279",
+    "county_name": "Lamb County"
+  },
+  "79313": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79314": {
+    "county_fips": "48079",
+    "county_name": "Cochran County"
+  },
+  "79316": {
+    "county_fips": "48445",
+    "county_name": "Terry County"
+  },
+  "79322": {
+    "county_fips": "48107",
+    "county_name": "Crosby County"
+  },
+  "79323": {
+    "county_fips": "48165",
+    "county_name": "Gaines County"
+  },
+  "79324": {
+    "county_fips": "48017",
+    "county_name": "Bailey County"
+  },
+  "79325": {
+    "county_fips": "48369",
+    "county_name": "Parmer County"
+  },
+  "79326": {
+    "county_fips": "48279",
+    "county_name": "Lamb County"
+  },
+  "79329": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79330": {
+    "county_fips": "48169",
+    "county_name": "Garza County"
+  },
+  "79331": {
+    "county_fips": "48115",
+    "county_name": "Dawson County"
+  },
+  "79336": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79339": {
+    "county_fips": "48279",
+    "county_name": "Lamb County"
+  },
+  "79342": {
+    "county_fips": "48165",
+    "county_name": "Gaines County"
+  },
+  "79343": {
+    "county_fips": "48107",
+    "county_name": "Crosby County"
+  },
+  "79344": {
+    "county_fips": "48017",
+    "county_name": "Bailey County"
+  },
+  "79345": {
+    "county_fips": "48445",
+    "county_name": "Terry County"
+  },
+  "79346": {
+    "county_fips": "48079",
+    "county_name": "Cochran County"
+  },
+  "79347": {
+    "county_fips": "48017",
+    "county_name": "Bailey County"
+  },
+  "79350": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79351": {
+    "county_fips": "48115",
+    "county_name": "Dawson County"
+  },
+  "79353": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79355": {
+    "county_fips": "48501",
+    "county_name": "Yoakum County"
+  },
+  "79356": {
+    "county_fips": "48169",
+    "county_name": "Garza County"
+  },
+  "79357": {
+    "county_fips": "48107",
+    "county_name": "Crosby County"
+  },
+  "79358": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79359": {
+    "county_fips": "48165",
+    "county_name": "Gaines County"
+  },
+  "79360": {
+    "county_fips": "48165",
+    "county_name": "Gaines County"
+  },
+  "79363": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79364": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79366": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79367": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79369": {
+    "county_fips": "48279",
+    "county_name": "Lamb County"
+  },
+  "79370": {
+    "county_fips": "48125",
+    "county_name": "Dickens County"
+  },
+  "79371": {
+    "county_fips": "48017",
+    "county_name": "Bailey County"
+  },
+  "79372": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79373": {
+    "county_fips": "48305",
+    "county_name": "Lynn County"
+  },
+  "79376": {
+    "county_fips": "48501",
+    "county_name": "Yoakum County"
+  },
+  "79377": {
+    "county_fips": "48115",
+    "county_name": "Dawson County"
+  },
+  "79378": {
+    "county_fips": "48445",
+    "county_name": "Terry County"
+  },
+  "79379": {
+    "county_fips": "48079",
+    "county_name": "Cochran County"
+  },
+  "79380": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79381": {
+    "county_fips": "48305",
+    "county_name": "Lynn County"
+  },
+  "79382": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79383": {
+    "county_fips": "48305",
+    "county_name": "Lynn County"
+  },
+  "79401": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79402": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79403": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79404": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79406": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79407": {
+    "county_fips": "48219",
+    "county_name": "Hockley County"
+  },
+  "79410": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79411": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79412": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79413": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79414": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79415": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79416": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79423": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79424": {
+    "county_fips": "48303",
+    "county_name": "Lubbock County"
+  },
+  "79501": {
+    "county_fips": "48253",
+    "county_name": "Jones County"
+  },
+  "79502": {
+    "county_fips": "48433",
+    "county_name": "Stonewall County"
+  },
+  "79503": {
+    "county_fips": "48253",
+    "county_name": "Jones County"
+  },
+  "79504": {
+    "county_fips": "48059",
+    "county_name": "Callahan County"
+  },
+  "79505": {
+    "county_fips": "48275",
+    "county_name": "Knox County"
+  },
+  "79506": {
+    "county_fips": "48353",
+    "county_name": "Nolan County"
+  },
+  "79508": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79510": {
+    "county_fips": "48059",
+    "county_name": "Callahan County"
+  },
+  "79511": {
+    "county_fips": "48227",
+    "county_name": "Howard County"
+  },
+  "79512": {
+    "county_fips": "48335",
+    "county_name": "Mitchell County"
+  },
+  "79517": {
+    "county_fips": "48033",
+    "county_name": "Borden County"
+  },
+  "79518": {
+    "county_fips": "48263",
+    "county_name": "Kent County"
+  },
+  "79519": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "79520": {
+    "county_fips": "48253",
+    "county_name": "Jones County"
+  },
+  "79521": {
+    "county_fips": "48207",
+    "county_name": "Haskell County"
+  },
+  "79525": {
+    "county_fips": "48253",
+    "county_name": "Jones County"
+  },
+  "79526": {
+    "county_fips": "48415",
+    "county_name": "Scurry County"
+  },
+  "79527": {
+    "county_fips": "48415",
+    "county_name": "Scurry County"
+  },
+  "79528": {
+    "county_fips": "48263",
+    "county_name": "Kent County"
+  },
+  "79529": {
+    "county_fips": "48275",
+    "county_name": "Knox County"
+  },
+  "79530": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79532": {
+    "county_fips": "48335",
+    "county_name": "Mitchell County"
+  },
+  "79533": {
+    "county_fips": "48417",
+    "county_name": "Shackelford County"
+  },
+  "79534": {
+    "county_fips": "48151",
+    "county_name": "Fisher County"
+  },
+  "79535": {
+    "county_fips": "48353",
+    "county_name": "Nolan County"
+  },
+  "79536": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79537": {
+    "county_fips": "48353",
+    "county_name": "Nolan County"
+  },
+  "79538": {
+    "county_fips": "48083",
+    "county_name": "Coleman County"
+  },
+  "79539": {
+    "county_fips": "48207",
+    "county_name": "Haskell County"
+  },
+  "79540": {
+    "county_fips": "48433",
+    "county_name": "Stonewall County"
+  },
+  "79541": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79543": {
+    "county_fips": "48151",
+    "county_name": "Fisher County"
+  },
+  "79544": {
+    "county_fips": "48207",
+    "county_name": "Haskell County"
+  },
+  "79545": {
+    "county_fips": "48353",
+    "county_name": "Nolan County"
+  },
+  "79546": {
+    "county_fips": "48151",
+    "county_name": "Fisher County"
+  },
+  "79547": {
+    "county_fips": "48207",
+    "county_name": "Haskell County"
+  },
+  "79548": {
+    "county_fips": "48207",
+    "county_name": "Haskell County"
+  },
+  "79549": {
+    "county_fips": "48415",
+    "county_name": "Scurry County"
+  },
+  "79553": {
+    "county_fips": "48253",
+    "county_name": "Jones County"
+  },
+  "79556": {
+    "county_fips": "48353",
+    "county_name": "Nolan County"
+  },
+  "79560": {
+    "county_fips": "48151",
+    "county_name": "Fisher County"
+  },
+  "79561": {
+    "county_fips": "48353",
+    "county_name": "Nolan County"
+  },
+  "79562": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79563": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79565": {
+    "county_fips": "48335",
+    "county_name": "Mitchell County"
+  },
+  "79566": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79567": {
+    "county_fips": "48399",
+    "county_name": "Runnels County"
+  },
+  "79601": {
+    "county_fips": "48253",
+    "county_name": "Jones County"
+  },
+  "79602": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79603": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79605": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79606": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79607": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79699": {
+    "county_fips": "48441",
+    "county_name": "Taylor County"
+  },
+  "79701": {
+    "county_fips": "48329",
+    "county_name": "Midland County"
+  },
+  "79703": {
+    "county_fips": "48329",
+    "county_name": "Midland County"
+  },
+  "79705": {
+    "county_fips": "48317",
+    "county_name": "Martin County"
+  },
+  "79706": {
+    "county_fips": "48329",
+    "county_name": "Midland County"
+  },
+  "79707": {
+    "county_fips": "48329",
+    "county_name": "Midland County"
+  },
+  "79713": {
+    "county_fips": "48317",
+    "county_name": "Martin County"
+  },
+  "79714": {
+    "county_fips": "48003",
+    "county_name": "Andrews County"
+  },
+  "79718": {
+    "county_fips": "48389",
+    "county_name": "Reeves County"
+  },
+  "79719": {
+    "county_fips": "48475",
+    "county_name": "Ward County"
+  },
+  "79720": {
+    "county_fips": "48227",
+    "county_name": "Howard County"
+  },
+  "79721": {
+    "county_fips": "48227",
+    "county_name": "Howard County"
+  },
+  "79730": {
+    "county_fips": "48371",
+    "county_name": "Pecos County"
+  },
+  "79731": {
+    "county_fips": "48103",
+    "county_name": "Crane County"
+  },
+  "79733": {
+    "county_fips": "48227",
+    "county_name": "Howard County"
+  },
+  "79734": {
+    "county_fips": "48243",
+    "county_name": "Jeff Davis County"
+  },
+  "79735": {
+    "county_fips": "48371",
+    "county_name": "Pecos County"
+  },
+  "79738": {
+    "county_fips": "48033",
+    "county_name": "Borden County"
+  },
+  "79739": {
+    "county_fips": "48173",
+    "county_name": "Glasscock County"
+  },
+  "79741": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79742": {
+    "county_fips": "48475",
+    "county_name": "Ward County"
+  },
+  "79743": {
+    "county_fips": "48371",
+    "county_name": "Pecos County"
+  },
+  "79744": {
+    "county_fips": "48105",
+    "county_name": "Crockett County"
+  },
+  "79745": {
+    "county_fips": "48495",
+    "county_name": "Winkler County"
+  },
+  "79748": {
+    "county_fips": "48227",
+    "county_name": "Howard County"
+  },
+  "79749": {
+    "county_fips": "48317",
+    "county_name": "Martin County"
+  },
+  "79752": {
+    "county_fips": "48461",
+    "county_name": "Upton County"
+  },
+  "79754": {
+    "county_fips": "48301",
+    "county_name": "Loving County"
+  },
+  "79755": {
+    "county_fips": "48461",
+    "county_name": "Upton County"
+  },
+  "79756": {
+    "county_fips": "48475",
+    "county_name": "Ward County"
+  },
+  "79758": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79759": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79761": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79762": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79763": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79764": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79765": {
+    "county_fips": "48329",
+    "county_name": "Midland County"
+  },
+  "79766": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79769": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79770": {
+    "county_fips": "48389",
+    "county_name": "Reeves County"
+  },
+  "79772": {
+    "county_fips": "48389",
+    "county_name": "Reeves County"
+  },
+  "79776": {
+    "county_fips": "48135",
+    "county_name": "Ector County"
+  },
+  "79777": {
+    "county_fips": "48475",
+    "county_name": "Ward County"
+  },
+  "79778": {
+    "county_fips": "48461",
+    "county_name": "Upton County"
+  },
+  "79780": {
+    "county_fips": "48389",
+    "county_name": "Reeves County"
+  },
+  "79781": {
+    "county_fips": "48443",
+    "county_name": "Terrell County"
+  },
+  "79782": {
+    "county_fips": "48317",
+    "county_name": "Martin County"
+  },
+  "79783": {
+    "county_fips": "48317",
+    "county_name": "Martin County"
+  },
+  "79785": {
+    "county_fips": "48389",
+    "county_name": "Reeves County"
+  },
+  "79788": {
+    "county_fips": "48475",
+    "county_name": "Ward County"
+  },
+  "79789": {
+    "county_fips": "48495",
+    "county_name": "Winkler County"
+  },
+  "79821": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79830": {
+    "county_fips": "48043",
+    "county_name": "Brewster County"
+  },
+  "79832": {
+    "county_fips": "48043",
+    "county_name": "Brewster County"
+  },
+  "79834": {
+    "county_fips": "48043",
+    "county_name": "Brewster County"
+  },
+  "79835": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79836": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79837": {
+    "county_fips": "48229",
+    "county_name": "Hudspeth County"
+  },
+  "79838": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79839": {
+    "county_fips": "48229",
+    "county_name": "Hudspeth County"
+  },
+  "79842": {
+    "county_fips": "48043",
+    "county_name": "Brewster County"
+  },
+  "79843": {
+    "county_fips": "48377",
+    "county_name": "Presidio County"
+  },
+  "79845": {
+    "county_fips": "48377",
+    "county_name": "Presidio County"
+  },
+  "79846": {
+    "county_fips": "48377",
+    "county_name": "Presidio County"
+  },
+  "79847": {
+    "county_fips": "48109",
+    "county_name": "Culberson County"
+  },
+  "79848": {
+    "county_fips": "48443",
+    "county_name": "Terrell County"
+  },
+  "79849": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79851": {
+    "county_fips": "48229",
+    "county_name": "Hudspeth County"
+  },
+  "79852": {
+    "county_fips": "48043",
+    "county_name": "Brewster County"
+  },
+  "79853": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79854": {
+    "county_fips": "48243",
+    "county_name": "Jeff Davis County"
+  },
+  "79855": {
+    "county_fips": "48109",
+    "county_name": "Culberson County"
+  },
+  "79901": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79902": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79903": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79904": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79905": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79906": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79907": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79908": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79911": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79912": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79915": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79916": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79918": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79920": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79922": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79924": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79925": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79927": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79928": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79930": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79932": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79934": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79935": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79936": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "79938": {
+    "county_fips": "48141",
+    "county_name": "El Paso County"
+  },
+  "88430": {
+    "county_fips": "48359",
+    "county_name": "Oldham County"
+  }
+}

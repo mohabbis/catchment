@@ -1,0 +1,1184 @@
+[
+  {
+    "npi": "1356588446",
+    "org_name": "BEHAVIOR ANALYTIC SOLUTIONS, LLC",
+    "dba_name": "PEDIATRIC REHABILITATION AND BEHAVIORAL SERVICES",
+    "address_line1": "4502 CENTERVIEW",
+    "city": "SAN ANTONIO",
+    "state": "TX",
+    "zip": "78228",
+    "all_matched_taxonomies": [
+      "Day Training, Developmentally Disabled Services",
+      "Occupational Therapist",
+      "Occupational Therapist, Feeding, Eating & Swallowing",
+      "Occupational Therapist, Pediatrics",
+      "Behavior Analyst",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT"
+    ]
+  },
+  {
+    "npi": "1477875656",
+    "org_name": "PEDIATRIC ACTION THERAPY, LLC",
+    "dba_name": null,
+    "address_line1": "12 DER FLUGPLATZ",
+    "city": "BOERNE",
+    "state": "TX",
+    "zip": "78006",
+    "all_matched_taxonomies": [
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  ",
+      "Behavior Analyst"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1689262313",
+    "org_name": "PEDIATRIC GI OF EL PASO, PLLC",
+    "dba_name": null,
+    "address_line1": "1351 N ZARAGOZA RD STE 1",
+    "city": "EL PASO",
+    "state": "TX",
+    "zip": "79936",
+    "all_matched_taxonomies": [
+      "Dietitian, Registered",
+      "Speech-Language Pathologist,  ",
+      "Nurse Practitioner, Pediatrics",
+      "Pediatrics, Pediatric Gastroenterology"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1386085355",
+    "org_name": "PEDIATRIC HELPING HANDS THERAPY, LLC",
+    "dba_name": null,
+    "address_line1": "2 CHELSEA BLVD",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77006",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Pediatrics",
+      "Speech-Language Pathologist,  ",
+      "Occupational Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1073736765",
+    "org_name": "PEDIATRIC NETWORK FOUNDATION",
+    "dba_name": "THE SENSORY STAR CENTER OF TEXAS",
+    "address_line1": "6464 EAST LOVERS LANE",
+    "city": "DALLAS",
+    "state": "TX",
+    "zip": "75214",
+    "all_matched_taxonomies": [
+      "Physical Therapist",
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1316709173",
+    "org_name": "PEDIATRIC SPEECH STARS, PLLC",
+    "dba_name": null,
+    "address_line1": "1560 E SOUTHLAKE BLVD STE 100",
+    "city": "SOUTHLAKE",
+    "state": "TX",
+    "zip": "76092",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1982120044",
+    "org_name": "PEDIATRIC SPEECH THERAPY OF NORTH TEXAS",
+    "dba_name": null,
+    "address_line1": "2715 SEABISCUIT RD",
+    "city": "CELINA",
+    "state": "TX",
+    "zip": "75009",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1174212773",
+    "org_name": "PEDIATRIC SPEECH THERAPY SOLUTIONS, PLLC",
+    "dba_name": null,
+    "address_line1": "2770 SUMMER ST APT 192",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77007",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1295374627",
+    "org_name": "PEDIATRIC THERAPY ASSOCIATES-SPEECH, PLLC",
+    "dba_name": null,
+    "address_line1": "1001 LOUISIANA AVE STE 402",
+    "city": "CORPUS CHRISTI",
+    "state": "TX",
+    "zip": "78404",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1508067935",
+    "org_name": "PEDIATRIC THERAPY CENTER",
+    "dba_name": null,
+    "address_line1": "8323 SOUTHWEST FWY",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77074",
+    "all_matched_taxonomies": [
+      "Physical Therapist",
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1770473530",
+    "org_name": "PEDIATRIC THERAPY SOLUTIONS OF TEXAS PLLC",
+    "dba_name": "N/A",
+    "address_line1": "6230 PEBBLE CANYON CT",
+    "city": "KATY",
+    "state": "TX",
+    "zip": "77450",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1902496953",
+    "org_name": "PEDIATRIC THERAPY TOGETHER LLC",
+    "dba_name": null,
+    "address_line1": "1848 LONE STAR RD STE 103",
+    "city": "MANSFIELD",
+    "state": "TX",
+    "zip": "76063",
+    "all_matched_taxonomies": [
+      "Behavior Analyst",
+      "Psychologist",
+      "Assistant Behavior Analyst",
+      "Behavior Technician",
+      "Dietitian, Registered",
+      "Art Therapist",
+      "Developmental Therapist",
+      "Occupational Therapy Assistant",
+      "Physical Therapy Assistant",
+      "Music Therapist",
+      "Occupational Therapist",
+      "Specialist/Technologist, Speech-Language Assistant",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT"
+    ]
+  },
+  {
+    "npi": "1831574185",
+    "org_name": "PEDIATRIC THERAPY WORKS, PLLC",
+    "dba_name": null,
+    "address_line1": "370 GREEN HOLLOW DR",
+    "city": "TEMPLE",
+    "state": "TX",
+    "zip": "76502",
+    "all_matched_taxonomies": [
+      "Physical Therapist",
+      "Occupational Therapist",
+      "Physical Therapist, Pediatrics",
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1255492864",
+    "org_name": "PEDIATRIC THERAPY, INC.",
+    "dba_name": null,
+    "address_line1": "3605 NE LOOP 286 STE 1800",
+    "city": "PARIS",
+    "state": "TX",
+    "zip": "75460",
+    "all_matched_taxonomies": [
+      "Behavior Analyst",
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  ",
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1730907791",
+    "org_name": "PEDIATRIC WORLD OF THERAPY PLLC",
+    "dba_name": null,
+    "address_line1": "3033 CHIMNEY ROCK RD STE 601",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77056",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1992969133",
+    "org_name": "PROGRESSIVE MILESTONES CORPORATION",
+    "dba_name": "PEDIATRIC THERAPY SOLUTIONS",
+    "address_line1": "5600 NW CENTRAL DR STE 272",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77092",
+    "all_matched_taxonomies": [
+      "Counselor, Mental Health",
+      "Counselor, Professional",
+      "Psychologist, Intellectual & Developmental Disabilities",
+      "Occupational Therapy Assistant",
+      "Physical Therapist, Pediatrics",
+      "Physical Therapy Assistant",
+      "Occupational Therapist, Pediatrics",
+      "Specialist/Technologist, Speech-Language Assistant",
+      "Speech-Language Pathologist,  ",
+      "Community/Behavioral Health",
+      "Home Health"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1245342773",
+    "org_name": "S. POTTS AND PROFESSIONALS, INC.",
+    "dba_name": "PEDIATRIC THERAPY ASSOCIATES",
+    "address_line1": "8527 VILLAGE DR STE 107",
+    "city": "SAN ANTONIO",
+    "state": "TX",
+    "zip": "78217",
+    "all_matched_taxonomies": [
+      "Occupational Therapy Assistant",
+      "Physical Therapist, Pediatrics",
+      "Physical Therapy Assistant",
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  ",
+      "Clinic/Center, Rehabilitation, Comprehensive Outpatient Rehabilitation Facility (CORF)"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1952074486",
+    "org_name": "TWINKLE AUTISM THERAPY, LLC",
+    "dba_name": "PEDIATRIC PSYCHOLOGICAL TESTING SERVICES",
+    "address_line1": "12175 NETWORK BLVD",
+    "city": "SAN ANTONIO",
+    "state": "TX",
+    "zip": "78249",
+    "all_matched_taxonomies": [
+      "Behavior Analyst",
+      "Psychologist",
+      "Psychologist, Cognitive & Behavioral",
+      "Psychologist, Counseling",
+      "Psychologist, Clinical Child & Adolescent",
+      "Psychologist, Intellectual & Developmental Disabilities",
+      "Behavior Technician",
+      "Psychiatry & Neurology, Child & Adolescent Psychiatry",
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  ",
+      "Community/Behavioral Health"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1558311662",
+    "org_name": "CHERYL E. WANEK",
+    "dba_name": "KIDS IN MOTION",
+    "address_line1": "5211 N MCCOLL RD",
+    "city": "MCALLEN",
+    "state": "TX",
+    "zip": "78504",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  ",
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1457887887",
+    "org_name": "KIDS AND ADULTS THERAPY SERVICES",
+    "dba_name": null,
+    "address_line1": "21304 PROVINCIAL BLVD",
+    "city": "KATY",
+    "state": "TX",
+    "zip": "77450",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1528218120",
+    "org_name": "KIDS BRAIN, LLC",
+    "dba_name": null,
+    "address_line1": "13500 MIDWAY RD.,",
+    "city": "DALLAS",
+    "state": "TX",
+    "zip": "75244",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Pediatrics",
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  ",
+      "Psychologist, Clinical Child & Adolescent"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1588201081",
+    "org_name": "KIDS CLUB THERAPY CENTER LLC",
+    "dba_name": null,
+    "address_line1": "1550 N BROADWAY STE B",
+    "city": "ELSA",
+    "state": "TX",
+    "zip": "78543",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1962295519",
+    "org_name": "KIDS FIRST THERAPY CENTER INC.",
+    "dba_name": "KIDS FIRST THERAPY CENTER INC TX",
+    "address_line1": "8822 MUGWORT DR",
+    "city": "RICHMOND",
+    "state": "TX",
+    "zip": "77469",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Physical Therapist",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1275714370",
+    "org_name": "KIDS IN PROGRESS PLLC",
+    "dba_name": null,
+    "address_line1": "2116 W GRIFFIN PARKWAY",
+    "city": "MISSION",
+    "state": "TX",
+    "zip": "78572",
+    "all_matched_taxonomies": [
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  ",
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1235162264",
+    "org_name": "KIDS PLAYHOUSE REHAB LP",
+    "dba_name": "KIDS PLAYHOUSE REHAB",
+    "address_line1": "3601 BUDDY OWENS AVE STE 100",
+    "city": "MCALLEN",
+    "state": "TX",
+    "zip": "78504",
+    "all_matched_taxonomies": [
+      "Nutritionist, Nutrition, Education",
+      "Physical Therapist",
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  ",
+      "Clinic/Center, Rehabilitation, Comprehensive Outpatient Rehabilitation Facility (CORF)"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1154593622",
+    "org_name": "KIDS T.L.C. THE LANGUAGE CONNECTION LLC",
+    "dba_name": null,
+    "address_line1": "2610 ALLEN ST",
+    "city": "DALLAS",
+    "state": "TX",
+    "zip": "75204",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1225328297",
+    "org_name": "KIDS THERAPY BY DESIGN",
+    "dba_name": null,
+    "address_line1": "12922 AMBROSE DR",
+    "city": "FRISCO",
+    "state": "TX",
+    "zip": "75035",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1194073353",
+    "org_name": "KIDS THERAPY SET, LLC",
+    "dba_name": null,
+    "address_line1": "500 SOUTH ST UNIT 500",
+    "city": "VIDOR",
+    "state": "TX",
+    "zip": "77662",
+    "all_matched_taxonomies": [
+      "Physical Therapist",
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  ",
+      "Clinic/Center, Multi-Specialty"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1407923808",
+    "org_name": "KIDS THERAPY SPECIALTIES LLC",
+    "dba_name": null,
+    "address_line1": "4900 SANGER AVE",
+    "city": "WACO",
+    "state": "TX",
+    "zip": "76710",
+    "all_matched_taxonomies": [
+      "Behavior Analyst",
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  ",
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1255606232",
+    "org_name": "KIDS THERAPY SPECIALTIES, LLC",
+    "dba_name": null,
+    "address_line1": "4900 SANGER AVE",
+    "city": "WACO",
+    "state": "TX",
+    "zip": "76710",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  ",
+      "Occupational Therapist",
+      "Behavior Analyst",
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1619814274",
+    "org_name": "KIDSPEAK, LLC",
+    "dba_name": null,
+    "address_line1": "4530 BELTWAY DR",
+    "city": "ADDISON",
+    "state": "TX",
+    "zip": "75001",
+    "all_matched_taxonomies": [
+      "Specialist/Technologist, Speech-Language Assistant",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1235137506",
+    "org_name": "RENAISSANCE OUTPATIENT REHABILITATION CENTER, LLC.",
+    "dba_name": "KIDS KORNER AT RENAISSANCE",
+    "address_line1": "910 E 8TH ST STE 7",
+    "city": "WESLACO",
+    "state": "TX",
+    "zip": "78596",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  ",
+      "Physical Therapist",
+      "Occupational Therapist",
+      "Respiratory Therapist, Registered",
+      "Clinic/Center, Rehabilitation, Comprehensive Outpatient Rehabilitation Facility (CORF)"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1700041258",
+    "org_name": "ROSEN THERAPY LLC",
+    "dba_name": "KIDS SPEAK",
+    "address_line1": "12722 CONCHO DR",
+    "city": "FRISCO",
+    "state": "TX",
+    "zip": "75034",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1215253141",
+    "org_name": "S & L PEDIATRIC THERAPY SERVICES LLC",
+    "dba_name": "KIDS IN MOTION",
+    "address_line1": "5211 N MCCOLL RD",
+    "city": "MCALLEN",
+    "state": "TX",
+    "zip": "78504",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1649519844",
+    "org_name": "THERAPY BY DESIGN, LLC",
+    "dba_name": "KIDS THERAPY BY DESIGN",
+    "address_line1": "14241 DALLAS PKWY",
+    "city": "DALLAS",
+    "state": "TX",
+    "zip": "75254",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  ",
+      "Social Worker",
+      "Home Health"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1912047093",
+    "org_name": "THERAPY CONSULTANTS OF LAREDO",
+    "dba_name": "KIDS THERAPY CONSULTANTS",
+    "address_line1": "1605 E HILLSIDE RD",
+    "city": "LAREDO",
+    "state": "TX",
+    "zip": "78041",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  ",
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1427278316",
+    "org_name": "CENTRAL COUNTIES CENTER FOR MHMR SERVICES",
+    "dba_name": "CHILDTEAM ECI",
+    "address_line1": "304 S 22ND ST",
+    "city": "TEMPLE",
+    "state": "TX",
+    "zip": "76501",
+    "all_matched_taxonomies": [
+      "Dietitian, Registered",
+      "Speech-Language Pathologist,  ",
+      "Case Manager/Care Coordinator",
+      "Occupational Therapist",
+      "Physical Therapist",
+      "Early Intervention Provider Agency"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1174719983",
+    "org_name": "CHILDREN FIRST",
+    "dba_name": null,
+    "address_line1": "1409 N STUART PLACE RD",
+    "city": "HARLINGEN",
+    "state": "TX",
+    "zip": "78552",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1184665317",
+    "org_name": "CHILDREN FIRST PEDIATRIC REHABILITATION",
+    "dba_name": null,
+    "address_line1": "1145 ROSS ST",
+    "city": "SAN BENITO",
+    "state": "TX",
+    "zip": "78586",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1346715786",
+    "org_name": "CHILDREN'S LANGUAGE CENTER, LLC",
+    "dba_name": null,
+    "address_line1": "5143 YELLOWSTONE BLVD",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77021",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  ",
+      "Clinic/Center"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1619162849",
+    "org_name": "CHILDREN'S LANGUAGE DEVELOPMENT CENTER",
+    "dba_name": null,
+    "address_line1": "4108 W SPRING CREEK PKWY STE E300A",
+    "city": "PLANO",
+    "state": "TX",
+    "zip": "75024",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT"
+    ]
+  },
+  {
+    "npi": "1942400817",
+    "org_name": "CHILDREN'S REHABILITATION CLINIC",
+    "dba_name": null,
+    "address_line1": "1620 E 8TH ST STE 3",
+    "city": "WESLACO",
+    "state": "TX",
+    "zip": "78596",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  ",
+      "Occupational Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT"
+    ]
+  },
+  {
+    "npi": "1578041398",
+    "org_name": "CHILDREN'S SPOT 4 THERAPY, LLC",
+    "dba_name": null,
+    "address_line1": "2300 E RANCIER AVE STE 106",
+    "city": "KILLEEN",
+    "state": "TX",
+    "zip": "76543",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  ",
+      "Occupational Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT"
+    ]
+  },
+  {
+    "npi": "1316532955",
+    "org_name": "CHILDRENS HOME TREATMENT SERVICES, LLC",
+    "dba_name": null,
+    "address_line1": "315 CALLE DEL NORTE STE 206-207",
+    "city": "LAREDO",
+    "state": "TX",
+    "zip": "78041",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  ",
+      "Home Health"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT"
+    ]
+  },
+  {
+    "npi": "1457601379",
+    "org_name": "CHILDS PLAY THERAPY SERVICES",
+    "dba_name": null,
+    "address_line1": "3505 TYLER AVE",
+    "city": "MCALLEN",
+    "state": "TX",
+    "zip": "78503",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT"
+    ]
+  },
+  {
+    "npi": "1225486046",
+    "org_name": "CLC THERAPY SOLUTIONS LLC",
+    "dba_name": "CHILDREN'S THERAPY SOLUTIONS",
+    "address_line1": "255 ELK DR",
+    "city": "BURLESON",
+    "state": "TX",
+    "zip": "76028",
+    "all_matched_taxonomies": [
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP"
+    ]
+  },
+  {
+    "npi": "1851304802",
+    "org_name": "CTOA LLC.",
+    "dba_name": null,
+    "address_line1": "3211 HANCOCK DR",
+    "city": "AUSTIN",
+    "state": "TX",
+    "zip": "78731",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Pediatrics",
+      "Occupational Therapist, Pediatrics",
+      "Speech-Language Pathologist,  "
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1780924274",
+    "org_name": "J & A REHAB GROUP LLC",
+    "dba_name": "CHILDREN'S THERAPY WORLD",
+    "address_line1": "512 S WESTGATE DR STE A",
+    "city": "WESLACO",
+    "state": "TX",
+    "zip": "78596",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Speech-Language Pathologist,  ",
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "SLP",
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1902024912",
+    "org_name": "PEDIATRIC THERAPY & ACTIVITY CENTER",
+    "dba_name": null,
+    "address_line1": "2606 BRANDI LANE",
+    "city": "CORINTH",
+    "state": "TX",
+    "zip": "76208",
+    "all_matched_taxonomies": [
+      "Occupational Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "OT"
+    ]
+  },
+  {
+    "npi": "1447447180",
+    "org_name": "PEDIATRIC THERAPY ASSOCIATES OF FW",
+    "dba_name": null,
+    "address_line1": "7500 PEBBLE DR",
+    "city": "FORT WORTH",
+    "state": "TX",
+    "zip": "76118",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1316147598",
+    "org_name": "KIDSENSATIONS",
+    "dba_name": null,
+    "address_line1": "3109 W SLAUGHTER LN STE B",
+    "city": "AUSTIN",
+    "state": "TX",
+    "zip": "78748",
+    "all_matched_taxonomies": [
+      "Occupational Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "OT"
+    ]
+  },
+  {
+    "npi": "1811159684",
+    "org_name": "KIDSTEPS PEDIATRIC THERAPY CENTER, P. C.",
+    "dba_name": null,
+    "address_line1": "9595 US HIGHWAY 87 E",
+    "city": "SAN ANTONIO",
+    "state": "TX",
+    "zip": "78263",
+    "all_matched_taxonomies": [
+      "Physical Therapist",
+      "Occupational Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1730757469",
+    "org_name": "KIDZONE THERAPY, PLLC DBA KIDSQUEST THERAPY",
+    "dba_name": "KIDSQUEST THERAPY",
+    "address_line1": "303 WALNUT ST",
+    "city": "HOWE",
+    "state": "TX",
+    "zip": "75459",
+    "all_matched_taxonomies": [
+      "Physical Medicine & Rehabilitation, Pediatric Rehabilitation Medicine",
+      "Occupational Therapist",
+      "Clinic/Center, Rehabilitation"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "OT"
+    ]
+  },
+  {
+    "npi": "1376789917",
+    "org_name": "CHILD THERAPY HEALING OASIS, PLLC",
+    "dba_name": null,
+    "address_line1": "8810 THUNDERBIRD RD",
+    "city": "AUSTIN",
+    "state": "TX",
+    "zip": "78736",
+    "all_matched_taxonomies": [
+      "Occupational Therapist",
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1699293753",
+    "org_name": "CHSR, LLC",
+    "dba_name": "CHILDREN'S HEALTH ANDREWS INSTITUTE FOR ORTHOPAEDICS AND SPORTS",
+    "address_line1": "6950 STADIUM LN",
+    "city": "FRISCO",
+    "state": "TX",
+    "zip": "75033",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Orthopedic",
+      "Clinic/Center, Rehabilitation",
+      "Occupational Therapist",
+      "Physical Therapy Assistant",
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "OT",
+      "PT"
+    ]
+  },
+  {
+    "npi": "1699015990",
+    "org_name": "PEDIATRIC AND SPORTS PHYSICAL THERAPY PLLC",
+    "dba_name": null,
+    "address_line1": "211 REGENCY DR",
+    "city": "WYLIE",
+    "state": "TX",
+    "zip": "75098",
+    "all_matched_taxonomies": [
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1902146152",
+    "org_name": "PEDIATRIC AND SPORTS PHYSICAL THERAPY PLLC",
+    "dba_name": null,
+    "address_line1": "211 REGENCY DRIVE",
+    "city": "WYLIE",
+    "state": "TX",
+    "zip": "75098",
+    "all_matched_taxonomies": [
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1952785107",
+    "org_name": "PEDIATRIC PHYSICAL THERAPY SERVICES",
+    "dba_name": null,
+    "address_line1": "15915 RESTON BRIDGE DR",
+    "city": "CYPRESS",
+    "state": "TX",
+    "zip": "77429",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1710324025",
+    "org_name": "PEDIATRIC THERAPEAS PLLC",
+    "dba_name": null,
+    "address_line1": "4801 TROUP HWY STE 800",
+    "city": "TYLER",
+    "state": "TX",
+    "zip": "75703",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1295058253",
+    "org_name": "PEDIATRIC THERAPY OF TEXAS",
+    "dba_name": null,
+    "address_line1": "7520 HORNWOOD DR APT 904",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77036",
+    "all_matched_taxonomies": [
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1154643583",
+    "org_name": "PEDIATRIC THERAPY SERVICES",
+    "dba_name": null,
+    "address_line1": "31 N MISTY CANYON PL",
+    "city": "THE WOODLANDS",
+    "state": "TX",
+    "zip": "77385",
+    "all_matched_taxonomies": [
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1194820399",
+    "org_name": "PEDIATRICS PLUS THERAPY SERVICES, LLC",
+    "dba_name": null,
+    "address_line1": "12805 GULF FWY",
+    "city": "HOUSTON",
+    "state": "TX",
+    "zip": "77034",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1043529217",
+    "org_name": "KIDS UNLIMITED THERAPY FUN AND FITNESS CENTER, P.C.",
+    "dba_name": null,
+    "address_line1": "6755 PHELAN BLVD",
+    "city": "BEAUMONT",
+    "state": "TX",
+    "zip": "77706",
+    "all_matched_taxonomies": [
+      "Physical Therapist"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  },
+  {
+    "npi": "1902907868",
+    "org_name": "CHILDRENS OCCUPATIONAL, PHYSICAL, SPEECH THERAPY SERVICES, PLLC",
+    "dba_name": null,
+    "address_line1": "6102 SPICEWOOD SPRINGS RD",
+    "city": "AUSTIN",
+    "state": "TX",
+    "zip": "78759",
+    "all_matched_taxonomies": [
+      "Physical Therapist, Pediatrics"
+    ],
+    "pediatric_signal": true,
+    "provider_types": [
+      "PT"
+    ]
+  }
+]

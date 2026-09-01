@@ -1,0 +1,1272 @@
+[
+  {
+    "county_fips": "48001",
+    "county_name": "Anderson County",
+    "population_under_18": 11217
+  },
+  {
+    "county_fips": "48003",
+    "county_name": "Andrews County",
+    "population_under_18": 5697
+  },
+  {
+    "county_fips": "48005",
+    "county_name": "Angelina County",
+    "population_under_18": 22162
+  },
+  {
+    "county_fips": "48007",
+    "county_name": "Aransas County",
+    "population_under_18": 4249
+  },
+  {
+    "county_fips": "48009",
+    "county_name": "Archer County",
+    "population_under_18": 2012
+  },
+  {
+    "county_fips": "48011",
+    "county_name": "Armstrong County",
+    "population_under_18": 409
+  },
+  {
+    "county_fips": "48013",
+    "county_name": "Atascosa County",
+    "population_under_18": 13404
+  },
+  {
+    "county_fips": "48015",
+    "county_name": "Austin County",
+    "population_under_18": 7242
+  },
+  {
+    "county_fips": "48017",
+    "county_name": "Bailey County",
+    "population_under_18": 1973
+  },
+  {
+    "county_fips": "48019",
+    "county_name": "Bandera County",
+    "population_under_18": 3596
+  },
+  {
+    "county_fips": "48021",
+    "county_name": "Bastrop County",
+    "population_under_18": 26574
+  },
+  {
+    "county_fips": "48023",
+    "county_name": "Baylor County",
+    "population_under_18": 806
+  },
+  {
+    "county_fips": "48025",
+    "county_name": "Bee County",
+    "population_under_18": 6358
+  },
+  {
+    "county_fips": "48027",
+    "county_name": "Bell County",
+    "population_under_18": 105006
+  },
+  {
+    "county_fips": "48029",
+    "county_name": "Bexar County",
+    "population_under_18": 508025
+  },
+  {
+    "county_fips": "48031",
+    "county_name": "Blanco County",
+    "population_under_18": 2146
+  },
+  {
+    "county_fips": "48033",
+    "county_name": "Borden County",
+    "population_under_18": 240
+  },
+  {
+    "county_fips": "48035",
+    "county_name": "Bosque County",
+    "population_under_18": 3872
+  },
+  {
+    "county_fips": "48037",
+    "county_name": "Bowie County",
+    "population_under_18": 22050
+  },
+  {
+    "county_fips": "48039",
+    "county_name": "Brazoria County",
+    "population_under_18": 98742
+  },
+  {
+    "county_fips": "48041",
+    "county_name": "Brazos County",
+    "population_under_18": 48241
+  },
+  {
+    "county_fips": "48043",
+    "county_name": "Brewster County",
+    "population_under_18": 1623
+  },
+  {
+    "county_fips": "48045",
+    "county_name": "Briscoe County",
+    "population_under_18": 218
+  },
+  {
+    "county_fips": "48047",
+    "county_name": "Brooks County",
+    "population_under_18": 1295
+  },
+  {
+    "county_fips": "48049",
+    "county_name": "Brown County",
+    "population_under_18": 7972
+  },
+  {
+    "county_fips": "48051",
+    "county_name": "Burleson County",
+    "population_under_18": 4033
+  },
+  {
+    "county_fips": "48053",
+    "county_name": "Burnet County",
+    "population_under_18": 10464
+  },
+  {
+    "county_fips": "48055",
+    "county_name": "Caldwell County",
+    "population_under_18": 11042
+  },
+  {
+    "county_fips": "48057",
+    "county_name": "Calhoun County",
+    "population_under_18": 4655
+  },
+  {
+    "county_fips": "48059",
+    "county_name": "Callahan County",
+    "population_under_18": 3005
+  },
+  {
+    "county_fips": "48061",
+    "county_name": "Cameron County",
+    "population_under_18": 123291
+  },
+  {
+    "county_fips": "48063",
+    "county_name": "Camp County",
+    "population_under_18": 3341
+  },
+  {
+    "county_fips": "48065",
+    "county_name": "Carson County",
+    "population_under_18": 1303
+  },
+  {
+    "county_fips": "48067",
+    "county_name": "Cass County",
+    "population_under_18": 6461
+  },
+  {
+    "county_fips": "48069",
+    "county_name": "Castro County",
+    "population_under_18": 2121
+  },
+  {
+    "county_fips": "48071",
+    "county_name": "Chambers County",
+    "population_under_18": 13515
+  },
+  {
+    "county_fips": "48073",
+    "county_name": "Cherokee County",
+    "population_under_18": 13000
+  },
+  {
+    "county_fips": "48075",
+    "county_name": "Childress County",
+    "population_under_18": 1260
+  },
+  {
+    "county_fips": "48077",
+    "county_name": "Clay County",
+    "population_under_18": 2040
+  },
+  {
+    "county_fips": "48079",
+    "county_name": "Cochran County",
+    "population_under_18": 682
+  },
+  {
+    "county_fips": "48081",
+    "county_name": "Coke County",
+    "population_under_18": 716
+  },
+  {
+    "county_fips": "48083",
+    "county_name": "Coleman County",
+    "population_under_18": 1597
+  },
+  {
+    "county_fips": "48085",
+    "county_name": "Collin County",
+    "population_under_18": 280048
+  },
+  {
+    "county_fips": "48087",
+    "county_name": "Collingsworth County",
+    "population_under_18": 789
+  },
+  {
+    "county_fips": "48089",
+    "county_name": "Colorado County",
+    "population_under_18": 4844
+  },
+  {
+    "county_fips": "48091",
+    "county_name": "Comal County",
+    "population_under_18": 38791
+  },
+  {
+    "county_fips": "48093",
+    "county_name": "Comanche County",
+    "population_under_18": 3160
+  },
+  {
+    "county_fips": "48095",
+    "county_name": "Concho County",
+    "population_under_18": 421
+  },
+  {
+    "county_fips": "48097",
+    "county_name": "Cooke County",
+    "population_under_18": 9947
+  },
+  {
+    "county_fips": "48099",
+    "county_name": "Coryell County",
+    "population_under_18": 19056
+  },
+  {
+    "county_fips": "48101",
+    "county_name": "Cottle County",
+    "population_under_18": 287
+  },
+  {
+    "county_fips": "48103",
+    "county_name": "Crane County",
+    "population_under_18": 1203
+  },
+  {
+    "county_fips": "48105",
+    "county_name": "Crockett County",
+    "population_under_18": 667
+  },
+  {
+    "county_fips": "48107",
+    "county_name": "Crosby County",
+    "population_under_18": 1300
+  },
+  {
+    "county_fips": "48109",
+    "county_name": "Culberson County",
+    "population_under_18": 471
+  },
+  {
+    "county_fips": "48111",
+    "county_name": "Dallam County",
+    "population_under_18": 2339
+  },
+  {
+    "county_fips": "48113",
+    "county_name": "Dallas County",
+    "population_under_18": 661827
+  },
+  {
+    "county_fips": "48115",
+    "county_name": "Dawson County",
+    "population_under_18": 2942
+  },
+  {
+    "county_fips": "48117",
+    "county_name": "Deaf Smith County",
+    "population_under_18": 5760
+  },
+  {
+    "county_fips": "48119",
+    "county_name": "Delta County",
+    "population_under_18": 1269
+  },
+  {
+    "county_fips": "48121",
+    "county_name": "Denton County",
+    "population_under_18": 224897
+  },
+  {
+    "county_fips": "48123",
+    "county_name": "DeWitt County",
+    "population_under_18": 4487
+  },
+  {
+    "county_fips": "48125",
+    "county_name": "Dickens County",
+    "population_under_18": 355
+  },
+  {
+    "county_fips": "48127",
+    "county_name": "Dimmit County",
+    "population_under_18": 2413
+  },
+  {
+    "county_fips": "48129",
+    "county_name": "Donley County",
+    "population_under_18": 586
+  },
+  {
+    "county_fips": "48131",
+    "county_name": "Duval County",
+    "population_under_18": 2546
+  },
+  {
+    "county_fips": "48133",
+    "county_name": "Eastland County",
+    "population_under_18": 3824
+  },
+  {
+    "county_fips": "48135",
+    "county_name": "Ector County",
+    "population_under_18": 49505
+  },
+  {
+    "county_fips": "48137",
+    "county_name": "Edwards County",
+    "population_under_18": 224
+  },
+  {
+    "county_fips": "48139",
+    "county_name": "Ellis County",
+    "population_under_18": 53955
+  },
+  {
+    "county_fips": "48141",
+    "county_name": "El Paso County",
+    "population_under_18": 228795
+  },
+  {
+    "county_fips": "48143",
+    "county_name": "Erath County",
+    "population_under_18": 9021
+  },
+  {
+    "county_fips": "48145",
+    "county_name": "Falls County",
+    "population_under_18": 3604
+  },
+  {
+    "county_fips": "48147",
+    "county_name": "Fannin County",
+    "population_under_18": 7796
+  },
+  {
+    "county_fips": "48149",
+    "county_name": "Fayette County",
+    "population_under_18": 4973
+  },
+  {
+    "county_fips": "48151",
+    "county_name": "Fisher County",
+    "population_under_18": 762
+  },
+  {
+    "county_fips": "48153",
+    "county_name": "Floyd County",
+    "population_under_18": 1377
+  },
+  {
+    "county_fips": "48155",
+    "county_name": "Foard County",
+    "population_under_18": 254
+  },
+  {
+    "county_fips": "48157",
+    "county_name": "Fort Bend County",
+    "population_under_18": 231703
+  },
+  {
+    "county_fips": "48159",
+    "county_name": "Franklin County",
+    "population_under_18": 2380
+  },
+  {
+    "county_fips": "48161",
+    "county_name": "Freestone County",
+    "population_under_18": 4507
+  },
+  {
+    "county_fips": "48163",
+    "county_name": "Frio County",
+    "population_under_18": 4685
+  },
+  {
+    "county_fips": "48165",
+    "county_name": "Gaines County",
+    "population_under_18": 7830
+  },
+  {
+    "county_fips": "48167",
+    "county_name": "Galveston County",
+    "population_under_18": 84634
+  },
+  {
+    "county_fips": "48169",
+    "county_name": "Garza County",
+    "population_under_18": 1029
+  },
+  {
+    "county_fips": "48171",
+    "county_name": "Gillespie County",
+    "population_under_18": 5277
+  },
+  {
+    "county_fips": "48173",
+    "county_name": "Glasscock County",
+    "population_under_18": 274
+  },
+  {
+    "county_fips": "48175",
+    "county_name": "Goliad County",
+    "population_under_18": 1428
+  },
+  {
+    "county_fips": "48177",
+    "county_name": "Gonzales County",
+    "population_under_18": 5159
+  },
+  {
+    "county_fips": "48179",
+    "county_name": "Gray County",
+    "population_under_18": 5313
+  },
+  {
+    "county_fips": "48181",
+    "county_name": "Grayson County",
+    "population_under_18": 33760
+  },
+  {
+    "county_fips": "48183",
+    "county_name": "Gregg County",
+    "population_under_18": 32324
+  },
+  {
+    "county_fips": "48185",
+    "county_name": "Grimes County",
+    "population_under_18": 6839
+  },
+  {
+    "county_fips": "48187",
+    "county_name": "Guadalupe County",
+    "population_under_18": 43392
+  },
+  {
+    "county_fips": "48189",
+    "county_name": "Hale County",
+    "population_under_18": 8672
+  },
+  {
+    "county_fips": "48191",
+    "county_name": "Hall County",
+    "population_under_18": 616
+  },
+  {
+    "county_fips": "48193",
+    "county_name": "Hamilton County",
+    "population_under_18": 1845
+  },
+  {
+    "county_fips": "48195",
+    "county_name": "Hansford County",
+    "population_under_18": 1496
+  },
+  {
+    "county_fips": "48197",
+    "county_name": "Hardeman County",
+    "population_under_18": 718
+  },
+  {
+    "county_fips": "48199",
+    "county_name": "Hardin County",
+    "population_under_18": 14172
+  },
+  {
+    "county_fips": "48201",
+    "county_name": "Harris County",
+    "population_under_18": 1243425
+  },
+  {
+    "county_fips": "48203",
+    "county_name": "Harrison County",
+    "population_under_18": 16922
+  },
+  {
+    "county_fips": "48205",
+    "county_name": "Hartley County",
+    "population_under_18": 1198
+  },
+  {
+    "county_fips": "48207",
+    "county_name": "Haskell County",
+    "population_under_18": 940
+  },
+  {
+    "county_fips": "48209",
+    "county_name": "Hays County",
+    "population_under_18": 57970
+  },
+  {
+    "county_fips": "48211",
+    "county_name": "Hemphill County",
+    "population_under_18": 776
+  },
+  {
+    "county_fips": "48213",
+    "county_name": "Henderson County",
+    "population_under_18": 17936
+  },
+  {
+    "county_fips": "48215",
+    "county_name": "Hidalgo County",
+    "population_under_18": 276639
+  },
+  {
+    "county_fips": "48217",
+    "county_name": "Hill County",
+    "population_under_18": 8568
+  },
+  {
+    "county_fips": "48219",
+    "county_name": "Hockley County",
+    "population_under_18": 5695
+  },
+  {
+    "county_fips": "48221",
+    "county_name": "Hood County",
+    "population_under_18": 13281
+  },
+  {
+    "county_fips": "48223",
+    "county_name": "Hopkins County",
+    "population_under_18": 9114
+  },
+  {
+    "county_fips": "48225",
+    "county_name": "Houston County",
+    "population_under_18": 4415
+  },
+  {
+    "county_fips": "48227",
+    "county_name": "Howard County",
+    "population_under_18": 7461
+  },
+  {
+    "county_fips": "48229",
+    "county_name": "Hudspeth County",
+    "population_under_18": 598
+  },
+  {
+    "county_fips": "48231",
+    "county_name": "Hunt County",
+    "population_under_18": 25535
+  },
+  {
+    "county_fips": "48233",
+    "county_name": "Hutchinson County",
+    "population_under_18": 5140
+  },
+  {
+    "county_fips": "48235",
+    "county_name": "Irion County",
+    "population_under_18": 343
+  },
+  {
+    "county_fips": "48237",
+    "county_name": "Jack County",
+    "population_under_18": 1918
+  },
+  {
+    "county_fips": "48239",
+    "county_name": "Jackson County",
+    "population_under_18": 3658
+  },
+  {
+    "county_fips": "48241",
+    "county_name": "Jasper County",
+    "population_under_18": 7713
+  },
+  {
+    "county_fips": "48243",
+    "county_name": "Jeff Davis County",
+    "population_under_18": 294
+  },
+  {
+    "county_fips": "48245",
+    "county_name": "Jefferson County",
+    "population_under_18": 62564
+  },
+  {
+    "county_fips": "48247",
+    "county_name": "Jim Hogg County",
+    "population_under_18": 1664
+  },
+  {
+    "county_fips": "48249",
+    "county_name": "Jim Wells County",
+    "population_under_18": 10628
+  },
+  {
+    "county_fips": "48251",
+    "county_name": "Johnson County",
+    "population_under_18": 48899
+  },
+  {
+    "county_fips": "48253",
+    "county_name": "Jones County",
+    "population_under_18": 3313
+  },
+  {
+    "county_fips": "48255",
+    "county_name": "Karnes County",
+    "population_under_18": 2983
+  },
+  {
+    "county_fips": "48257",
+    "county_name": "Kaufman County",
+    "population_under_18": 45986
+  },
+  {
+    "county_fips": "48259",
+    "county_name": "Kendall County",
+    "population_under_18": 10675
+  },
+  {
+    "county_fips": "48261",
+    "county_name": "Kenedy County",
+    "population_under_18": 3
+  },
+  {
+    "county_fips": "48263",
+    "county_name": "Kent County",
+    "population_under_18": 127
+  },
+  {
+    "county_fips": "48265",
+    "county_name": "Kerr County",
+    "population_under_18": 9787
+  },
+  {
+    "county_fips": "48267",
+    "county_name": "Kimble County",
+    "population_under_18": 714
+  },
+  {
+    "county_fips": "48269",
+    "county_name": "King County",
+    "population_under_18": 35
+  },
+  {
+    "county_fips": "48271",
+    "county_name": "Kinney County",
+    "population_under_18": 274
+  },
+  {
+    "county_fips": "48273",
+    "county_name": "Kleberg County",
+    "population_under_18": 7364
+  },
+  {
+    "county_fips": "48275",
+    "county_name": "Knox County",
+    "population_under_18": 860
+  },
+  {
+    "county_fips": "48277",
+    "county_name": "Lamar County",
+    "population_under_18": 12185
+  },
+  {
+    "county_fips": "48279",
+    "county_name": "Lamb County",
+    "population_under_18": 3558
+  },
+  {
+    "county_fips": "48281",
+    "county_name": "Lampasas County",
+    "population_under_18": 4835
+  },
+  {
+    "county_fips": "48283",
+    "county_name": "La Salle County",
+    "population_under_18": 1618
+  },
+  {
+    "county_fips": "48285",
+    "county_name": "Lavaca County",
+    "population_under_18": 4857
+  },
+  {
+    "county_fips": "48287",
+    "county_name": "Lee County",
+    "population_under_18": 3833
+  },
+  {
+    "county_fips": "48289",
+    "county_name": "Leon County",
+    "population_under_18": 3655
+  },
+  {
+    "county_fips": "48291",
+    "county_name": "Liberty County",
+    "population_under_18": 28751
+  },
+  {
+    "county_fips": "48293",
+    "county_name": "Limestone County",
+    "population_under_18": 4991
+  },
+  {
+    "county_fips": "48295",
+    "county_name": "Lipscomb County",
+    "population_under_18": 890
+  },
+  {
+    "county_fips": "48297",
+    "county_name": "Live Oak County",
+    "population_under_18": 2344
+  },
+  {
+    "county_fips": "48299",
+    "county_name": "Llano County",
+    "population_under_18": 3432
+  },
+  {
+    "county_fips": "48301",
+    "county_name": "Loving County",
+    "population_under_18": 0
+  },
+  {
+    "county_fips": "48303",
+    "county_name": "Lubbock County",
+    "population_under_18": 74234
+  },
+  {
+    "county_fips": "48305",
+    "county_name": "Lynn County",
+    "population_under_18": 1565
+  },
+  {
+    "county_fips": "48307",
+    "county_name": "McCulloch County",
+    "population_under_18": 1626
+  },
+  {
+    "county_fips": "48309",
+    "county_name": "McLennan County",
+    "population_under_18": 63669
+  },
+  {
+    "county_fips": "48311",
+    "county_name": "McMullen County",
+    "population_under_18": 237
+  },
+  {
+    "county_fips": "48313",
+    "county_name": "Madison County",
+    "population_under_18": 3015
+  },
+  {
+    "county_fips": "48315",
+    "county_name": "Marion County",
+    "population_under_18": 1734
+  },
+  {
+    "county_fips": "48317",
+    "county_name": "Martin County",
+    "population_under_18": 1539
+  },
+  {
+    "county_fips": "48319",
+    "county_name": "Mason County",
+    "population_under_18": 914
+  },
+  {
+    "county_fips": "48321",
+    "county_name": "Matagorda County",
+    "population_under_18": 9328
+  },
+  {
+    "county_fips": "48323",
+    "county_name": "Maverick County",
+    "population_under_18": 18012
+  },
+  {
+    "county_fips": "48325",
+    "county_name": "Medina County",
+    "population_under_18": 11878
+  },
+  {
+    "county_fips": "48327",
+    "county_name": "Menard County",
+    "population_under_18": 466
+  },
+  {
+    "county_fips": "48329",
+    "county_name": "Midland County",
+    "population_under_18": 49714
+  },
+  {
+    "county_fips": "48331",
+    "county_name": "Milam County",
+    "population_under_18": 5798
+  },
+  {
+    "county_fips": "48333",
+    "county_name": "Mills County",
+    "population_under_18": 809
+  },
+  {
+    "county_fips": "48335",
+    "county_name": "Mitchell County",
+    "population_under_18": 1666
+  },
+  {
+    "county_fips": "48337",
+    "county_name": "Montague County",
+    "population_under_18": 4714
+  },
+  {
+    "county_fips": "48339",
+    "county_name": "Montgomery County",
+    "population_under_18": 170795
+  },
+  {
+    "county_fips": "48341",
+    "county_name": "Moore County",
+    "population_under_18": 6637
+  },
+  {
+    "county_fips": "48343",
+    "county_name": "Morris County",
+    "population_under_18": 2758
+  },
+  {
+    "county_fips": "48345",
+    "county_name": "Motley County",
+    "population_under_18": 221
+  },
+  {
+    "county_fips": "48347",
+    "county_name": "Nacogdoches County",
+    "population_under_18": 15263
+  },
+  {
+    "county_fips": "48349",
+    "county_name": "Navarro County",
+    "population_under_18": 14351
+  },
+  {
+    "county_fips": "48351",
+    "county_name": "Newton County",
+    "population_under_18": 2438
+  },
+  {
+    "county_fips": "48353",
+    "county_name": "Nolan County",
+    "population_under_18": 3733
+  },
+  {
+    "county_fips": "48355",
+    "county_name": "Nueces County",
+    "population_under_18": 84438
+  },
+  {
+    "county_fips": "48357",
+    "county_name": "Ochiltree County",
+    "population_under_18": 3032
+  },
+  {
+    "county_fips": "48359",
+    "county_name": "Oldham County",
+    "population_under_18": 751
+  },
+  {
+    "county_fips": "48361",
+    "county_name": "Orange County",
+    "population_under_18": 21572
+  },
+  {
+    "county_fips": "48363",
+    "county_name": "Palo Pinto County",
+    "population_under_18": 6715
+  },
+  {
+    "county_fips": "48365",
+    "county_name": "Panola County",
+    "population_under_18": 5243
+  },
+  {
+    "county_fips": "48367",
+    "county_name": "Parker County",
+    "population_under_18": 39163
+  },
+  {
+    "county_fips": "48369",
+    "county_name": "Parmer County",
+    "population_under_18": 2757
+  },
+  {
+    "county_fips": "48371",
+    "county_name": "Pecos County",
+    "population_under_18": 3621
+  },
+  {
+    "county_fips": "48373",
+    "county_name": "Polk County",
+    "population_under_18": 10540
+  },
+  {
+    "county_fips": "48375",
+    "county_name": "Potter County",
+    "population_under_18": 31334
+  },
+  {
+    "county_fips": "48377",
+    "county_name": "Presidio County",
+    "population_under_18": 1680
+  },
+  {
+    "county_fips": "48379",
+    "county_name": "Rains County",
+    "population_under_18": 2414
+  },
+  {
+    "county_fips": "48381",
+    "county_name": "Randall County",
+    "population_under_18": 34450
+  },
+  {
+    "county_fips": "48383",
+    "county_name": "Reagan County",
+    "population_under_18": 1130
+  },
+  {
+    "county_fips": "48385",
+    "county_name": "Real County",
+    "population_under_18": 752
+  },
+  {
+    "county_fips": "48387",
+    "county_name": "Red River County",
+    "population_under_18": 2350
+  },
+  {
+    "county_fips": "48389",
+    "county_name": "Reeves County",
+    "population_under_18": 3282
+  },
+  {
+    "county_fips": "48391",
+    "county_name": "Refugio County",
+    "population_under_18": 1494
+  },
+  {
+    "county_fips": "48393",
+    "county_name": "Roberts County",
+    "population_under_18": 220
+  },
+  {
+    "county_fips": "48395",
+    "county_name": "Robertson County",
+    "population_under_18": 4065
+  },
+  {
+    "county_fips": "48397",
+    "county_name": "Rockwall County",
+    "population_under_18": 31234
+  },
+  {
+    "county_fips": "48399",
+    "county_name": "Runnels County",
+    "population_under_18": 2327
+  },
+  {
+    "county_fips": "48401",
+    "county_name": "Rusk County",
+    "population_under_18": 11932
+  },
+  {
+    "county_fips": "48403",
+    "county_name": "Sabine County",
+    "population_under_18": 1770
+  },
+  {
+    "county_fips": "48405",
+    "county_name": "San Augustine County",
+    "population_under_18": 1585
+  },
+  {
+    "county_fips": "48407",
+    "county_name": "San Jacinto County",
+    "population_under_18": 6049
+  },
+  {
+    "county_fips": "48409",
+    "county_name": "San Patricio County",
+    "population_under_18": 18078
+  },
+  {
+    "county_fips": "48411",
+    "county_name": "San Saba County",
+    "population_under_18": 1113
+  },
+  {
+    "county_fips": "48413",
+    "county_name": "Schleicher County",
+    "population_under_18": 580
+  },
+  {
+    "county_fips": "48415",
+    "county_name": "Scurry County",
+    "population_under_18": 4210
+  },
+  {
+    "county_fips": "48417",
+    "county_name": "Shackelford County",
+    "population_under_18": 717
+  },
+  {
+    "county_fips": "48419",
+    "county_name": "Shelby County",
+    "population_under_18": 6339
+  },
+  {
+    "county_fips": "48421",
+    "county_name": "Sherman County",
+    "population_under_18": 532
+  },
+  {
+    "county_fips": "48423",
+    "county_name": "Smith County",
+    "population_under_18": 57909
+  },
+  {
+    "county_fips": "48425",
+    "county_name": "Somervell County",
+    "population_under_18": 2059
+  },
+  {
+    "county_fips": "48427",
+    "county_name": "Starr County",
+    "population_under_18": 21566
+  },
+  {
+    "county_fips": "48429",
+    "county_name": "Stephens County",
+    "population_under_18": 1981
+  },
+  {
+    "county_fips": "48431",
+    "county_name": "Sterling County",
+    "population_under_18": 500
+  },
+  {
+    "county_fips": "48433",
+    "county_name": "Stonewall County",
+    "population_under_18": 334
+  },
+  {
+    "county_fips": "48435",
+    "county_name": "Sutton County",
+    "population_under_18": 901
+  },
+  {
+    "county_fips": "48437",
+    "county_name": "Swisher County",
+    "population_under_18": 1697
+  },
+  {
+    "county_fips": "48439",
+    "county_name": "Tarrant County",
+    "population_under_18": 548477
+  },
+  {
+    "county_fips": "48441",
+    "county_name": "Taylor County",
+    "population_under_18": 35427
+  },
+  {
+    "county_fips": "48443",
+    "county_name": "Terrell County",
+    "population_under_18": 120
+  },
+  {
+    "county_fips": "48445",
+    "county_name": "Terry County",
+    "population_under_18": 3288
+  },
+  {
+    "county_fips": "48447",
+    "county_name": "Throckmorton County",
+    "population_under_18": 332
+  },
+  {
+    "county_fips": "48449",
+    "county_name": "Titus County",
+    "population_under_18": 8935
+  },
+  {
+    "county_fips": "48451",
+    "county_name": "Tom Green County",
+    "population_under_18": 28580
+  },
+  {
+    "county_fips": "48453",
+    "county_name": "Travis County",
+    "population_under_18": 267667
+  },
+  {
+    "county_fips": "48455",
+    "county_name": "Trinity County",
+    "population_under_18": 2709
+  },
+  {
+    "county_fips": "48457",
+    "county_name": "Tyler County",
+    "population_under_18": 3907
+  },
+  {
+    "county_fips": "48459",
+    "county_name": "Upshur County",
+    "population_under_18": 10056
+  },
+  {
+    "county_fips": "48461",
+    "county_name": "Upton County",
+    "population_under_18": 727
+  },
+  {
+    "county_fips": "48463",
+    "county_name": "Uvalde County",
+    "population_under_18": 6492
+  },
+  {
+    "county_fips": "48465",
+    "county_name": "Val Verde County",
+    "population_under_18": 13378
+  },
+  {
+    "county_fips": "48467",
+    "county_name": "Van Zandt County",
+    "population_under_18": 14114
+  },
+  {
+    "county_fips": "48469",
+    "county_name": "Victoria County",
+    "population_under_18": 23026
+  },
+  {
+    "county_fips": "48471",
+    "county_name": "Walker County",
+    "population_under_18": 11493
+  },
+  {
+    "county_fips": "48473",
+    "county_name": "Waller County",
+    "population_under_18": 14126
+  },
+  {
+    "county_fips": "48475",
+    "county_name": "Ward County",
+    "population_under_18": 3275
+  },
+  {
+    "county_fips": "48477",
+    "county_name": "Washington County",
+    "population_under_18": 7784
+  },
+  {
+    "county_fips": "48479",
+    "county_name": "Webb County",
+    "population_under_18": 84736
+  },
+  {
+    "county_fips": "48481",
+    "county_name": "Wharton County",
+    "population_under_18": 10649
+  },
+  {
+    "county_fips": "48483",
+    "county_name": "Wheeler County",
+    "population_under_18": 1199
+  },
+  {
+    "county_fips": "48485",
+    "county_name": "Wichita County",
+    "population_under_18": 29808
+  },
+  {
+    "county_fips": "48487",
+    "county_name": "Wilbarger County",
+    "population_under_18": 2859
+  },
+  {
+    "county_fips": "48489",
+    "county_name": "Willacy County",
+    "population_under_18": 4835
+  },
+  {
+    "county_fips": "48491",
+    "county_name": "Williamson County",
+    "population_under_18": 157599
+  },
+  {
+    "county_fips": "48493",
+    "county_name": "Wilson County",
+    "population_under_18": 12118
+  },
+  {
+    "county_fips": "48495",
+    "county_name": "Winkler County",
+    "population_under_18": 2144
+  },
+  {
+    "county_fips": "48497",
+    "county_name": "Wise County",
+    "population_under_18": 17836
+  },
+  {
+    "county_fips": "48499",
+    "county_name": "Wood County",
+    "population_under_18": 8728
+  },
+  {
+    "county_fips": "48501",
+    "county_name": "Yoakum County",
+    "population_under_18": 2459
+  },
+  {
+    "county_fips": "48503",
+    "county_name": "Young County",
+    "population_under_18": 4277
+  },
+  {
+    "county_fips": "48505",
+    "county_name": "Zapata County",
+    "population_under_18": 4463
+  },
+  {
+    "county_fips": "48507",
+    "county_name": "Zavala County",
+    "population_under_18": 2810
+  }
+]
