@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #efe8dc;
+  --paper-deep: #e4d9c8;
+  --card: #fffdf8;
+  --ink: #1c1915;
+  --ink-soft: #4a453c;
+  --ink-faint: #7a7368;
+  --line: #d8cfc0;
+  --line-strong: #c4b8a4;
+  --forest: #1f5c4d;
+  --forest-deep: #164338;
+  --forest-soft: #e4f0ea;
+  --risk: #8a4b12;
+  --risk-soft: #f6ead8;
+  --violet-soft: #efe8f6;
+  --violet: #5b4570;
+  --amber-soft: #f4ead0;
+  --background: var(--paper);
+  --foreground: var(--ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-forest: var(--forest);
   --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-source-serif);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  background:
+    radial-gradient(1200px 480px at 10% -10%, #f7f1e6 0%, transparent 55%),
+    var(--paper);
+}
+
+.serif {
+  font-family: var(--font-source-serif), "Times New Roman", serif;
+}
+
+.panel {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: 0 1px 0 rgba(28, 25, 21, 0.03);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--forest);
+  color: #f6f3ec;
+}
+
+.btn-primary:hover {
+  background: var(--forest-deep);
+}
+
+.btn-ghost {
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink-soft);
+}
+
+.btn-ghost:hover,
+.btn-ghost.is-active {
+  background: var(--paper-deep);
+  color: var(--ink);
+}
+
+.btn-ghost.is-active {
+  border-color: var(--ink);
 }

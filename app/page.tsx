@@ -78,55 +78,48 @@ async function loadWorkbenchData(): Promise<{
 export default async function Home() {
   const { counties, registryCandidates, source } = await loadWorkbenchData();
   const shortlist = buildDisplayShortlist(counties, groupRegistryByCounty(registryCandidates));
-  const countyCount = shortlist.filter((market) => market.kind === "county").length;
-  const classifiedCount = VERIFIED_CLINICS.length;
   const targetCount = VERIFIED_CLINICS.filter(
     (clinic) => clinic.classification === "target_candidate"
   ).length;
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-100 text-slate-950">
-      <header className="shrink-0 border-b border-slate-200 bg-white">
-        <div className="flex flex-wrap items-center justify-between gap-4 px-4 py-3 lg:px-6">
+    <div className="app-shell">
+      <header className="shrink-0 border-b border-[var(--line)] bg-[var(--card)]/90 backdrop-blur">
+        <div className="flex flex-wrap items-end justify-between gap-4 px-4 py-3.5 lg:px-6">
           <div>
-            <h1 className="text-lg font-semibold tracking-tight">Catchment</h1>
-            <p className="text-xs text-slate-600">
-              Texas pediatric therapy deal-origination workbench
+            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--ink-faint)]">
+              Oaklin Lane · Texas
             </p>
+            <div className="mt-0.5 flex flex-wrap items-baseline gap-3">
+              <h1 className="serif text-2xl font-semibold tracking-tight text-[var(--ink)]">
+                Catchment
+              </h1>
+              <p className="max-w-xl text-sm text-[var(--ink-soft)]">
+                Which markets, which clinics, what evidence.
+              </p>
+            </div>
           </div>
-          <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-[var(--ink-soft)]">
             <span>
-              <span className="font-medium text-slate-900">{countyCount}</span> counties + DFW
+              <span className="font-semibold text-[var(--ink)]">{targetCount}</span> ranked
+              targets
             </span>
             <span>
-              <span className="font-medium text-slate-900">{classifiedCount}</span> classified
-              clinics
+              <span className="font-semibold text-[var(--ink)]">{VERIFIED_CLINICS.length}</span>{" "}
+              classified
             </span>
-            <span>
-              <span className="font-medium text-teal-800">{targetCount}</span> potential targets
-            </span>
-            {source === "local" ? (
-              <span className="rounded bg-amber-50 px-1.5 py-0.5 text-amber-800 ring-1 ring-amber-200">
-                Local extract
-              </span>
-            ) : null}
             <details className="relative">
-              <summary className="cursor-pointer font-medium text-slate-700 hover:text-slate-950">
-                Methodology
+              <summary className="cursor-pointer font-medium text-[var(--forest)] hover:text-[var(--forest-deep)]">
+                How to read this
               </summary>
-              <div className="absolute right-0 z-10 mt-2 w-80 rounded-lg border border-slate-200 bg-white p-4 text-xs leading-5 text-slate-600 shadow-lg">
+              <div className="absolute right-0 z-20 mt-2 w-80 rounded-lg border border-[var(--line)] bg-[var(--card)] p-4 text-xs leading-5 text-[var(--ink-soft)] shadow-lg">
                 <p>
-                  County screening joins Census ACS under-18 population with NPPES organization
-                  records matching pediatric therapy signals. That screen is candidate generation,
-                  not a clinic census.
+                  Start on DFW. Open a target. Export a brief. NPPES is a screen, not a clinic
+                  census. Ownership is web/NPI research, not a pulled SOS filing.
                 </p>
                 <p className="mt-2">
-                  Classified clinics are website-verified, then tagged for ownership, size,
-                  pediatric mix, and next action. DFW is one metro market. Passes are logged on
-                  purpose.
-                </p>
-                <p className="mt-2 text-slate-500">
-                  Independent work sample. Not commissioned by Oaklin Lane.
+                  Registry source: {source === "local" ? "checked-in extract" : "Supabase"}.
+                  Independent work sample — not commissioned by Oaklin Lane.
                 </p>
               </div>
             </details>
@@ -136,10 +129,9 @@ export default async function Home() {
 
       <Workbench shortlist={shortlist} />
 
-      <footer className="shrink-0 border-t border-slate-200 px-4 py-2 text-[10px] text-slate-500 lg:px-6">
-        Screening: NPPES NPI Registry, Census ACS 5-Year, ZCTA-to-County crosswalk. Clinic layer:
-        official operator websites, NPI authorized officials, and public founder sources. Ownership
-        is not a pulled SOS filing.
+      <footer className="shrink-0 border-t border-[var(--line)] px-4 py-2 text-[10px] text-[var(--ink-faint)] lg:px-6">
+        Screening: NPPES, Census ACS, ZCTA crosswalk. Clinic layer: official sites and public
+        founder sources. Passes are logged on purpose.
       </footer>
     </div>
   );
