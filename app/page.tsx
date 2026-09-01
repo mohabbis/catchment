@@ -1,4 +1,4 @@
-import Workbench from "@/components/Workbench";
+import CatchmentApp from "@/components/CatchmentApp";
 import { VERIFIED_CLINICS } from "@/lib/verified-clinics";
 import { hasSupabaseEnv, loadLocalCountyScores, loadLocalRegistryCandidates } from "@/lib/local-data";
 import { getSupabaseClient } from "@/lib/supabase";
@@ -27,9 +27,7 @@ async function getRegistryCandidates(): Promise<RegistryCandidate[]> {
   const supabase = getSupabaseClient();
   const { data, error } = await supabase
     .from("providers")
-    .select(
-      "npi, org_name, dba_name, address_line1, city, zip, county_name, provider_type"
-    )
+    .select("npi, org_name, dba_name, address_line1, city, zip, county_name, provider_type")
     .eq("pediatric_signal", true)
     .order("county_name", { ascending: true })
     .order("org_name", { ascending: true });
@@ -83,56 +81,6 @@ export default async function Home() {
   ).length;
 
   return (
-    <div className="app-shell">
-      <header className="shrink-0 border-b border-[var(--line)] bg-[var(--card)]/90 backdrop-blur">
-        <div className="flex flex-wrap items-end justify-between gap-4 px-4 py-3.5 lg:px-6">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--ink-faint)]">
-              Oaklin Lane · Texas
-            </p>
-            <div className="mt-0.5 flex flex-wrap items-baseline gap-3">
-              <h1 className="serif text-2xl font-semibold tracking-tight text-[var(--ink)]">
-                Catchment
-              </h1>
-              <p className="max-w-xl text-sm text-[var(--ink-soft)]">
-                Which markets, which clinics, what evidence.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-[var(--ink-soft)]">
-            <span>
-              <span className="font-semibold text-[var(--ink)]">{targetCount}</span> ranked
-              targets
-            </span>
-            <span>
-              <span className="font-semibold text-[var(--ink)]">{VERIFIED_CLINICS.length}</span>{" "}
-              classified
-            </span>
-            <details className="relative">
-              <summary className="cursor-pointer font-medium text-[var(--forest)] hover:text-[var(--forest-deep)]">
-                How to read this
-              </summary>
-              <div className="absolute right-0 z-20 mt-2 w-80 rounded-lg border border-[var(--line)] bg-[var(--card)] p-4 text-xs leading-5 text-[var(--ink-soft)] shadow-lg">
-                <p>
-                  Start on a metro. Open a target. Download or print a brief. NPPES is a screen,
-                  not a clinic census. SOS and license rows are dated checks, not pulled filings.
-                </p>
-                <p className="mt-2">
-                  Registry source: {source === "local" ? "checked-in extract" : "Supabase"}.
-                  Independent work sample — not commissioned by Oaklin Lane.
-                </p>
-              </div>
-            </details>
-          </div>
-        </div>
-      </header>
-
-      <Workbench shortlist={shortlist} />
-
-      <footer className="shrink-0 border-t border-[var(--line)] px-4 py-2 text-[10px] text-[var(--ink-faint)] lg:px-6">
-        Screening: NPPES, Census ACS, ZCTA crosswalk. Clinic layer: official sites and public
-        founder sources. Passes are logged on purpose.
-      </footer>
-    </div>
+    <CatchmentApp shortlist={shortlist} dataSource={source} targetCount={targetCount} />
   );
 }
