@@ -1,9 +1,8 @@
 # Catchment
 
-Catchment is a public-data market analysis tool for Texas pediatric therapy
-expansion strategy. It combines demographic and provider-supply data to screen
-counties for preliminary de novo clinic development and acquisition-sourcing
-attractiveness across speech therapy, occupational therapy, and physical therapy.
+Catchment is a deal-origination workbench for Texas pediatric therapy (SLP / OT /
+PT). It answers three questions: which markets deserve attention, which real
+clinics operate there, and what evidence supports that.
 
 This is an independent work sample. It is not commissioned by Oaklin Lane and
 does not use Oaklin Lane proprietary data.
@@ -11,10 +10,21 @@ does not use Oaklin Lane proprietary data.
 **Live:** https://catchment-oaklin.vercel.app
 **Memo:** [`memo/oaklin-lane-market-memo.pdf`](memo/oaklin-lane-market-memo.pdf)
 
+The app is an IC workbench, not a county dashboard:
+
+- Ranked shortlist with **DFW as one metro** (Dallas + Tarrant + Collin), then
+  the six county cuts
+- Website-verified clinics with ownership, size signals, license/SOS lookup
+  links, and a sourcing trail
+- Pass / not-a-target log (Cole, NAPA, Oaklin Lane’s own clinics, closed sites)
+- Workflow states, clinic detail drawer, and a one-click IC brief export
+- Census + NPPES used as **screening only** — never as a clinic census
+
 ## Stack
 
-Next.js App Router, TypeScript, React, Supabase Postgres, Vercel, public Census
-data, and public NPPES/NPI data.
+Next.js App Router, TypeScript, React, Supabase Postgres (optional), Vercel,
+public Census data, and public NPPES/NPI data. If Supabase env is missing, the
+app boots from the checked-in extract in `data/`.
 
 ## Data Sources
 
@@ -47,11 +57,11 @@ recommendations.
 
 ```sh
 npm install
-cp .env.example .env.local   # fill in Supabase + Census API keys
-npm run dev                   # http://localhost:3000
+npm run dev                   # http://localhost:3000 — works without Supabase
+cp .env.example .env.local    # optional: fill in Supabase + Census API keys
 ```
 
-Required environment variables:
+Optional environment variables (Supabase is the live registry source when set):
 
 - `NEXT_PUBLIC_SUPABASE_URL`: browser-safe Supabase project URL.
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: browser-safe Supabase anon key.
