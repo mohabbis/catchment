@@ -1,7 +1,12 @@
 import {
+  LICENSE_STATUS_LABELS,
   REJECTED_RECORDS,
+  SOS_STATUS_LABELS,
   VERIFIED_CLINICS,
+  type LicenseCheck,
+  type MetroId,
   type RejectedRecord,
+  type SosCheck,
   type VerifiedClinic,
 } from "@/lib/verified-clinics";
 import type { Quadrant } from "@/lib/scoring";
@@ -102,10 +107,10 @@ export const MARKET_NARRATIVES: Record<string, MarketNarrative> = {
   "Travis County": {
     headline: "Austin has named independents — and two platforms already on the ground.",
     rationale:
-      "KidWorks (Rebecca Pokluda, 1999) and Children's Therapeutics of Austin are founder-era single sites. Line Leader is a real multidisciplinary clinic with unnamed ownership. Cole and NAPA are already here. This is a selective add-on market, not a greenfield.",
+      "KidWorks (Rebecca Pokluda, 1999), Line Leader (Sharon Wisnieski, 2009), and Children's Therapeutics of Austin (Gabriele Rose on NPI; retired 2020) are the Travis independents. Cole and NAPA are already here. This is a selective add-on market, not a greenfield.",
     risk:
-      "Williamson and Hays are not in this county total. KidSensations closed in May 2025 — NPPES still carries it.",
-    nextAction: "KidWorks first. SOS on Line Leader and CTOA. Do not underwrite Austin from four NPPES rows.",
+      "Williamson and Hays are not in this county total. KidSensations closed in May 2025 — NPPES still carries it. CTOA current members after Rose’s retirement are unconfirmed.",
+    nextAction: "KidWorks first. Line Leader second. SOS on CTOA LLC before assuming Rose still owns it.",
   },
   "Collin County": {
     headline: "North DFW is where rooftops and multi-site independents already meet.",
@@ -335,19 +340,88 @@ export function buildDiligenceQueue(shortlist: ShortlistMarket[]): DiligenceItem
 
 export const DFW_COUNTY_NAMES = ["Dallas County", "Tarrant County", "Collin County"] as const;
 
-export function buildDfwRollup(shortlist: ShortlistMarket[]): ShortlistMarket {
-  const parts = shortlist.filter((market) =>
-    (DFW_COUNTY_NAMES as readonly string[]).includes(market.county_name)
+export type MetroDefinition = {
+  metroId: Extract<MetroId, "dfw" | "houston" | "austin">;
+  fips: string;
+  name: string;
+  countyNames: readonly string[];
+  metroLabel: string;
+  narrative: MarketNarrative;
+};
+
+export const METRO_DEFINITIONS: MetroDefinition[] = [
+  {
+    metroId: "dfw",
+    fips: "dfw",
+    name: "DFW Metro",
+    countyNames: DFW_COUNTY_NAMES,
+    metroLabel: "Dallas, Tarrant, and Collin as one market",
+    narrative: {
+      headline: "Treat DFW as one market. The independents already cross the county lines.",
+      rationale:
+        "Synaptic, Therapy Spot, Frisco Feeding, and Cole do not operate inside a single county. A Tarrant-only or Collin-only density number is a screening artifact. Combined child population is ~1.5M. Named founder targets: Therapedia (Kitchens), Frisco Feeding (Roddy), Synaptic (Elashi), Anchor (Ruelas), Cowtown (Khammar), Jump Start (Roe).",
+      risk:
+        "Oaklin Lane already has Lake Highlands and Rockwall. Cole is in Frisco. Synaptic is scaling without you. This is a consolidation race, not a discovery exercise.",
+      nextAction:
+        "Outreach order: Therapedia → Frisco Feeding → Synaptic. SOS on Therapy Spot. Pass Cole, Oaklin Lane, and hospital/nonprofit names.",
+    },
+  },
+  {
+    metroId: "houston",
+    fips: "houston",
+    name: "Houston Metro",
+    countyNames: ["Harris County", "Fort Bend County", "Montgomery County"],
+    metroLabel: "Harris, Fort Bend, and Montgomery as one market",
+    narrative: {
+      headline: "Treat Houston as one market. The named independents sit next to a local platform.",
+      rationale:
+        "Kids Developmental Clinic (Dinn, 4 sites), Pediatric Therapy Center (Knowlton / 113015 Therapy, PLLC), and Wishing Well (Eglinger / MERC) are the Harris independents. Fort Bend and Montgomery add children to the metro total but have no verified clinic in this set — they are not shortlist rows. Cole is the Houston incumbent.",
+      risk:
+        "NPPES undercounts (missed Cole and KDC). Therapy At The Zone is not one P&L. T2000 is home health. Fort Bend and Montgomery density is not a clinic census.",
+      nextAction:
+        "Outreach: KDC → PTC. SOS on Kids DC, LLC and 113015 Therapy, PLLC. Ask Knowlton who the unnamed co-owner is. Pass Cole, the Zone, and hospital/home-health names.",
+    },
+  },
+  {
+    metroId: "austin",
+    fips: "austin",
+    name: "Austin Metro",
+    countyNames: ["Travis County", "Williamson County", "Hays County"],
+    metroLabel: "Travis, Williamson, and Hays as one market",
+    narrative: {
+      headline: "Austin is a selective add-on market with named founders and two platforms already on the ground.",
+      rationale:
+        "KidWorks (Pokluda, 1999), Line Leader (Wisnieski, 2009), and CTOA (Rose on NPI, retired 2020) are the Travis independents. Williamson and Hays add children to the metro total but have no verified clinic assigned — they are not shortlist rows. Cole and NAPA are already here.",
+      risk:
+        "KidSensations closed May 2025 and still sits in NPPES. CTOA current members after Rose’s retirement are unconfirmed. A Travis-only density number is the wrong object.",
+      nextAction:
+        "KidWorks first. Line Leader second. SOS on CTOA LLC before assuming Rose still owns it. Pass Cole, NAPA, and the closed clinic.",
+    },
+  },
+];
+
+export function buildMetroRollup(
+  def: MetroDefinition,
+  allCounties: CountyScoreRow[],
+  registryByCounty: Map<string, RegistryCandidate[]>
+): ShortlistMarket {
+  const countyRows = def.countyNames.map((name) =>
+    allCounties.find((county) => county.county_name === name)
   );
-  const verifiedClinics = VERIFIED_CLINICS.filter((clinic) => clinic.metroId === "dfw");
-  const registryCandidates = parts.flatMap((market) => market.registryCandidates);
+  const under18 = countyRows.reduce((sum, row) => sum + (row?.population_under_18 ?? 0), 0);
+  const providerCount = countyRows.reduce(
+    (sum, row) => sum + (row?.pediatric_provider_count ?? 0),
+    0
+  );
+  const verifiedClinics = VERIFIED_CLINICS.filter((clinic) => clinic.metroId === def.metroId);
+  const registryCandidates = def.countyNames.flatMap(
+    (name) => registryByCounty.get(name) ?? []
+  );
   const unmatched = unmatchedRegistryCandidates(registryCandidates, verifiedClinics);
-  const under18 = parts.reduce((sum, market) => sum + (market.population_under_18 ?? 0), 0);
-  const providerCount = parts.reduce((sum, market) => sum + market.pediatric_provider_count, 0);
 
   return {
-    county_fips: "dfw",
-    county_name: "DFW Metro",
+    county_fips: def.fips,
+    county_name: def.name,
     population_under_18: under18 || null,
     pediatric_provider_count: providerCount,
     density_per_10k:
@@ -359,23 +433,35 @@ export function buildDfwRollup(shortlist: ShortlistMarket[]): ShortlistMarket {
     evidence_confidence: "Directional",
     kind: "metro",
     curatedRank: 0,
-    metroLabel: "Dallas + Tarrant + Collin",
-    narrative: {
-      headline: "Treat DFW as one market. The independents already cross the county lines.",
-      rationale:
-        "Synaptic, Therapy Spot, Frisco Feeding, and Cole do not operate inside a single county. A Tarrant-only or Collin-only density number is a screening artifact. Combined child population is ~1.5M. Named founder targets: Therapedia (Kitchens), Frisco Feeding (Roddy), Synaptic (Elashi), Anchor (Ruelas), Cowtown (Khammar), Jump Start (Roe).",
-      risk:
-        "Oaklin Lane already has Lake Highlands and Rockwall. Cole is in Frisco. Synaptic is scaling without you. This is a consolidation race, not a discovery exercise.",
-      nextAction:
-        "Outreach order: Therapedia → Frisco Feeding → Synaptic. SOS on Therapy Spot. Pass Cole, Oaklin Lane, and hospital/nonprofit names.",
-    },
+    metroLabel: def.metroLabel,
+    narrative: def.narrative,
     verifiedClinics,
-    targetCount: verifiedClinics.filter((clinic) => clinic.classification === "target_candidate").length,
-    benchmarkCount: verifiedClinics.filter((clinic) => clinic.classification === "competitor_benchmark")
+    targetCount: verifiedClinics.filter((clinic) => clinic.classification === "target_candidate")
       .length,
+    benchmarkCount: verifiedClinics.filter(
+      (clinic) => clinic.classification === "competitor_benchmark"
+    ).length,
     registryCandidates,
     unmatchedRegistryCount: unmatched.length,
   };
+}
+
+/** @deprecated Use buildMetroRollup — kept for the DFW-only call sites. */
+export function buildDfwRollup(
+  shortlist: ShortlistMarket[],
+  allCounties?: CountyScoreRow[]
+): ShortlistMarket {
+  const def = METRO_DEFINITIONS[0];
+  const counties =
+    allCounties ??
+    shortlist.filter((market) =>
+      (DFW_COUNTY_NAMES as readonly string[]).includes(market.county_name)
+    );
+  const registryByCounty = new Map<string, RegistryCandidate[]>();
+  for (const market of shortlist) {
+    registryByCounty.set(market.county_name, market.registryCandidates);
+  }
+  return buildMetroRollup(def, counties, registryByCounty);
 }
 
 export function buildDisplayShortlist(
@@ -383,7 +469,10 @@ export function buildDisplayShortlist(
   registryByCounty: Map<string, RegistryCandidate[]>
 ): ShortlistMarket[] {
   const countyShortlist = buildShortlist(counties, registryByCounty);
-  return [buildDfwRollup(countyShortlist), ...countyShortlist];
+  const metros = METRO_DEFINITIONS.map((def) =>
+    buildMetroRollup(def, counties, registryByCounty)
+  );
+  return [...metros, ...countyShortlist];
 }
 
 export function buildExecutiveConclusion(shortlist: ShortlistMarket[]): ExecutiveConclusion {
@@ -395,14 +484,14 @@ export function buildExecutiveConclusion(shortlist: ShortlistMarket[]): Executiv
 
   return {
     thesis:
-      "Start where a named founder, more than one site or a disclosed therapist bench, and no PE press overlap. That list is short: Therapedia, Frisco Feeding, Synaptic, PTA San Antonio, Kids Developmental Clinic. DFW is one market. NPPES is a candidate generator — Tarrant had 3 registry rows and 4 verified independents.",
+      "Start where a named founder, more than one site or a disclosed therapist bench, and no PE press overlap. That list is short: Therapedia, Frisco Feeding, Synaptic, PTA San Antonio, Kids Developmental Clinic. DFW, Houston, and Austin are metro markets. NPPES is a candidate generator — Tarrant had 3 registry rows and 4 verified independents.",
     priorities: ranked.slice(0, 6).map((clinic) => {
       const owner = clinic.ownerName ? ` (${clinic.ownerName})` : "";
       return `${clinic.outreachRank}. ${clinic.name}${owner} — ${clinic.nextAction}`;
     }),
     caveats: [
       `${verifiedMarkets.length} of ${countyMarkets.length} county markets now have a verified clinic layer.`,
-      "Ownership is from practice sites, NPI authorized officials, and LinkedIn — not pulled SOS filings. 'No PE press found' is not a clearance.",
+      "Ownership is from practice sites, NPI authorized officials, and LinkedIn — SOS/license rows are dated checks, not pulled filings. 'No PE press found' is not a clearance.",
       "Clinician counts from LinkedIn/sites are estimates. Confirm on the call.",
       "NPPES name-match missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding. Density is a hypothesis.",
       "Oaklin Lane's own clinics are on the map and in the pass list.",
@@ -445,6 +534,8 @@ const MARKET_ALIASES: Record<string, string[]> = {
   "Travis County": ["Travis", "Austin"],
   "Bexar County": ["Bexar", "San Antonio"],
   "DFW Metro": ["Dallas", "Tarrant", "Collin", "Frisco", "Rockwall", "Denton", "DFW"],
+  "Houston Metro": ["Houston", "Harris", "Fort Bend", "Montgomery", "Pearland", "Pasadena"],
+  "Austin Metro": ["Austin", "Travis", "Williamson", "Hays"],
 };
 
 export function rejectedForMarket(
@@ -465,7 +556,7 @@ export function rejectedForMarket(
 export function ownershipHeadline(clinic: VerifiedClinic): string {
   if (clinic.ownerName) return clinic.ownerName;
   if (clinic.ownershipStatus === "independent_unnamed") {
-    return "Owner not named on public site";
+    return `Owner not named — ${SOS_STATUS_LABELS[clinic.sosCheck.status]} as of ${clinic.sosCheck.checkedOn}`;
   }
   if (clinic.ownershipStatus === "platform_scaled") return "Scaled platform";
   if (clinic.ownershipStatus === "nonprofit") return "Nonprofit";
@@ -474,11 +565,30 @@ export function ownershipHeadline(clinic: VerifiedClinic): string {
   return "Ownership not established";
 }
 
+export function sosCheckLine(check: SosCheck): string {
+  const legal = check.legalName ? ` · ${check.legalName}` : "";
+  const members = check.members ? ` · ${check.members}` : "";
+  return `${SOS_STATUS_LABELS[check.status]} · checked ${check.checkedOn}${legal}${members}`;
+}
+
+export function licenseCheckLine(check: LicenseCheck): string {
+  const number = check.licenseNumber ? ` · #${check.licenseNumber}` : "";
+  const holder = check.holderName ? ` · ${check.holderName}` : "";
+  return `${check.board}: ${LICENSE_STATUS_LABELS[check.status]}${number}${holder} · ${check.checkedOn}`;
+}
+
+export type BriefNotes = Record<string, string>;
+
 export function buildIcBrief(
   selected: ShortlistMarket,
   queue: DiligenceItem[],
-  rejected: RejectedRecord[]
+  rejected: RejectedRecord[],
+  notes: BriefNotes = {}
 ): string {
+  const ranked = [...selected.verifiedClinics]
+    .filter((clinic) => clinic.outreachRank !== null)
+    .sort((a, b) => (a.outreachRank ?? 99) - (b.outreachRank ?? 99));
+
   const lines = [
     `# Catchment IC brief — ${selected.county_name}`,
     "",
@@ -496,24 +606,46 @@ export function buildIcBrief(
     `- Risk: ${selected.narrative.risk}`,
     `- Next: ${selected.narrative.nextAction}`,
     "",
-    "## Classified clinics",
-    "",
   ];
 
+  if (ranked.length) {
+    lines.push("## Ranked targets", "");
+    for (const clinic of ranked) {
+      lines.push(
+        `${clinic.outreachRank}. ${clinic.name} — ${ownershipHeadline(clinic)}. ${clinic.nextAction}`
+      );
+    }
+    lines.push("");
+  }
+
+  lines.push("## Classified clinics", "");
+
   for (const clinic of selected.verifiedClinics) {
+    const workspaceNote = notes[clinic.id]?.trim();
     lines.push(
       `### ${clinic.name}`,
       `- Classification: ${clinic.classification}`,
       `- Ownership: ${ownershipHeadline(clinic)} — ${clinic.ownershipSignal}`,
+      `- SOS / NPI check: ${sosCheckLine(clinic.sosCheck)}`,
+      `- SOS note: ${clinic.sosCheck.note}`,
       `- PE signal: ${clinic.peSignal}`,
       `- Locations: ${clinic.locationCount} (${clinic.footprint})`,
       `- Size signal: ${clinic.clinicianEstimate}`,
       `- Services: ${clinic.services.join(", ")}`,
       `- Next action: ${clinic.nextAction}`,
       `- Website: ${clinic.websiteUrl}`,
-      `- Notes: ${clinic.verificationNote}`,
-      ""
+      `- Notes: ${clinic.verificationNote}`
     );
+    if (clinic.licenseChecks.length) {
+      lines.push("- License / SOS:");
+      for (const check of clinic.licenseChecks) {
+        lines.push(`  - ${licenseCheckLine(check)} — ${check.note}`);
+      }
+    }
+    if (workspaceNote) {
+      lines.push(`- Workspace note: ${workspaceNote}`);
+    }
+    lines.push("");
   }
 
   const registryItems = queue.filter((item) => item.kind === "registry");
@@ -539,6 +671,7 @@ export function buildIcBrief(
   lines.push(
     "## Caveats",
     "- NPPES is a candidate-generation screen, not a clinic census.",
+    "- SOS and license rows are dated checks from this pass. Interactive board/SOS search was not completed — do not read `not_pulled` as unlicensed or uncleared.",
     "- Ownership notes are web/NPI research, not Texas SOS filings.",
     "- “No PE press found” is not clearance.",
     "- Oaklin Lane’s own clinics are the buyer, not targets.",

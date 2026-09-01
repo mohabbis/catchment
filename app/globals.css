@@ -117,3 +117,113 @@ body {
 .btn-ghost.is-active {
   border-color: var(--ink);
 }
+
+.ic-brief {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: auto;
+  background: var(--paper);
+}
+
+.ic-brief-toolbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+  padding: 0.75rem 1.25rem;
+}
+
+.ic-brief-page {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  color: var(--ink);
+}
+
+.ic-brief-page .kicker {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.ic-brief-page h1 {
+  font-family: var(--font-source-serif), "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0.4rem 0 0.75rem;
+}
+
+.ic-brief-page h2 {
+  font-family: var(--font-source-serif), "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.5rem;
+}
+
+.ic-brief-page h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.1rem 0 0.35rem;
+}
+
+.ic-brief-page p,
+.ic-brief-page li {
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.ic-brief-page .lede,
+.ic-brief-page .serif-body {
+  font-family: var(--font-source-serif), "Times New Roman", serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.ic-brief-page ul,
+.ic-brief-page ol {
+  padding-left: 1.2rem;
+}
+
+.ic-brief-page .clinic-block {
+  break-inside: avoid;
+}
+
+@media print {
+  @page {
+    margin: 0.7in;
+    size: letter;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    height: auto;
+    color: #111;
+  }
+
+  .app-shell > header,
+  .app-shell > footer,
+  .workbench-chrome,
+  .no-print,
+  [data-testid="clinic-drawer"] {
+    display: none !important;
+  }
+
+  .ic-brief {
+    position: static;
+    overflow: visible;
+    background: #fff;
+  }
+
+  .ic-brief-page {
+    max-width: none;
+    padding: 0;
+  }
+}
