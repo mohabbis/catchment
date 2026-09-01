@@ -1,7 +1,9 @@
 import Workbench from "@/components/Workbench";
+import { VERIFIED_CLINICS } from "@/lib/verified-clinics";
+import { hasSupabaseEnv, loadLocalCountyScores, loadLocalRegistryCandidates } from "@/lib/local-data";
 import { getSupabaseClient } from "@/lib/supabase";
 import {
-  buildShortlist,
+  buildDisplayShortlist,
   type CountyScoreRow,
   type RegistryCandidate,
 } from "@/lib/workbench";
@@ -47,15 +49,40 @@ function groupRegistryByCounty(candidates: RegistryCandidate[]): Map<string, Reg
   return map;
 }
 
-export default async function Home() {
-  const [counties, registryCandidates] = await Promise.all([
-    getCountyScores(),
-    getRegistryCandidates(),
-  ]);
+async function loadWorkbenchData(): Promise<{
+  counties: CountyScoreRow[];
+  registryCandidates: RegistryCandidate[];
+  source: "supabase" | "local";
+}> {
+  if (hasSupabaseEnv()) {
+    try {
+      const [counties, registryCandidates] = await Promise.all([
+        getCountyScores(),
+        getRegistryCandidates(),
+      ]);
+      if (counties.length > 0) {
+        return { counties, registryCandidates, source: "supabase" };
+      }
+    } catch {
+      // Fall through to the checked-in extract so the workbench still boots.
+    }
+  }
 
-  const shortlist = buildShortlist(counties, groupRegistryByCounty(registryCandidates));
-  const verifiedCount = shortlist.reduce((sum, market) => sum + market.verifiedClinics.length, 0);
-  const targetCount = shortlist.reduce((sum, market) => sum + market.targetCount, 0);
+  return {
+    counties: loadLocalCountyScores(),
+    registryCandidates: loadLocalRegistryCandidates(),
+    source: "local",
+  };
+}
+
+export default async function Home() {
+  const { counties, registryCandidates, source } = await loadWorkbenchData();
+  const shortlist = buildDisplayShortlist(counties, groupRegistryByCounty(registryCandidates));
+  const countyCount = shortlist.filter((market) => market.kind === "county").length;
+  const classifiedCount = VERIFIED_CLINICS.length;
+  const targetCount = VERIFIED_CLINICS.filter(
+    (clinic) => clinic.classification === "target_candidate"
+  ).length;
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-100 text-slate-950">
@@ -69,15 +96,20 @@ export default async function Home() {
           </div>
           <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600">
             <span>
-              <span className="font-medium text-slate-900">{shortlist.length}</span> shortlist
-              markets
+              <span className="font-medium text-slate-900">{countyCount}</span> counties + DFW
             </span>
             <span>
-              <span className="font-medium text-slate-900">{verifiedCount}</span> verified clinics
+              <span className="font-medium text-slate-900">{classifiedCount}</span> classified
+              clinics
             </span>
             <span>
               <span className="font-medium text-teal-800">{targetCount}</span> potential targets
             </span>
+            {source === "local" ? (
+              <span className="rounded bg-amber-50 px-1.5 py-0.5 text-amber-800 ring-1 ring-amber-200">
+                Local extract
+              </span>
+            ) : null}
             <details className="relative">
               <summary className="cursor-pointer font-medium text-slate-700 hover:text-slate-950">
                 Methodology
@@ -85,13 +117,13 @@ export default async function Home() {
               <div className="absolute right-0 z-10 mt-2 w-80 rounded-lg border border-slate-200 bg-white p-4 text-xs leading-5 text-slate-600 shadow-lg">
                 <p>
                   County screening joins Census ACS under-18 population with NPPES organization
-                  records matching pediatric therapy signals. M&A rank reflects captured provider
-                  count, market scale, and single-location fragmentation proxy.
+                  records matching pediatric therapy signals. That screen is candidate generation,
+                  not a clinic census.
                 </p>
                 <p className="mt-2">
-                  Verified clinics are confirmed via official practice websites and location pages.
-                  NPPES records are candidate organizations only — not presented as a clinic
-                  database.
+                  Classified clinics are website-verified, then tagged for ownership, size,
+                  pediatric mix, and next action. DFW is one metro market. Passes are logged on
+                  purpose.
                 </p>
                 <p className="mt-2 text-slate-500">
                   Independent work sample. Not commissioned by Oaklin Lane.
@@ -105,8 +137,9 @@ export default async function Home() {
       <Workbench shortlist={shortlist} />
 
       <footer className="shrink-0 border-t border-slate-200 px-4 py-2 text-[10px] text-slate-500 lg:px-6">
-        Data: NPPES NPI Registry, Census ACS 5-Year, ZCTA-to-County crosswalk. Clinic verification
-        via official operator websites.
+        Screening: NPPES NPI Registry, Census ACS 5-Year, ZCTA-to-County crosswalk. Clinic layer:
+        official operator websites, NPI authorized officials, and public founder sources. Ownership
+        is not a pulled SOS filing.
       </footer>
     </div>
   );
