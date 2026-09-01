@@ -359,7 +359,7 @@ export function buildDfwRollup(shortlist: ShortlistMarket[]): ShortlistMarket {
     evidence_confidence: "Directional",
     kind: "metro",
     curatedRank: 0,
-    metroLabel: "Dallas + Tarrant + Collin",
+    metroLabel: "Dallas, Tarrant, and Collin as one market",
     narrative: {
       headline: "Treat DFW as one market. The independents already cross the county lines.",
       rationale:

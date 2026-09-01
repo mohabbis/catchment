@@ -267,6 +267,7 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                 market={market}
                 selected={market.county_name === selectedCounty}
                 featured
+                subtitle="Metro rollup"
                 onSelect={selectMarket}
               />
             ))}
@@ -301,6 +302,8 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                 <button
                   key={value}
                   type="button"
+                  data-testid={`view-${value}`}
+                  aria-pressed={centerView === value}
                   onClick={() => setCenterView(value)}
                   className={`btn btn-ghost ${centerView === value ? "is-active" : ""}`}
                 >
@@ -328,7 +331,12 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                   </select>
                 </label>
               ) : null}
-              <button type="button" onClick={exportBrief} className="btn btn-primary">
+              <button
+                type="button"
+                data-testid="export-brief"
+                onClick={exportBrief}
+                className="btn btn-primary"
+              >
                 {exported ? "Brief saved" : "Export IC brief"}
               </button>
             </div>
@@ -364,6 +372,7 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                   <button
                     key={priority}
                     type="button"
+                    data-testid={clinic ? `call-next-${clinic.id}` : undefined}
                     onClick={() => clinic && openClinic(clinic.id)}
                     className="rounded-full border border-[var(--line-strong)] bg-[var(--card)] px-3 py-1.5 text-left text-xs text-[var(--ink-soft)] hover:border-[var(--ink)] hover:text-[var(--ink)]"
                   >
@@ -472,16 +481,21 @@ function MarketButton({
   market,
   selected,
   featured,
+  subtitle,
   onSelect,
 }: {
   market: ShortlistMarket;
   selected: boolean;
   featured?: boolean;
+  subtitle?: string;
   onSelect: (countyName: string) => void;
 }) {
   return (
     <button
       type="button"
+      data-testid={`market-${market.county_fips || market.county_name}`}
+      aria-current={selected ? "true" : undefined}
+      aria-label={`Select ${countyLabel(market.county_name)}`}
       onClick={() => onSelect(market.county_name)}
       className={`mb-1 w-full rounded-md px-3 py-2.5 text-left transition-colors ${
         selected
@@ -496,8 +510,10 @@ function MarketButton({
           <div className="text-sm font-semibold text-[var(--ink)]">
             {countyLabel(market.county_name)}
           </div>
-          {market.metroLabel ? (
-            <div className="mt-0.5 text-[11px] text-[var(--ink-faint)]">{market.metroLabel}</div>
+          {(subtitle || market.metroLabel) ? (
+            <div className="mt-0.5 text-[11px] text-[var(--ink-faint)]">
+              {subtitle ?? market.metroLabel}
+            </div>
           ) : null}
         </div>
         <span className="text-[11px] tabular-nums text-[var(--ink-faint)]">
@@ -516,7 +532,10 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--ink-faint)]">
             {isMetroMarket(market) ? "Metro thesis" : "County cut"} · {market.evidence_confidence}
           </p>
-          <h2 className="serif mt-1 text-3xl font-semibold tracking-tight text-[var(--ink)]">
+          <h2
+            data-testid="thesis-title"
+            className="serif mt-1 text-3xl font-semibold tracking-tight text-[var(--ink)]"
+          >
             {countyLabel(market.county_name)}
           </h2>
         </div>
@@ -729,6 +748,7 @@ function PipelineGroup({
               <button
                 key={item.npi}
                 type="button"
+                data-testid={`clinic-${item.npi}`}
                 onClick={() => onOpen({ kind: "registry", item })}
                 className={`w-full rounded-md border border-dashed border-[var(--line-strong)] bg-[var(--paper)] px-3 py-2.5 text-left ${
                   selected ? "ring-1 ring-[var(--forest)]" : ""
@@ -755,6 +775,7 @@ function PipelineGroup({
             >
               <button
                 type="button"
+                data-testid={`clinic-${item.id}`}
                 onClick={() => onOpen({ kind: "verified", item })}
                 className="w-full px-3 py-2.5 text-left"
               >
@@ -819,7 +840,12 @@ function ClinicDetail({
   const item = selection.item;
 
   return (
-    <div className="fixed inset-0 z-40 flex justify-end bg-[rgba(28,25,21,0.28)]" role="dialog" aria-modal="true">
+    <div
+      className="fixed inset-0 z-40 flex justify-end bg-[rgba(28,25,21,0.28)]"
+      role="dialog"
+      aria-modal="true"
+      data-testid="clinic-drawer"
+    >
       <button type="button" className="h-full flex-1 cursor-default" onClick={onClose} aria-label="Close drawer" />
       <aside className="flex h-full w-full max-w-md flex-col overflow-y-auto border-l border-[var(--line)] bg-[var(--card)] shadow-2xl">
         <div className="flex items-start justify-between gap-3 border-b border-[var(--line)] px-5 py-4">
