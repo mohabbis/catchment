@@ -146,8 +146,8 @@ function assignQuadrants(scores: CountyScore[]): CountyScore[] {
 }
 
 export const QUADRANT_LABELS: Record<Quadrant, string> = {
-  underserved_fragmented: "Underserved & Fragmented",
-  underserved_consolidated: "Underserved & Consolidated",
-  saturated_fragmented: "Saturated & Fragmented",
-  saturated_consolidated: "Saturated & Consolidated",
+  underserved_fragmented: "Lower Density & Fragmented",
+  underserved_consolidated: "Lower Density & Less Fragmented",
+  saturated_fragmented: "Higher Density & Fragmented",
+  saturated_consolidated: "Higher Density & Less Fragmented",
 };

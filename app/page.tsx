@@ -1,6 +1,10 @@
+import Workbench from "@/components/Workbench";
 import { getSupabaseClient } from "@/lib/supabase";
-import { QUADRANT_LABELS, type Quadrant } from "@/lib/scoring";
-import CountyTable, { type CountyScoreRow } from "@/components/CountyTable";
+import {
+  buildShortlist,
+  type CountyScoreRow,
+  type RegistryCandidate,
+} from "@/lib/workbench";
 
 export const revalidate = 3600;
 
@@ -17,50 +21,92 @@ async function getCountyScores(): Promise<CountyScoreRow[]> {
   return (data ?? []) as CountyScoreRow[];
 }
 
+async function getRegistryCandidates(): Promise<RegistryCandidate[]> {
+  const supabase = getSupabaseClient();
+  const { data, error } = await supabase
+    .from("providers")
+    .select(
+      "npi, org_name, dba_name, address_line1, city, zip, county_name, provider_type"
+    )
+    .eq("pediatric_signal", true)
+    .order("county_name", { ascending: true })
+    .order("org_name", { ascending: true });
+
+  if (error) throw new Error(`Failed to load providers: ${error.message}`);
+  return (data ?? []) as RegistryCandidate[];
+}
+
+function groupRegistryByCounty(candidates: RegistryCandidate[]): Map<string, RegistryCandidate[]> {
+  const map = new Map<string, RegistryCandidate[]>();
+  for (const candidate of candidates) {
+    if (!candidate.county_name) continue;
+    const list = map.get(candidate.county_name) ?? [];
+    list.push(candidate);
+    map.set(candidate.county_name, list);
+  }
+  return map;
+}
+
 export default async function Home() {
-  const counties = await getCountyScores();
-  const withProviders = counties.filter((c) => c.pediatric_provider_count > 0);
+  const [counties, registryCandidates] = await Promise.all([
+    getCountyScores(),
+    getRegistryCandidates(),
+  ]);
+
+  const shortlist = buildShortlist(counties, groupRegistryByCounty(registryCandidates));
+  const verifiedCount = shortlist.reduce((sum, market) => sum + market.verifiedClinics.length, 0);
+  const targetCount = shortlist.reduce((sum, market) => sum + market.targetCount, 0);
 
   return (
-    <div className="flex flex-1 flex-col">
-      <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-        <div className="mx-auto max-w-6xl px-6 py-8">
-          <h1 className="text-2xl font-semibold tracking-tight">catchment</h1>
-          <p className="mt-1 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
-            Texas counties ranked by pediatric therapy (speech, OT, PT) market opportunity —
-            provider density vs. market fragmentation, from NPPES registry and Census ACS data.
-          </p>
-          <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm">
-            <div>
-              <dt className="text-zinc-500 dark:text-zinc-400">TX counties</dt>
-              <dd className="font-medium">{counties.length}</dd>
-            </div>
-            <div>
-              <dt className="text-zinc-500 dark:text-zinc-400">With a captured pediatric provider</dt>
-              <dd className="font-medium">{withProviders.length}</dd>
-            </div>
-            {(Object.keys(QUADRANT_LABELS) as Quadrant[]).map((q) => (
-              <div key={q}>
-                <dt className="text-zinc-500 dark:text-zinc-400">{QUADRANT_LABELS[q]}</dt>
-                <dd className="font-medium">
-                  {withProviders.filter((c) => c.quadrant === q).length}
-                </dd>
+    <div className="flex min-h-screen flex-col bg-slate-100 text-slate-950">
+      <header className="shrink-0 border-b border-slate-200 bg-white">
+        <div className="flex flex-wrap items-center justify-between gap-4 px-4 py-3 lg:px-6">
+          <div>
+            <h1 className="text-lg font-semibold tracking-tight">Catchment</h1>
+            <p className="text-xs text-slate-600">
+              Texas pediatric therapy deal-origination workbench
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600">
+            <span>
+              <span className="font-medium text-slate-900">{shortlist.length}</span> shortlist
+              markets
+            </span>
+            <span>
+              <span className="font-medium text-slate-900">{verifiedCount}</span> verified clinics
+            </span>
+            <span>
+              <span className="font-medium text-teal-800">{targetCount}</span> potential targets
+            </span>
+            <details className="relative">
+              <summary className="cursor-pointer font-medium text-slate-700 hover:text-slate-950">
+                Methodology
+              </summary>
+              <div className="absolute right-0 z-10 mt-2 w-80 rounded-lg border border-slate-200 bg-white p-4 text-xs leading-5 text-slate-600 shadow-lg">
+                <p>
+                  County screening joins Census ACS under-18 population with NPPES organization
+                  records matching pediatric therapy signals. M&A rank reflects captured provider
+                  count, market scale, and single-location fragmentation proxy.
+                </p>
+                <p className="mt-2">
+                  Verified clinics are confirmed via official practice websites and location pages.
+                  NPPES records are candidate organizations only — not presented as a clinic
+                  database.
+                </p>
+                <p className="mt-2 text-slate-500">
+                  Independent work sample. Not commissioned by Oaklin Lane.
+                </p>
               </div>
-            ))}
-          </dl>
+            </details>
+          </div>
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-8">
-        <CountyTable counties={counties} />
-      </main>
+      <Workbench shortlist={shortlist} />
 
-      <footer className="border-t border-zinc-200 px-6 py-6 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-500">
-        <div className="mx-auto max-w-6xl">
-          Data: NPPES NPI Registry (org-level SLP/OT/PT providers, name-matched for pediatric
-          signal), Census ACS 5-Year (under-18 population), Census ZCTA-to-County Relationship
-          File (ZIP crosswalk). See the methodology memo for limitations.
-        </div>
+      <footer className="shrink-0 border-t border-slate-200 px-4 py-2 text-[10px] text-slate-500 lg:px-6">
+        Data: NPPES NPI Registry, Census ACS 5-Year, ZCTA-to-County crosswalk. Clinic verification
+        via official operator websites.
       </footer>
     </div>
   );

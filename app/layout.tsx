@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "catchment — TX pediatric therapy market fragmentation",
+  title: "Catchment — Pediatric Therapy Deal Origination",
   description:
-    "County-level opportunity ranking for Texas pediatric speech, OT, and PT providers.",
+    "Investment workbench for Texas pediatric therapy market screening, clinic verification, and acquisition sourcing.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-950">
         {children}
       </body>
     </html>

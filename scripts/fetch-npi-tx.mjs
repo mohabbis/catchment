@@ -196,7 +196,11 @@ async function main() {
     }
   }
 
-  const deduped = Array.from(byNpi.values()).map(({ __searchLabel, ...rest }) => rest);
+  const deduped = Array.from(byNpi.values()).map((record) => {
+    const rest = { ...record };
+    delete rest.__searchLabel;
+    return rest;
+  });
 
   const pediatricCount = deduped.filter((r) => r.pediatric_signal).length;
   log(`\nTotal unique TX org NPIs (name-matched search): ${deduped.length}`);

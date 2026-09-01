@@ -13,6 +13,8 @@ import { createClient } from "@supabase/supabase-js";
 import { computeCountyScores, type Provider, type CountyPopulation } from "../lib/scoring.ts";
 import { loadEnvLocal } from "./lib/load-env.mjs";
 
+type RawNpiProvider = Omit<Provider, "county_fips" | "county_name">;
+
 function log(msg: string) {
   fs.writeSync(1, `${msg}\n`);
 }
@@ -34,7 +36,7 @@ async function main() {
     auth: { autoRefreshToken: false, persistSession: false },
   });
 
-  const rawProviders = await readJson<any[]>("../data/npi_tx_raw.json");
+  const rawProviders = await readJson<RawNpiProvider[]>("../data/npi_tx_raw.json");
   const zipCrosswalk = await readJson<Record<string, { county_fips: string; county_name: string }>>(
     "../data/zip_county_tx.json"
   );
