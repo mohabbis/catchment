@@ -113,13 +113,20 @@ function asVerifiedItem(
   return { kind: "verified", status: clinic.classification, ...clinic };
 }
 
-export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] }) {
+export default function Workbench({
+  shortlist,
+  focusMarket = null,
+}: {
+  shortlist: ShortlistMarket[];
+  focusMarket?: string | null;
+}) {
   const [selectedCounty, setSelectedCounty] = useState(shortlist[0]?.county_name ?? "");
   const [compareCounty, setCompareCounty] = useState<string | null>(null);
-  const [pipelineFilter, setPipelineFilter] = useState<PipelineFilter>("all");
+  const [pipelineFilter, setPipelineFilter] = useState<PipelineFilter>("target_candidate");
   const [centerView, setCenterView] = useState<CenterView>("thesis");
   const [mobilePane, setMobilePane] = useState<MobilePane>("thesis");
   const [showAllRejected, setShowAllRejected] = useState(false);
+  const [showMoreLists, setShowMoreLists] = useState(false);
   const [detail, setDetail] = useState<DetailSelection | null>(null);
   const [exported, setExported] = useState(false);
   const [printOpen, setPrintOpen] = useState(false);
@@ -135,6 +142,14 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    if (!focusMarket) return;
+    setSelectedCounty(focusMarket);
+    setCenterView("thesis");
+    setMobilePane("thesis");
+    setDetail(null);
+  }, [focusMarket]);
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -268,15 +283,23 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
     );
   }
 
+  const nextStep = detail
+    ? "This panel is the clinic file. Status and notes are at the bottom."
+    : `Open a clinic on the right. ${
+        conclusion.priorities[0]
+          ? `First call: ${VERIFIED_CLINICS.find((row) => row.outreachRank === 1)?.name ?? "the #1 target"}.`
+          : "Targets are the call list."
+      }`;
+
   return (
     <>
     <div className="workbench-chrome flex min-h-0 flex-1 flex-col">
       <div className="flex items-center gap-1 border-b border-[var(--line)] px-3 py-2 lg:hidden">
         {(
           [
-            ["markets", "Markets"],
-            ["thesis", "Thesis"],
-            ["pipeline", "Clinics"],
+            ["markets", "1. Market"],
+            ["thesis", "2. Case"],
+            ["pipeline", "3. Clinics"],
           ] as const
         ).map(([value, label]) => (
           <button
@@ -290,7 +313,7 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
         ))}
       </div>
 
-      <div className="grid min-h-0 flex-1 gap-0 lg:grid-cols-[232px_minmax(0,1fr)_360px] xl:grid-cols-[250px_minmax(0,1fr)_400px]">
+      <div className="grid min-h-0 flex-1 gap-0 lg:grid-cols-[240px_minmax(0,1fr)_380px] xl:grid-cols-[260px_minmax(0,1fr)_400px]">
         <aside
           className={`min-h-0 flex-col border-[var(--line)] bg-[var(--card)] lg:flex lg:border-r ${
             mobilePane === "markets" ? "flex" : "hidden"
@@ -298,10 +321,10 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
         >
           <div className="border-b border-[var(--line)] px-4 py-3">
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
-              Markets
+              1. Market
             </h2>
             <p className="mt-1 text-xs leading-5 text-[var(--ink-soft)]">
-              Three metros, then the county cuts.
+              Start with a metro. Counties below are slices of the same place.
             </p>
           </div>
           <nav className="min-h-0 flex-1 overflow-y-auto px-2 py-2">
@@ -311,12 +334,12 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                 market={market}
                 selected={market.county_name === selectedCounty}
                 featured
-                subtitle="Metro rollup"
+                subtitle={market.metroLabel ?? "Deal market"}
                 onSelect={selectMarket}
               />
             ))}
             <p className="mt-3 px-2 pb-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
-              County cuts
+              County slices
             </p>
             {countyMarkets.map((market) => (
               <MarketButton
@@ -334,55 +357,21 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
             mobilePane === "thesis" ? "flex" : "hidden"
           }`}
         >
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-            <div className="flex flex-wrap gap-1.5">
-              {(
-                [
-                  ["thesis", "Thesis"],
-                  ["compare", "Compare"],
-                  ["passes", "Pass log"],
-                  ["map", "Map"],
-                ] as const
-              ).map(([value, label]) => (
-                <button
-                  key={value}
-                  type="button"
-                  data-testid={`view-${value}`}
-                  aria-pressed={centerView === value}
-                  onClick={() => setCenterView(value)}
-                  className={`btn btn-ghost ${centerView === value ? "is-active" : ""}`}
-                >
-                  {label}
-                </button>
-              ))}
+          <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
+                2. Case
+              </h2>
+              <p className="mt-1 max-w-xl text-xs leading-5 text-[var(--ink-soft)]">{nextStep}</p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              {centerView === "thesis" ? (
-                <label className="flex items-center gap-2 text-xs text-[var(--ink-soft)]">
-                  vs
-                  <select
-                    value={compareCounty ?? ""}
-                    onChange={(event) => setCompareCounty(event.target.value || null)}
-                    className="rounded-md border border-[var(--line-strong)] bg-[var(--card)] px-2 py-1 text-xs text-[var(--ink)]"
-                  >
-                    <option value="">None</option>
-                    {shortlist
-                      .filter((market) => market.county_name !== selected.county_name)
-                      .map((market) => (
-                        <option key={market.county_name} value={market.county_name}>
-                          {countyLabel(market.county_name)}
-                        </option>
-                      ))}
-                  </select>
-                </label>
-              ) : null}
               <button
                 type="button"
                 data-testid="export-brief"
                 onClick={exportBrief}
                 className="btn btn-primary"
               >
-                {exported ? "Brief saved" : "Download .md"}
+                {exported ? "Brief saved" : "Save brief"}
               </button>
               <button
                 type="button"
@@ -390,9 +379,50 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
                 onClick={() => setPrintOpen(true)}
                 className="btn btn-ghost"
               >
-                Print / Save PDF
+                Print
               </button>
             </div>
+          </div>
+
+          <div className="mb-4 flex flex-wrap items-center gap-1.5">
+            {(
+              [
+                ["thesis", "Overview"],
+                ["compare", "Compare"],
+                ["passes", "Passed"],
+                ["map", "Map"],
+              ] as const
+            ).map(([value, label]) => (
+              <button
+                key={value}
+                type="button"
+                data-testid={`view-${value}`}
+                aria-pressed={centerView === value}
+                onClick={() => setCenterView(value)}
+                className={`btn btn-ghost ${centerView === value ? "is-active" : ""}`}
+              >
+                {label}
+              </button>
+            ))}
+            {centerView === "thesis" ? (
+              <label className="ml-auto flex items-center gap-2 text-xs text-[var(--ink-soft)]">
+                Compare with
+                <select
+                  value={compareCounty ?? ""}
+                  onChange={(event) => setCompareCounty(event.target.value || null)}
+                  className="rounded-md border border-[var(--line-strong)] bg-[var(--card)] px-2 py-1 text-xs text-[var(--ink)]"
+                >
+                  <option value="">None</option>
+                  {shortlist
+                    .filter((market) => market.county_name !== selected.county_name)
+                    .map((market) => (
+                      <option key={market.county_name} value={market.county_name}>
+                        {countyLabel(market.county_name)}
+                      </option>
+                    ))}
+                </select>
+              </label>
+            ) : null}
           </div>
 
           {centerView === "compare" ? (
@@ -419,28 +449,36 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
             </div>
           )}
 
-          <ol className="mt-5 flex flex-col gap-2 border-t border-[var(--line)] pt-4">
-            <li className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
-              Call next
-            </li>
-            <li className="flex flex-wrap gap-2">
-              {conclusion.priorities.slice(0, 5).map((priority, index) => {
-                const clinic = VERIFIED_CLINICS.find((row) => row.outreachRank === index + 1);
-                return (
-                  <button
-                    key={priority}
-                    type="button"
-                    data-testid={clinic ? `call-next-${clinic.id}` : undefined}
-                    onClick={() => clinic && openClinic(clinic.id)}
-                    className="rounded-full border border-[var(--line-strong)] bg-[var(--card)] px-3 py-1.5 text-left text-xs text-[var(--ink-soft)] hover:border-[var(--ink)] hover:text-[var(--ink)]"
-                  >
-                    <span className="font-semibold text-[var(--ink)]">{index + 1}.</span>{" "}
-                    {clinic?.name ?? priority}
-                  </button>
-                );
-              })}
-            </li>
-          </ol>
+          {centerView === "thesis" ? (
+            <div className="mt-5 border-t border-[var(--line)] pt-4">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
+                First five calls
+              </p>
+              <div className="mt-2 flex flex-col gap-2">
+                {conclusion.priorities.slice(0, 5).map((priority, index) => {
+                  const clinic = VERIFIED_CLINICS.find((row) => row.outreachRank === index + 1);
+                  return (
+                    <button
+                      key={priority}
+                      type="button"
+                      data-testid={clinic ? `call-next-${clinic.id}` : undefined}
+                      onClick={() => clinic && openClinic(clinic.id)}
+                      className="flex items-start justify-between gap-3 rounded-md border border-[var(--line)] bg-[var(--card)] px-3 py-2.5 text-left text-sm hover:border-[var(--ink)]"
+                    >
+                      <span>
+                        <span className="font-semibold text-[var(--forest)]">{index + 1}. </span>
+                        <span className="font-semibold">{clinic?.name ?? priority}</span>
+                        {clinic?.ownerName ? (
+                          <span className="text-[var(--ink-soft)]"> — {clinic.ownerName}</span>
+                        ) : null}
+                      </span>
+                      <span className="shrink-0 text-xs text-[var(--ink-faint)]">Open</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ) : null}
         </section>
 
         <aside
@@ -449,69 +487,81 @@ export default function Workbench({ shortlist }: { shortlist: ShortlistMarket[] 
           }`}
         >
           <div className="border-b border-[var(--line)] px-4 py-3">
-            <div className="flex items-baseline justify-between gap-2">
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
-                {countyLabel(selected.county_name)} clinics
-              </h2>
-              <span className="text-xs text-[var(--ink-faint)]">
-                {pipelineCounts.target_candidate} targets
-              </span>
-            </div>
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
+              3. Clinics
+            </h2>
+            <p className="mt-1 text-xs leading-5 text-[var(--ink-soft)]">
+              {countyLabel(selected.county_name)} · {pipelineCounts.target_candidate} to call.
+              Open a name for the file.
+            </p>
             <div className="mt-2 flex flex-wrap gap-1">
-              {(
-                [
-                  ["all", "All"],
-                  ["target_candidate", "Targets"],
-                  ["verified_operator", "Verified"],
-                  ["competitor_benchmark", "Pass"],
-                  ["registry_candidate", "Registry"],
-                ] as const
-              ).map(([value, label]) => (
-                <button
-                  key={value}
-                  type="button"
-                  onClick={() => setPipelineFilter(value)}
-                  className={`btn btn-ghost !px-2 !py-1 !text-[10px] ${
-                    pipelineFilter === value ? "is-active" : ""
-                  }`}
-                >
-                  {label} {pipelineCounts[value]}
-                </button>
-              ))}
+              <button
+                type="button"
+                onClick={() => setPipelineFilter("target_candidate")}
+                className={`btn btn-ghost !px-2 !py-1 !text-[10px] ${
+                  pipelineFilter === "target_candidate" ? "is-active" : ""
+                }`}
+              >
+                To call {pipelineCounts.target_candidate}
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowMoreLists((value) => !value)}
+                className={`btn btn-ghost !px-2 !py-1 !text-[10px] ${showMoreLists ? "is-active" : ""}`}
+              >
+                More lists
+              </button>
             </div>
+            {showMoreLists ? (
+              <div className="mt-2 flex flex-wrap gap-1">
+                {(
+                  [
+                    ["all", "Everything"],
+                    ["verified_operator", "On the map"],
+                    ["competitor_benchmark", "Passed"],
+                    ["registry_candidate", "Unverified names"],
+                  ] as const
+                ).map(([value, label]) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => setPipelineFilter(value)}
+                    className={`btn btn-ghost !px-2 !py-1 !text-[10px] ${
+                      pipelineFilter === value ? "is-active" : ""
+                    }`}
+                  >
+                    {label} {pipelineCounts[value]}
+                  </button>
+                ))}
+              </div>
+            ) : null}
           </div>
 
           <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-3 py-3">
             <PipelineGroup
-              title="Targets"
-              empty="No targets in this cut."
+              title="To call"
+              empty="No call-list clinics in this market."
               items={groupedPipeline.targets}
               selectedKey={detail ? itemKey(detail.item) : null}
-              clinicWorkflow={clinicWorkflow}
-              setClinicWorkflow={setClinicWorkflow}
               onOpen={setDetail}
             />
             {pipelineFilter === "all" ||
             pipelineFilter === "verified_operator" ||
             pipelineFilter === "competitor_benchmark" ? (
               <PipelineGroup
-                title="On the map — not the outreach list"
+                title="On the map — not the call list"
                 empty=""
                 items={groupedPipeline.map}
                 selectedKey={detail ? itemKey(detail.item) : null}
-                clinicWorkflow={clinicWorkflow}
-                setClinicWorkflow={setClinicWorkflow}
                 onOpen={setDetail}
               />
             ) : null}
             {pipelineFilter === "all" || pipelineFilter === "registry_candidate" ? (
               <PipelineGroup
-                title="Registry only — not clinics"
+                title="Unverified registry names"
                 empty=""
                 items={groupedPipeline.registry}
                 selectedKey={detail ? itemKey(detail.item) : null}
-                clinicWorkflow={clinicWorkflow}
-                setClinicWorkflow={setClinicWorkflow}
                 onOpen={setDetail}
               />
             ) : null}
@@ -585,14 +635,12 @@ function MarketButton({
           <div className="text-sm font-semibold text-[var(--ink)]">
             {countyLabel(market.county_name)}
           </div>
-          {(subtitle || market.metroLabel) ? (
-            <div className="mt-0.5 text-[11px] text-[var(--ink-faint)]">
-              {subtitle ?? market.metroLabel}
-            </div>
+          {subtitle ? (
+            <div className="mt-0.5 text-[11px] leading-4 text-[var(--ink-faint)]">{subtitle}</div>
           ) : null}
         </div>
-        <span className="text-[11px] tabular-nums text-[var(--ink-faint)]">
-          {market.targetCount} tgt
+        <span className="shrink-0 text-[11px] tabular-nums text-[var(--ink-faint)]">
+          {market.targetCount} to call
         </span>
       </div>
     </button>
@@ -605,7 +653,7 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--ink-faint)]">
-            {isMetroMarket(market) ? "Metro thesis" : "County cut"} · {market.evidence_confidence}
+            {isMetroMarket(market) ? "Deal market" : "County slice"}
           </p>
           <h2
             data-testid="thesis-title"
@@ -621,7 +669,7 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
 
       <div className="mt-5 rounded-md bg-[var(--forest-soft)] px-4 py-3">
         <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--forest)]">
-          Next
+          What to do next
         </p>
         <p className="mt-1 text-sm leading-6 text-[var(--forest-deep)]">
           {market.narrative.nextAction}
@@ -634,18 +682,16 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
           <dd className="mt-1 font-semibold tabular-nums">{formatChildren(market.population_under_18)}</dd>
         </div>
         <div>
-          <dt className="text-[11px] text-[var(--ink-faint)]">Targets</dt>
+          <dt className="text-[11px] text-[var(--ink-faint)]">To call</dt>
           <dd className="mt-1 font-semibold tabular-nums">{market.targetCount}</dd>
         </div>
         <div>
-          <dt className="text-[11px] text-[var(--ink-faint)]">Classified</dt>
+          <dt className="text-[11px] text-[var(--ink-faint)]">On the map</dt>
           <dd className="mt-1 font-semibold tabular-nums">{market.verifiedClinics.length}</dd>
         </div>
         <div>
-          <dt className="text-[11px] text-[var(--ink-faint)]">Registry screen</dt>
-          <dd className="mt-1 font-semibold tabular-nums">
-            {market.pediatric_provider_count} · {formatDensity(market.density_per_10k)}/10k
-          </dd>
+          <dt className="text-[11px] text-[var(--ink-faint)]">Registry names</dt>
+          <dd className="mt-1 font-semibold tabular-nums">{market.pediatric_provider_count}</dd>
         </div>
       </dl>
 
@@ -748,9 +794,9 @@ function PassLog({
     <div>
       <div className="mb-3 flex items-end justify-between gap-3">
         <div>
-          <h2 className="serif text-2xl font-semibold">Pass / not a target</h2>
+          <h2 className="serif text-2xl font-semibold">Passed — not a target</h2>
           <p className="mt-1 text-sm text-[var(--ink-soft)]">
-            Ruled out on purpose. Honesty is the differentiator.
+            These names were reviewed and set aside so they do not re-enter the call list.
           </p>
         </div>
         <button type="button" onClick={onToggleAll} className="btn btn-ghost">
@@ -795,16 +841,12 @@ function PipelineGroup({
   empty,
   items,
   selectedKey,
-  clinicWorkflow,
-  setClinicWorkflow,
   onOpen,
 }: {
   title: string;
   empty: string;
   items: DiligenceItem[];
   selectedKey: string | null;
-  clinicWorkflow: (item: Extract<DiligenceItem, { kind: "verified" }>) => WorkflowState;
-  setClinicWorkflow: (clinicId: string, state: WorkflowState) => void;
   onOpen: (selection: DetailSelection) => void;
 }) {
   if (!items.length) {
@@ -876,24 +918,6 @@ function PipelineGroup({
                   </span>
                 </p>
               </button>
-              <div className="flex items-center justify-between border-t border-[var(--line)] px-3 py-1.5">
-                <label className="flex items-center gap-2 text-[11px] text-[var(--ink-faint)]">
-                  Status
-                  <select
-                    value={clinicWorkflow(item)}
-                    onChange={(event) =>
-                      setClinicWorkflow(item.id, event.target.value as WorkflowState)
-                    }
-                    className="rounded border border-[var(--line)] bg-[var(--card)] px-1.5 py-0.5 text-[11px] text-[var(--ink)]"
-                  >
-                    {WORKFLOW_ORDER.map((value) => (
-                      <option key={value} value={value}>
-                        {WORKFLOW_LABELS[value]}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              </div>
             </article>
           );
         })}
@@ -931,7 +955,7 @@ function ClinicDetail({
         <div className="flex items-start justify-between gap-3 border-b border-[var(--line)] px-5 py-4">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--ink-faint)]">
-              Sourcing trail
+              Clinic file
             </p>
             <h2 className="serif mt-1 text-2xl font-semibold leading-tight">{item.name}</h2>
           </div>
