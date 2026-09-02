@@ -39,6 +39,23 @@ separated — do not blur them:
    rows (metro rollups first, then county slices), builds the diligence queue,
    the executive conclusion, and the IC brief markdown.
 
+Two cross-cutting modules keep the app honest about its own limits:
+
+- `lib/methodology.ts` — the data dictionary rendered by the **Method** center-pane
+  view: the literal NPPES / Census / crosswalk query parameters, per-metric formula +
+  denominator + deduplication rule (there is none), and `NOT_DONE`, an explicit list of
+  steps that were skipped. `computeScreenStats()` derives the live figures from whatever
+  extract is loaded so the page never states a number typed into prose. Every claim here
+  must be traceable to `scripts/` or `lib/scoring.ts`; if a step does not happen, say so
+  rather than describing it.
+- `lib/coverage.ts` — research completeness. `ownershipConfidence()` grades *provenance*
+  (filing > NPI authorized official / practice site > nothing), `clinicChecks()` is the
+  five-item standing check-list per clinic, and `marketCoverage()` rolls it up so a market's
+  candidate count is always shown next to how much diligence it received. Zero SOS filings
+  and zero license-board rows were pulled in this pass, so two of the five checks are open
+  everywhere and no market can reach the top coverage band. Leave that ceiling in place —
+  do not lower the band until something qualifies.
+
 ### Data flow
 
 `app/page.tsx` (server component, `revalidate = 3600`) loads county scores and
@@ -75,6 +92,13 @@ debounced 400ms. It is not a CRM and should not become one.
 - Never invent a fact for display. If a check was not run, the UI says "not pulled"
   — see `sosCheckLine`, `licenseCheckLine`, `linkStatusHeadline`. Preserve that
   discipline in any new surface.
+- Hypothesis language, not conclusions. The screening layer cannot establish that a
+  market is underserved, and no clinic has confirmed ownership or independence, so
+  copy says "appears", "suggests", "preliminary", "requires validation" rather than
+  asserting a finding. `target_candidate` renders as **Preliminary target** and the
+  counts read "preliminary outreach candidates" — never "targets" or "to call".
+- Do not hardcode a computed figure into prose. Derive it (`computeScreenStats`,
+  `marketCoverage`, `portfolioCoverage`) so it cannot go stale against the extract.
 
 ## Data regeneration
 

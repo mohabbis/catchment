@@ -122,9 +122,9 @@ function median(values: number[]): number {
  * zero-provider counties would just split "zero vs. zero").
  *
  * The fragmentation axis collapses on the current capture: single-location %
- * is 100 in 10 of the 12 counties clearing the floor, because multi-site
- * brands file their sites under separate legal entities and the name-match
- * catches only some of them. A median of 100 makes the ">= median" test
+ * is 100 in all but two of the counties clearing the floor (21 of 23 on the
+ * checked-in extract), because multi-site brands file their sites under
+ * separate legal entities and the name-match catches only some of them. A median of 100 makes the ">= median" test
  * near-universally true, which would label almost every county "fragmented"
  * and hand the 2x2 a second axis that carries no information. When that
  * happens the quadrant is left null rather than fabricated — a degenerate

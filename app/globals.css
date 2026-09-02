@@ -73,6 +73,9 @@ body {
 .chip {
   display: inline-flex;
   align-items: center;
+  /* Status chips sit beside variable-length clinic names; wrapping "Prelim. target"
+     onto two lines reads as a layout bug. Let the name wrap instead. */
+  white-space: nowrap;
   border-radius: 999px;
   padding: 0.15rem 0.5rem;
   font-size: 10px;

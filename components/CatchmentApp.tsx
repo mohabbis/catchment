@@ -5,6 +5,7 @@ import GuidePanel from "@/components/GuidePanel";
 import WelcomeOverlay from "@/components/WelcomeOverlay";
 import Workbench from "@/components/Workbench";
 import type { FocusRequest, ShortlistMarket } from "@/lib/workbench";
+import type { ScreenStats } from "@/lib/methodology";
 
 const WELCOME_SEEN_KEY = "catchment-welcome-seen";
 
@@ -26,10 +27,12 @@ export default function CatchmentApp({
   shortlist,
   dataSource,
   targetCount,
+  screenStats,
 }: {
   shortlist: ShortlistMarket[];
   dataSource: "supabase" | "local";
   targetCount: number;
+  screenStats: ScreenStats;
 }) {
   const [guideOpen, setGuideOpen] = useState(false);
   const [focusRequest, setFocusRequest] = useState<FocusRequest | null>(null);
@@ -83,9 +86,9 @@ export default function CatchmentApp({
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <p className="mr-1 text-xs text-[var(--ink-faint)]">
-              <span className="font-semibold text-[var(--ink)]">{targetCount}</span> clinics
-              to call
+            <p className="mr-1 max-w-[15rem] text-xs leading-4 text-[var(--ink-faint)]">
+              <span className="font-semibold text-[var(--ink)]">{targetCount}</span> preliminary
+              outreach candidates
             </p>
             <button
               type="button"
@@ -99,11 +102,12 @@ export default function CatchmentApp({
         </div>
       </header>
 
-      <Workbench shortlist={shortlist} focusRequest={focusRequest} />
+      <Workbench shortlist={shortlist} focusRequest={focusRequest} screenStats={screenStats} />
 
       <footer className="shrink-0 border-t border-[var(--line)] px-4 py-2 text-[10px] text-[var(--ink-faint)] lg:px-5">
-        NPPES and census screen markets. Clinic facts come from public sites and NPI. Passes
-        are listed on purpose.
+        NPPES and Census screen markets; neither ranks them. Clinic facts come from public sites
+        and NPI records — no SOS filing or license-board record was pulled. Open Method for the
+        full data dictionary. Passes are listed on purpose.
       </footer>
 
       {guideOpen ? (
