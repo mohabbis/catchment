@@ -25,8 +25,12 @@ Next.js App Router, React 19, Tailwind v4, TypeScript. Three layers, deliberatel
 separated — do not blur them:
 
 1. **Screening layer (quantitative, weak).** NPPES + Census, aggregated in
-   `lib/scoring.ts` into a density × fragmentation 2×2. Screening only — never
-   present it as a clinic census.
+   `lib/scoring.ts` into density and a fragmentation proxy. Screening only —
+   never present it as a clinic census, and never rank markets on it: the
+   statewide pull is 64 records, so density measures query recall, and the
+   fragmentation proxy reads ~100% almost everywhere. The 2×2 quadrant
+   deliberately abstains (returns `null`) while that second axis is degenerate.
+   Market order is the curated shortlist in `lib/workbench.ts`, an editorial call.
 2. **Verified layer (editorial, the real product).** `lib/verified-clinics.ts` is a
    hand-curated 1,200-line constant: named clinics, owners, dated SOS/license checks,
    sources, outreach ranks, plus `REJECTED_RECORDS` (the pass log). This file is the

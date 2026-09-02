@@ -5,6 +5,18 @@
 **Question:** Which Texas counties are underserved and fragmented enough to be good
 acquisition or de-novo targets for pediatric speech, OT, and PT services?
 
+> **Correction appended 2026-09-02.** The county ranking below does not hold, and
+> the app no longer uses it. Ranking by ascending captured density sorts counties
+> by how badly the NPPES name-match failed there, not by how underserved they are:
+> Tarrant places first on **3** captured records while Harris places fourth on 11.
+> The fragmentation column is worse — it reads 100% in 10 of the 12 counties that
+> clear the capture floor, because multi-site brands file their sites under
+> separate legal entities, so it separates nothing. The limitations section below
+> named both effects but the recommendation was still built on them, which is the
+> error. Treat the table as a record of the screen's output, not as a
+> recommendation. The defensible unit of work is the verified clinic layer in the
+> app: named operators, dated ownership and license checks, and the pass log.
+
 ## Methodology
 
 **Providers:** NPPES NPI Registry, org-level (NPI-2) records for Speech-Language

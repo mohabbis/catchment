@@ -1057,12 +1057,14 @@ export const VERIFIED_CLINICS: VerifiedClinic[] = [
     footprint: "Lake Highlands (Dallas) + Rockwall",
     locationCount: 2,
     clinicianEstimate: "Not used as a target size signal",
-    ownershipSignal: "The sponsor's own clinic brand. Lake Highlands 8610 Greenville Ave #200; Rockwall 789 Justin Rd.",
+    ownershipSignal:
+      "The sponsor's own clinic brand. Per oaklinlane.com read on 2026-09-01: Lake Highlands 8610 Greenville Ave #200; Rockwall 789 Justin Rd. Site read only — not a filing, and not confirmed against any acquisition since that date.",
     ownershipStatus: "sponsor_platform",
     ownerName: null,
     peSignal: "This is the house platform.",
     classification: "competitor_benchmark",
-    verificationNote: "On the map so DFW supply is honest. Not a target — it is the buyer.",
+    verificationNote:
+      "On the map so DFW supply is honest. Not a target — it is the buyer. Location count is what the public site showed on 2026-09-01; treat it as a floor, not a roster.",
     nextAction: "Pass. Use as the platform these add-ons would sit next to.",
     licenseLookups: [],
     sosCheck: sosNamed({

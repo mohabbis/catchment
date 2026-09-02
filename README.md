@@ -43,15 +43,30 @@ therapy taxonomy matches. Providers are mapped to counties through ZIP codes and
 the Census ZCTA-to-County Relationship File, then normalized against Census ACS
 under-18 population.
 
-The app presents separate screening scores:
+There is no composite score and no market ranking. Two independent measures are
+computed and reported as-is:
 
-- De novo opportunity: emphasizes larger child population and lower captured
-  provider density.
-- M&A opportunity: emphasizes captured provider count, market scale, and a
-  single-location organization proxy for fragmentation.
+- **Density** — captured pediatric providers per 10,000 under-18 residents.
+- **Fragmentation proxy** — share of captured records whose org identity (DBA,
+  falling back to legal name) appears at a single address statewide.
 
-Scores are directional indexes for initial market screening, not investment
-recommendations.
+Neither is used to order markets, for two reasons that the current capture makes
+unavoidable:
+
+1. The NPPES name-match returns 64 organization records for all of Texas, so
+   density runs 0.05–0.33 per 10k across every shortlist market — one to two
+   orders of magnitude below real supply. Sorting on it ranks query recall, not
+   markets: ascending density puts Tarrant first on 3 captured records and
+   Harris fourth on 11.
+2. The fragmentation proxy reads 100% in 10 of the 12 counties clearing the
+   capture floor, because multi-site brands file their sites under separate
+   legal entities. An axis with no variance cannot separate markets, so the 2x2
+   quadrant abstains rather than labelling everything "fragmented".
+
+Market order in the app is the **curated shortlist** in `lib/workbench.ts` — an
+editorial call about where clinic-level verification was actually done, stated
+as one. Hidalgo County has the state's second-largest capture and is
+deliberately not on it.
 
 ## Local setup
 

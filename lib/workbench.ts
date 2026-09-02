@@ -55,10 +55,14 @@ export type RegistryCandidate = {
   provider_type: string | null;
 };
 
+export type EvidenceLevel =
+  | "Named operators mapped"
+  | "Partial clinic layer"
+  | "Thin clinic layer"
+  | "Registry screen only";
+
 export type MarketProfile = CountyScoreRow & {
-  de_novo_rank: number | null;
-  ma_rank: number | null;
-  evidence_confidence: "Strong directional" | "Directional" | "Limited";
+  evidence_confidence: EvidenceLevel;
 };
 
 export type MarketNarrative = {
@@ -175,47 +179,33 @@ export type ExecutiveConclusion = {
   caveats: string[];
 };
 
-function confidenceFor(count: number): MarketProfile["evidence_confidence"] {
-  if (count >= 5) return "Strong directional";
-  if (count >= 3) return "Directional";
-  return "Limited";
+/**
+ * Confidence tracks the verified clinic layer, not registry capture. Ranking a
+ * market's evidence by how many NPPES rows a broken name-match returned would
+ * score the query, not the diligence — and would rate Harris "strong" off 11
+ * records drawn from a 64-record statewide pull.
+ */
+function confidenceFor(verifiedClinicCount: number): EvidenceLevel {
+  if (verifiedClinicCount >= 8) return "Named operators mapped";
+  if (verifiedClinicCount >= 4) return "Partial clinic layer";
+  if (verifiedClinicCount >= 1) return "Thin clinic layer";
+  return "Registry screen only";
 }
 
+/**
+ * There is deliberately no de-novo or M&A rank here.
+ *
+ * A rank on ascending captured density puts Tarrant first on 3 records and
+ * Harris fourth on 11 — it rewards the counties where the NPPES query failed
+ * hardest, which is the opposite of a market signal. A rank on descending
+ * record count just re-sorts the same artifact. Both were computed and never
+ * rendered; they are gone rather than dormant. Market order is the curated
+ * shortlist below, which is an editorial call, stated as one.
+ */
 export function buildMarketProfiles(counties: CountyScoreRow[]): MarketProfile[] {
-  const eligible = counties.filter(
-    (county) =>
-      county.pediatric_provider_count >= 2 &&
-      (county.population_under_18 ?? 0) >= 25000 &&
-      county.density_per_10k !== null
-  );
-
-  const deNovoRank = new Map(
-    [...eligible]
-      .sort(
-        (a, b) =>
-          (a.density_per_10k ?? Number.POSITIVE_INFINITY) -
-            (b.density_per_10k ?? Number.POSITIVE_INFINITY) ||
-          (b.population_under_18 ?? 0) - (a.population_under_18 ?? 0)
-      )
-      .map((county, index) => [county.county_fips, index + 1])
-  );
-
-  const maRank = new Map(
-    [...eligible]
-      .sort(
-        (a, b) =>
-          b.pediatric_provider_count - a.pediatric_provider_count ||
-          (b.single_location_pct ?? 0) - (a.single_location_pct ?? 0) ||
-          (b.population_under_18 ?? 0) - (a.population_under_18 ?? 0)
-      )
-      .map((county, index) => [county.county_fips, index + 1])
-  );
-
   return counties.map((county) => ({
     ...county,
-    de_novo_rank: deNovoRank.get(county.county_fips) ?? null,
-    ma_rank: maRank.get(county.county_fips) ?? null,
-    evidence_confidence: confidenceFor(county.pediatric_provider_count),
+    evidence_confidence: "Registry screen only" as EvidenceLevel,
   }));
 }
 
@@ -275,9 +265,7 @@ export function buildShortlist(
         density_per_10k: null,
         single_location_pct: null,
         quadrant: null,
-        de_novo_rank: null,
-        ma_rank: null,
-        evidence_confidence: "Limited",
+        evidence_confidence: "Registry screen only",
       } satisfies MarketProfile);
 
     const verifiedClinics = VERIFIED_CLINICS.filter((clinic) => clinic.countyName === countyName);
@@ -286,6 +274,7 @@ export function buildShortlist(
 
     return {
       ...market,
+      evidence_confidence: confidenceFor(verifiedClinics.length),
       kind: "county" as const,
       curatedRank: index + 1,
       metroLabel: METRO_CALLOUTS[countyName] ?? null,
@@ -370,7 +359,7 @@ export const METRO_DEFINITIONS: MetroDefinition[] = [
       rationale:
         "Synaptic, Therapy Spot, Frisco Feeding, and Cole do not operate inside a single county. A Tarrant-only or Collin-only density number is a screening artifact. Combined child population is ~1.5M. Named founder targets: Therapedia (Kitchens), Frisco Feeding (Roddy), Synaptic (Elashi), Anchor (Ruelas), Cowtown (Khammar), Jump Start (Roe).",
       risk:
-        "Oaklin Lane already has Lake Highlands and Rockwall. Cole is in Frisco. Synaptic is scaling without you. This is a consolidation race, not a discovery exercise.",
+        "Oaklin Lane's own site listed Lake Highlands and Rockwall when checked 2026-09-01 — confirm before relying on it. Cole is in Frisco. Synaptic is adding sites. Read DFW as a consolidation race, not a discovery exercise.",
       nextAction:
         "Outreach order: Therapedia → Frisco Feeding → Synaptic. SOS on Therapy Spot. Pass Cole, Oaklin Lane, and hospital/nonprofit names.",
     },
@@ -437,9 +426,7 @@ export function buildMetroRollup(
       under18 > 0 ? Number((providerCount / (under18 / 10000)).toFixed(2)) : null,
     single_location_pct: null,
     quadrant: null,
-    de_novo_rank: null,
-    ma_rank: null,
-    evidence_confidence: "Directional",
+    evidence_confidence: confidenceFor(verifiedClinics.length),
     kind: "metro",
     curatedRank: 0,
     metroLabel: def.metroLabel,
@@ -502,37 +489,53 @@ export function buildExecutiveConclusion(shortlist: ShortlistMarket[]): Executiv
       `${verifiedMarkets.length} of ${countyMarkets.length} county markets now have a verified clinic layer.`,
       "Ownership is from practice sites, NPI authorized officials, and LinkedIn — SOS/license rows are dated checks, not pulled filings. 'No PE press found' is not a clearance.",
       "Clinician counts from LinkedIn/sites are estimates. Confirm on the call.",
-      "NPPES name-match missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding. Density is a hypothesis.",
+      "The NPPES name-match returned 64 org records for all of Texas and missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding. Density and fragmentation are shown for transparency and are not used to rank markets.",
+      "The six markets are a curated editorial shortlist, not a model output. Hidalgo has the state's second-largest capture and is deliberately not on it — no clinic work was done there.",
       "Oaklin Lane's own clinics are on the map and in the pass list.",
     ],
   };
 }
 
+/**
+ * Reports capture; does not rank markets.
+ *
+ * The NPPES name-match returns 64 org records statewide, so density across every
+ * shortlist market lands between 0.05 and 0.33 per 10k children — one to two
+ * orders of magnitude under real supply. A threshold set calibrated to a true
+ * supply curve would never fire on this data, so there is nothing honest to
+ * branch on. State the capture and let the verified clinic layer carry the call.
+ */
 export function supplyGapReadout(market: ShortlistMarket): string {
-  if (market.density_per_10k === null) return "Insufficient data for density comparison.";
-  if (market.pediatric_provider_count <= 2) {
-    return "Very thin registry capture — supply gap signal is hypothesis-only until clinics are verified.";
+  if (market.density_per_10k === null || market.pediatric_provider_count === 0) {
+    return "No registry capture here. Nothing to screen on — read the verified clinic layer instead.";
   }
-  if (market.density_per_10k <= 1.5) {
-    return "Low captured provider density relative to peer counties; may indicate underserved demand or data undercount.";
-  }
-  if (market.density_per_10k >= 3) {
-    return "Higher captured density — competitive supply is more visible in public data, but still incomplete.";
-  }
-  return "Moderate captured density — useful for screening, not a supply conclusion.";
+  const records = `${market.pediatric_provider_count} NPPES name-matched record${
+    market.pediatric_provider_count === 1 ? "" : "s"
+  }`;
+  const scale = market.population_under_18
+    ? ` against ${market.population_under_18.toLocaleString()} children`
+    : "";
+  return `${records}${scale} — ${market.density_per_10k}/10k. That measures what the name-match found, not what operates here: the same query missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding. Do not rank markets on this number.`;
 }
 
+/**
+ * The fragmentation proxy reads 100% in 10 of the 12 Texas counties that clear
+ * the capture floor, because multi-site brands file their sites under separate
+ * legal entities and the name-match only catches some of them. A variable with
+ * no variance cannot separate markets, so this reports the number and says so
+ * rather than dressing it up as a consolidation signal.
+ */
 export function consolidationReadout(market: ShortlistMarket): string {
-  if (market.single_location_pct === null || market.pediatric_provider_count === 0) {
-    return "Fragmentation proxy unavailable — too few captured records.";
+  if (market.pediatric_provider_count === 0) {
+    return "Fragmentation proxy unavailable — no captured records in this market.";
   }
-  if (market.single_location_pct >= 70) {
-    return "High single-location organization proxy — more independent operators visible in registry data.";
+  if (market.single_location_pct === null) {
+    return "Not computed at metro level — single-location share is a statewide identity test and does not sum across counties. Read it on the county rows, with the caveat below.";
   }
-  if (market.single_location_pct <= 40) {
-    return "Lower fragmentation proxy — more multi-site or consolidated organization identities in capture.";
+  if (market.pediatric_provider_count < 5) {
+    return `${market.single_location_pct}% single-location across only ${market.pediatric_provider_count} captured records — too thin to read as fragmentation at all. Ownership mapping is the only route.`;
   }
-  return "Mixed fragmentation signal — ownership mapping required before consolidation thesis.";
+  return `${market.single_location_pct}% single-location. Across this capture the proxy sits at 100% in nearly every county, so differences between markets carry little signal. Ownership mapping is the only route.`;
 }
 
 const MARKET_ALIASES: Record<string, string[]> = {
@@ -610,8 +613,8 @@ export function buildIcBrief(
     "",
     "## Why this market",
     `- Scale: ${(selected.population_under_18 ?? 0).toLocaleString()} children 0–17`,
-    `- Supply (registry screen only): ${selected.pediatric_provider_count} NPPES name-matched records; density ${selected.density_per_10k ?? "n/a"} /10k`,
-    `- Consolidation proxy: ${selected.single_location_pct === null ? "n/a" : `${selected.single_location_pct}% single-location`}`,
+    `- Registry capture (not supply): ${selected.pediatric_provider_count} NPPES name-matched records, ${selected.density_per_10k ?? "n/a"}/10k. From a 64-record statewide pull that missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding — this counts what the query found, not what operates here.`,
+    `- Fragmentation proxy: ${selected.single_location_pct === null ? "n/a" : `${selected.single_location_pct}% single-location — reads ~100% across almost every captured county, so it does not separate markets`}.`,
     `- Risk: ${selected.narrative.risk}`,
     `- Next: ${selected.narrative.nextAction}`,
     "",
@@ -679,7 +682,8 @@ export function buildIcBrief(
 
   lines.push(
     "## Caveats",
-    "- NPPES is a candidate-generation screen, not a clinic census.",
+    "- NPPES is a candidate-generation screen, not a clinic census. Density and fragmentation are reported for transparency, not used to rank markets — see the note under each.",
+    "- The six markets are a curated editorial shortlist, not the output of a model. Hidalgo County has the second-largest registry capture in the state and is deliberately not shortlisted; no verified clinic work was done there.",
     "- SOS and license rows are dated checks from this pass. Interactive board/SOS search was not completed — do not read `not_pulled` as unlicensed or uncleared.",
     "- Ownership notes are web/NPI research, not Texas SOS filings.",
     "- “No PE press found” is not clearance.",
