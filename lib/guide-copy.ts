@@ -4,7 +4,7 @@ export const WHAT_IT_IS = {
   lede:
     "Catchment answers three questions for Oaklin Lane: which markets deserve a look, which named clinics operate there, and what public evidence supports a call. It is not a census, a CRM, or a finished investment memo.",
   body:
-    "Census and NPPES numbers only screen counties. The work is the named founders, the pass log, and the dated ownership and license checks. If a filing was not pulled, the row says so.",
+    "The work is the named founders, the pass log, and the dated ownership and license checks. The public-data layer is thinner than it looks: the NPPES name-match returned 64 org records for all of Texas, so it generates candidates and does not rank markets. If a filing was not pulled, the row says so.",
 };
 
 export const WHO_IT_IS_FOR = [
@@ -75,7 +75,17 @@ export const GLOSSARY = [
   {
     term: "NPPES",
     meaning:
-      "The federal provider registry. Used here as a screen. It missed Cole, KDC, Synaptic, and others. Density is a hypothesis.",
+      "The federal provider registry. Used here as a screen. The pull behind this app is 64 org records for the whole state and it missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding. Density measures what that query found, not local supply, so no market is ranked on it.",
+  },
+  {
+    term: "Fragmentation proxy",
+    meaning:
+      "Share of captured records whose org identity appears at one address statewide. It reads ~100% in almost every captured county — multi-site brands file under separate entities — so it is reported, not used to separate markets.",
+  },
+  {
+    term: "Why these six markets",
+    meaning:
+      "An editorial call, not a model output. They are the large metro markets where clinic-level verification was actually done. Hidalgo County has the state's second-largest registry capture and is deliberately not here.",
   },
   {
     term: "SOS / license row",
@@ -85,7 +95,8 @@ export const GLOSSARY = [
 ] as const;
 
 export const CAVEATS = [
-  "NPPES is a candidate screen, not a clinic census.",
+  "NPPES is a candidate screen, not a clinic census — 64 org records statewide.",
+  "Density and fragmentation are shown for transparency. No market is ranked on either.",
   "Ownership notes come from practice sites, NPI authorized officials, and public profiles — not pulled Texas SOS filings.",
   "“No PE press found” is not clearance.",
   "Oaklin Lane’s Lake Highlands and Rockwall clinics are the buyer, not targets.",
@@ -101,7 +112,7 @@ export const TOUR_STEPS = [
   {
     id: "thesis",
     title: "Read the argument",
-    body: "This column is why the market matters and what to do next. Screening math is behind a disclosure. You do not need it to make a call.",
+    body: "This column is why the market matters and what to do next. The screening math sits behind a disclosure with its own limits stated. You do not need it to make a call.",
   },
   {
     id: "clinics",

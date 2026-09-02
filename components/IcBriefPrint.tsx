@@ -62,14 +62,17 @@ export default function IcBriefPrint({
         <ul>
           <li>Scale: {(selected.population_under_18 ?? 0).toLocaleString()} children 0–17</li>
           <li>
-            Supply (registry screen only): {selected.pediatric_provider_count} NPPES name-matched
-            records; density {selected.density_per_10k ?? "n/a"} /10k
+            Registry capture (not supply): {selected.pediatric_provider_count} NPPES name-matched
+            records, {selected.density_per_10k ?? "n/a"}/10k. From a 64-record statewide pull that
+            missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding — this counts what the
+            query found, not what operates here.
           </li>
           <li>
-            Consolidation proxy:{" "}
+            Fragmentation proxy:{" "}
             {selected.single_location_pct === null
               ? "n/a"
-              : `${selected.single_location_pct}% single-location`}
+              : `${selected.single_location_pct}% single-location — reads ~100% across almost every captured county, so it does not separate markets`}
+            .
           </li>
           <li>Risk: {selected.narrative.risk}</li>
           <li>Next: {selected.narrative.nextAction}</li>

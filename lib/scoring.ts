@@ -120,6 +120,15 @@ function median(values: number[]): number {
  * median density and median fragmentation among counties that actually
  * have at least one pediatric provider (a median over hundreds of
  * zero-provider counties would just split "zero vs. zero").
+ *
+ * The fragmentation axis collapses on the current capture: single-location %
+ * is 100 in 10 of the 12 counties clearing the floor, because multi-site
+ * brands file their sites under separate legal entities and the name-match
+ * catches only some of them. A median of 100 makes the ">= median" test
+ * near-universally true, which would label almost every county "fragmented"
+ * and hand the 2x2 a second axis that carries no information. When that
+ * happens the quadrant is left null rather than fabricated — a degenerate
+ * axis should abstain, not vote.
  */
 function assignQuadrants(scores: CountyScore[]): CountyScore[] {
   const withProviders = scores.filter(
@@ -129,6 +138,14 @@ function assignQuadrants(scores: CountyScore[]): CountyScore[] {
 
   const densityMedian = median(withProviders.map((s) => s.density_per_10k!));
   const fragmentationMedian = median(withProviders.map((s) => s.single_location_pct!));
+
+  const distinctFragmentation = new Set(withProviders.map((s) => s.single_location_pct!)).size;
+  const atMedian = withProviders.filter((s) => s.single_location_pct === fragmentationMedian).length;
+  const fragmentationSeparates =
+    distinctFragmentation >= 3 && atMedian / withProviders.length < 0.5;
+  if (!fragmentationSeparates) {
+    return scores.map((s) => ({ ...s, quadrant: null }));
+  }
 
   return scores.map((s) => {
     if (s.pediatric_provider_count === 0 || s.density_per_10k === null || s.single_location_pct === null) {
