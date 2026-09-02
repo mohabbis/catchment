@@ -48,15 +48,18 @@ export default function WelcomeOverlay({
           </h2>
           <p className="mt-3 text-sm leading-6 text-[var(--ink-soft)]">{WHAT_IT_IS.lede}</p>
           <p className="mt-2 text-sm text-[var(--ink-soft)]">
-            <span className="font-semibold text-[var(--ink)]">{targetCount}</span> named clinics
-            are on the call list across the shortlisted Texas markets.
+            <span className="font-semibold text-[var(--ink)]">{targetCount}</span> named clinics are
+            shortlisted as preliminary outreach candidates across the Texas markets worked here —
+            each still needs ownership, entity status, and independence confirmed.
           </p>
           <p className="mt-3 rounded-md border border-[var(--line)] bg-[var(--paper)] px-3 py-2 text-xs leading-5 text-[var(--ink-soft)]">
             <span className="font-semibold text-[var(--ink)]">Known limit, up front. </span>
             The public-data screen behind this is thin — the NPPES name-match returned 64
             organization records for all of Texas and missed Cole, KDC, and Synaptic. Density and
-            fragmentation are reported for transparency and are not used to rank markets. The
-            shortlist is an editorial call and the verified clinic layer is the work.
+            fragmentation are reported for transparency and are not used to rank markets, and this
+            app does not establish that any market is underserved. The shortlist is an editorial
+            call; the verified clinic layer is the work. The Method tab spells out every query
+            parameter, denominator, and step that was skipped.
           </p>
         </div>
 

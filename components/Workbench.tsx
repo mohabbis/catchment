@@ -3,7 +3,17 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import CatchmentMap from "@/components/CatchmentMap";
 import IcBriefPrint from "@/components/IcBriefPrint";
+import MethodPanel from "@/components/MethodPanel";
 import { linkStatusHeadline } from "@/lib/clinic-links";
+import {
+  CHECK_STATE_LABELS,
+  clinicChecks,
+  clinicCompleteness,
+  marketCoverage,
+  ownershipConfidence,
+  type CheckState,
+} from "@/lib/coverage";
+import type { ScreenStats } from "@/lib/methodology";
 import {
   LICENSE_STATUS_LABELS,
   REJECTED_RECORDS,
@@ -37,7 +47,7 @@ import {
 } from "@/lib/workbench";
 
 type PipelineFilter = "all" | DiligenceStatus;
-type CenterView = "thesis" | "compare" | "passes" | "map";
+type CenterView = "thesis" | "compare" | "passes" | "map" | "method";
 type MobilePane = "markets" | "thesis" | "pipeline";
 type DetailSelection =
   | { kind: "verified"; item: Extract<DiligenceItem, { kind: "verified" }> }
@@ -51,11 +61,19 @@ const WORKFLOW_ORDER: WorkflowState[] = [
   "passed",
 ];
 
+// "Preliminary" is load-bearing: ownership, entity status, and independence are
+// open on most of these names, and "Target" reads like an approved one.
 const STATUS_LABELS: Record<DiligenceStatus, string> = {
-  target_candidate: "Target",
+  target_candidate: "Prelim. target",
   verified_operator: "Verified",
   competitor_benchmark: "Benchmark",
   registry_candidate: "Registry",
+};
+
+const CHECK_STATE_CHIP: Record<CheckState, string> = {
+  done: "bg-[var(--forest-soft)] text-[var(--forest-deep)]",
+  partial: "bg-[var(--paper-deep)] text-[var(--ink-soft)]",
+  open: "bg-[var(--amber-soft)] text-[var(--risk)]",
 };
 
 const STATUS_CHIP: Record<DiligenceStatus, string> = {
@@ -112,9 +130,11 @@ function asVerifiedItem(
 
 export default function Workbench({
   shortlist,
+  screenStats,
   focusRequest = null,
 }: {
   shortlist: ShortlistMarket[];
+  screenStats: ScreenStats;
   focusRequest?: FocusRequest | null;
 }) {
   const [selectedCounty, setSelectedCounty] = useState(shortlist[0]?.county_name ?? "");
@@ -287,10 +307,12 @@ export default function Workbench({
 
   const nextStep = detail
     ? "This panel is the clinic file. Status and notes are at the bottom."
-    : `Open a clinic on the right. ${
+    : `Open a clinic profile on the right. ${
         conclusion.priorities[0]
-          ? `First call: ${VERIFIED_CLINICS.find((row) => row.outreachRank === 1)?.name ?? "the #1 target"}.`
-          : "Targets are the call list."
+          ? `Suggested first call: ${
+              VERIFIED_CLINICS.find((row) => row.outreachRank === 1)?.name ?? "the top-ranked candidate"
+            }.`
+          : "Preliminary targets are the qualifying-call list."
       }`;
 
   return (
@@ -393,6 +415,7 @@ export default function Workbench({
                 ["compare", "Compare"],
                 ["passes", "Passed"],
                 ["map", "Map"],
+                ["method", "Method"],
               ] as const
             ).map(([value, label]) => (
               <button
@@ -439,6 +462,8 @@ export default function Workbench({
               showAll={showAllRejected}
               onToggleAll={() => setShowAllRejected((value) => !value)}
             />
+          ) : centerView === "method" ? (
+            <MethodPanel stats={screenStats} />
           ) : centerView === "map" ? (
             <CatchmentMap
               selectedClinicId={detail?.kind === "verified" ? detail.item.id : null}
@@ -454,7 +479,7 @@ export default function Workbench({
           {centerView === "thesis" ? (
             <div className="mt-5 border-t border-[var(--line)] pt-4">
               <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
-                First five calls
+                Suggested first five qualifying calls
               </p>
               <div className="mt-2 flex flex-col gap-2">
                 {conclusion.priorities.slice(0, 5).map((priority, index) => {
@@ -493,8 +518,9 @@ export default function Workbench({
               3. Clinics
             </h2>
             <p className="mt-1 text-xs leading-5 text-[var(--ink-soft)]">
-              {countyLabel(selected.county_name)} · {pipelineCounts.target_candidate} to call.
-              Open a name for the file.
+              {countyLabel(selected.county_name)} · {pipelineCounts.target_candidate} preliminary
+              outreach candidate{pipelineCounts.target_candidate === 1 ? "" : "s"}. Open a name for
+              the file.
             </p>
             <div className="mt-2 flex flex-wrap gap-1">
               <button
@@ -504,7 +530,7 @@ export default function Workbench({
                   pipelineFilter === "target_candidate" ? "is-active" : ""
                 }`}
               >
-                To call {pipelineCounts.target_candidate}
+                Prelim. targets {pipelineCounts.target_candidate}
               </button>
               <button
                 type="button"
@@ -546,8 +572,8 @@ export default function Workbench({
           <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-3 py-3">
             {pipelineFilter === "all" || pipelineFilter === "target_candidate" ? (
               <PipelineGroup
-                title="To call"
-                empty="No call-list clinics in this market."
+                title="Preliminary targets — qualifying calls"
+                empty="No preliminary targets in this market."
                 items={groupedPipeline.targets}
                 selectedKey={detail ? itemKey(detail.item) : null}
                 onOpen={setDetail}
@@ -623,6 +649,7 @@ function MarketButton({
   subtitle?: string;
   onSelect: (countyName: string) => void;
 }) {
+  const coverage = marketCoverage(market);
   return (
     <button
       type="button"
@@ -647,8 +674,10 @@ function MarketButton({
             <div className="mt-0.5 text-[11px] leading-4 text-[var(--ink-faint)]">{subtitle}</div>
           ) : null}
         </div>
-        <span className="shrink-0 text-[11px] tabular-nums text-[var(--ink-faint)]">
-          {market.targetCount} to call
+        <span className="shrink-0 text-right text-[11px] leading-4 text-[var(--ink-faint)]">
+          <span className="tabular-nums">{market.targetCount}</span> prelim.
+          <br />
+          <span className="text-[10px]">{coverage.label} coverage</span>
         </span>
       </div>
     </button>
@@ -656,6 +685,7 @@ function MarketButton({
 }
 
 function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolean }) {
+  const coverage = marketCoverage(market);
   return (
     <article className={`panel p-5 ${muted ? "opacity-95" : ""}`}>
       <div className="flex flex-wrap items-start justify-between gap-3">
@@ -690,17 +720,54 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
           <dd className="mt-1 font-semibold tabular-nums">{formatChildren(market.population_under_18)}</dd>
         </div>
         <div>
-          <dt className="text-[11px] text-[var(--ink-faint)]">To call</dt>
+          <dt className="text-[11px] text-[var(--ink-faint)]">Preliminary targets</dt>
           <dd className="mt-1 font-semibold tabular-nums">{market.targetCount}</dd>
         </div>
         <div>
-          <dt className="text-[11px] text-[var(--ink-faint)]">On the map</dt>
+          <dt className="text-[11px] text-[var(--ink-faint)]">Clinics classified</dt>
           <dd className="mt-1 font-semibold tabular-nums">{market.verifiedClinics.length}</dd>
         </div>
         <div>
-          <dt className="text-[11px] text-[var(--ink-faint)]">Registry names</dt>
+          <dt className="text-[11px] text-[var(--ink-faint)]">Research coverage</dt>
+          <dd className="mt-1 font-semibold tabular-nums" data-testid="market-coverage">
+            {coverage.label}
+            <span className="ml-1 text-xs font-normal text-[var(--ink-faint)]">
+              {coverage.clinicsClassified ? `${coverage.pct}%` : ""}
+            </span>
+          </dd>
+        </div>
+      </dl>
+
+      <p className="mt-2 text-[11px] leading-4 text-[var(--ink-faint)]">
+        Coverage is how much of the standing check-list is done here ({coverage.ownersNamed} of{" "}
+        {coverage.clinicsClassified} clinics with a named owner, {coverage.filingsPulled} with an SOS
+        filing pulled). It measures research effort, not market quality — a longer candidate list can
+        just mean more hours went in.
+      </p>
+
+      <dl
+        className="mt-4 grid grid-cols-2 gap-3 rounded-md bg-[var(--paper)] px-4 py-3 text-sm sm:grid-cols-3"
+        data-testid="screen-values"
+      >
+        <div>
+          <dt className="text-[11px] text-[var(--ink-faint)]">Captured records</dt>
           <dd className="mt-1 font-semibold tabular-nums">{market.pediatric_provider_count}</dd>
         </div>
+        <div>
+          <dt className="text-[11px] text-[var(--ink-faint)]">Density / 10k children</dt>
+          <dd className="mt-1 font-semibold tabular-nums">{market.density_per_10k ?? "—"}</dd>
+        </div>
+        <div>
+          <dt className="text-[11px] text-[var(--ink-faint)]">Single-location share</dt>
+          <dd className="mt-1 font-semibold tabular-nums">
+            {market.single_location_pct === null ? "n/a" : `${market.single_location_pct}%`}
+          </dd>
+        </div>
+        <p className="col-span-2 text-[11px] leading-4 text-[var(--ink-faint)] sm:col-span-3">
+          Screening values, shown so they can be checked. They are not used to rank markets — open
+          Method for the query, the denominator, the deduplication rule (there is none), and why the
+          fragmentation axis abstains.
+        </p>
       </dl>
 
       <div className="mt-5 border-t border-[var(--line)] pt-4">
@@ -712,7 +779,7 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
 
       <details className="mt-4 text-sm">
         <summary className="cursor-pointer text-xs font-medium text-[var(--ink-faint)] hover:text-[var(--ink)]">
-          Screening math (not clinic facts)
+          How these screening values were computed
         </summary>
         <div className="mt-3 grid gap-3 sm:grid-cols-2">
           <p className="text-xs leading-5 text-[var(--ink-soft)]">
@@ -746,21 +813,37 @@ function CompareAllTable({
   onSelect: (countyName: string) => void;
 }) {
   return (
-    <div className="panel overflow-x-auto">
-      <table className="min-w-full text-left text-sm">
+    <div className="panel">
+      <div className="border-b border-[var(--line)] px-4 py-3">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--risk)]">
+          Read this table carefully
+        </p>
+        <p className="mt-1 text-xs leading-5 text-[var(--ink-soft)]">
+          Preliminary targets, classified clinics, and registry names all partly reflect how much
+          research each market received — not how attractive it is. The coverage column is there so
+          research depth cannot be mistaken for market quality. Markets are not ranked here; row
+          order is the curated shortlist.
+        </p>
+      </div>
+      <div className="overflow-x-auto">
+      <table className="w-full min-w-[60rem] text-left align-top text-sm">
         <thead className="bg-[var(--paper)] text-[10px] uppercase tracking-[0.12em] text-[var(--ink-faint)]">
           <tr>
             <th className="px-4 py-3 font-semibold">Market</th>
             <th className="px-4 py-3 font-semibold">Kind</th>
             <th className="px-4 py-3 font-semibold">Children</th>
-            <th className="px-4 py-3 font-semibold">Targets</th>
+            <th className="px-4 py-3 font-semibold">Density /10k</th>
+            <th className="px-4 py-3 font-semibold">Prelim. targets</th>
             <th className="px-4 py-3 font-semibold">Classified</th>
             <th className="px-4 py-3 font-semibold">Registry</th>
-            <th className="px-4 py-3 font-semibold">Next</th>
+            <th className="whitespace-nowrap px-4 py-3 font-semibold">Research coverage</th>
+            <th className="w-[22rem] px-4 py-3 font-semibold">Next (full text on Overview)</th>
           </tr>
         </thead>
         <tbody>
-          {shortlist.map((market) => (
+          {shortlist.map((market) => {
+            const coverage = marketCoverage(market);
+            return (
             <tr
               key={market.county_name}
               className={`cursor-pointer border-t border-[var(--line)] ${
@@ -770,21 +853,39 @@ function CompareAllTable({
               }`}
               onClick={() => onSelect(market.county_name)}
             >
-              <td className="px-4 py-3 font-medium">{countyLabel(market.county_name)}</td>
-              <td className="px-4 py-3 text-[var(--ink-soft)]">
+              <td className="px-4 py-3 align-top font-medium">{countyLabel(market.county_name)}</td>
+              <td className="px-4 py-3 align-top text-[var(--ink-soft)]">
                 {isMetroMarket(market) ? "Metro" : "County"}
               </td>
-              <td className="px-4 py-3 tabular-nums">{formatChildren(market.population_under_18)}</td>
-              <td className="px-4 py-3 tabular-nums">{market.targetCount}</td>
-              <td className="px-4 py-3 tabular-nums">{market.verifiedClinics.length}</td>
-              <td className="px-4 py-3 tabular-nums">{market.pediatric_provider_count}</td>
-              <td className="max-w-xs px-4 py-3 text-xs leading-5 text-[var(--ink-soft)]">
-                {market.narrative.nextAction}
+              <td className="px-4 py-3 align-top tabular-nums">
+                {formatChildren(market.population_under_18)}
+              </td>
+              <td className="px-4 py-3 align-top tabular-nums text-[var(--ink-soft)]">
+                {market.density_per_10k ?? "—"}
+              </td>
+              <td className="px-4 py-3 align-top tabular-nums">{market.targetCount}</td>
+              <td className="px-4 py-3 align-top tabular-nums">{market.verifiedClinics.length}</td>
+              <td className="px-4 py-3 align-top tabular-nums">
+                {market.pediatric_provider_count}
+              </td>
+              <td className="whitespace-nowrap px-4 py-3 align-top text-xs">
+                <span className="font-medium">{coverage.label}</span>
+                {coverage.clinicsClassified ? (
+                  <span className="text-[var(--ink-faint)]"> · {coverage.pct}%</span>
+                ) : null}
+              </td>
+              <td className="px-4 py-3 align-top text-xs leading-5 text-[var(--ink-soft)]">
+                {/* Clamped: the full text is on the market's Overview card, and an
+                    unbounded cell here stretches every row to the height of its
+                    longest next-action. */}
+                <span className="line-clamp-3">{market.narrative.nextAction}</span>
               </td>
             </tr>
-          ))}
+            );
+          })}
         </tbody>
       </table>
+      </div>
     </div>
   );
 }
@@ -992,7 +1093,26 @@ function ClinicDetail({
                   1. Ownership
                 </h3>
                 <p className="mt-1 font-medium">{ownershipHeadline(selection.item)}</p>
-                <p className="mt-1 leading-6 text-[var(--ink-soft)]">{selection.item.ownershipSignal}</p>
+                {(() => {
+                  const confidence = ownershipConfidence(selection.item);
+                  return (
+                    <p className="mt-1.5 text-xs leading-5" data-testid="ownership-confidence">
+                      <span
+                        className={`chip ${
+                          confidence.level === "filing"
+                            ? CHECK_STATE_CHIP.done
+                            : confidence.level === "none"
+                              ? CHECK_STATE_CHIP.open
+                              : CHECK_STATE_CHIP.partial
+                        }`}
+                      >
+                        {confidence.label}
+                      </span>{" "}
+                      <span className="text-[var(--ink-faint)]">{confidence.basis}</span>
+                    </p>
+                  );
+                })()}
+                <p className="mt-2 leading-6 text-[var(--ink-soft)]">{selection.item.ownershipSignal}</p>
                 <p className="mt-2 text-xs leading-5 text-[var(--ink-faint)]" data-testid="sos-check">
                   {sosCheckLine(selection.item.sosCheck)}. {selection.item.sosCheck.note}
                 </p>
@@ -1082,9 +1202,52 @@ function ClinicDetail({
                 ) : null}
               </section>
 
+              <section data-testid="research-completeness">
+                {(() => {
+                  const checks = clinicChecks(selection.item);
+                  const completeness = clinicCompleteness(selection.item);
+                  return (
+                    <>
+                      <div className="flex items-baseline justify-between gap-2">
+                        <h3 className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
+                          5. Research completeness
+                        </h3>
+                        <span className="text-xs tabular-nums text-[var(--ink-faint)]">
+                          {completeness.pct}% · {completeness.open} open
+                        </span>
+                      </div>
+                      <ul className="mt-2 space-y-2">
+                        {checks.map((check) => (
+                          <li key={check.label}>
+                            <p className="flex items-center gap-2">
+                              <span className={`chip ${CHECK_STATE_CHIP[check.state]}`}>
+                                {CHECK_STATE_LABELS[check.state]}
+                              </span>
+                              <span className="font-medium">{check.label}</span>
+                              {check.checkedOn ? (
+                                <span className="ml-auto text-[11px] tabular-nums text-[var(--ink-faint)]">
+                                  {check.checkedOn}
+                                </span>
+                              ) : null}
+                            </p>
+                            <p className="mt-0.5 text-xs leading-5 text-[var(--ink-faint)]">
+                              {check.detail}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mt-3 text-xs leading-5 text-[var(--ink-faint)]">
+                        Open rows are work that has not been done, not findings. Nothing here is a
+                        clearance.
+                      </p>
+                    </>
+                  );
+                })()}
+              </section>
+
               <section>
                 <h3 className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--ink-faint)]">
-                  5. Next action
+                  6. Next action
                 </h3>
                 <p className="mt-1 leading-6">{selection.item.nextAction}</p>
                 {workflow && onWorkflowChange ? (

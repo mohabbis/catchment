@@ -10,6 +10,14 @@ import {
   type VerifiedClinic,
 } from "@/lib/verified-clinics";
 import type { Quadrant } from "@/lib/scoring";
+import {
+  clinicChecks,
+  marketCoverage,
+  ownershipConfidence,
+  portfolioCoverage,
+  CHECK_STATE_LABELS,
+} from "@/lib/coverage";
+import { METHODOLOGY_STATEMENT, NOT_DONE } from "@/lib/methodology";
 
 export type StrategyMode = "ma" | "deNovo";
 
@@ -76,7 +84,7 @@ export const MARKET_NARRATIVES: Record<string, MarketNarrative> = {
   "Harris County": {
     headline: "Largest pediatric demand pool with the deepest captured provider base.",
     rationale:
-      "Harris combines statewide-leading child population with enough public provider evidence to support real clinic verification. It is the strongest first market for an acquisition sourcing sprint, not a concluded investment.",
+      "Harris combines statewide-leading child population with enough public provider evidence to support real clinic verification. On current evidence it looks like the strongest first market for an acquisition sourcing sprint. That is a sequencing hypothesis, not a concluded investment.",
     risk:
       "The NPPES screen undercounts supply and overstates fragmentation when multi-site brands use different legal entities. Scaled competitors are already active in the market.",
     nextAction:
@@ -85,7 +93,7 @@ export const MARKET_NARRATIVES: Record<string, MarketNarrative> = {
   "Bexar County": {
     headline: "Large pediatric base with a mixed independent, nonprofit, and system landscape.",
     rationale:
-      "San Antonio has enough scale to support a platform thesis, while the verified set already shows several different operator models that can be compared before outreach.",
+      "San Antonio has enough scale that a platform thesis is worth testing, and the verified set already shows several different operator models that can be compared before outreach.",
     risk:
       "Hospital and nonprofit participation can make registry fragmentation look more actionable than the actual ownership landscape.",
     nextAction:
@@ -94,35 +102,38 @@ export const MARKET_NARRATIVES: Record<string, MarketNarrative> = {
   "Tarrant County": {
     headline: "High-growth metro scale with several verifiable independent clinic leads.",
     rationale:
-      "Tarrant has a large child population, low captured density, and the clearest early evidence of clinician-owned and founder-led operators in the verified set.",
+      "Tarrant has a large child population, low captured density, and the clearest early evidence of clinician-owned and founder-led operators in the verified set. Low captured density here is a recall problem before it is a supply signal — only three registry records were returned.",
     risk:
-      "Only three registry records were captured, so the apparent supply gap is especially sensitive to data misses.",
+      "The apparent supply gap here is especially sensitive to data misses, and no clinic census has been completed outside the named leads.",
     nextAction:
       "Expand the clinic census around Fort Worth, Keller, Mansfield, and Southlake before ranking individual targets.",
   },
   "Dallas County": {
-    headline: "The DFW consolidator already lives here — and the house platform does too.",
+    headline: "The most visible DFW consolidator appears to be based here — and so is the sponsor's own clinic.",
     rationale:
-      "Dallas is no longer a thesis-only market. Synaptic (Elashi, ~8–9 DFW sites, bootstrapped) is the local platform. KidSpeak and Speech Wings are real boutiques. Oaklin Lane's Lake Highlands clinic is the buyer, not a target. Read Dallas as the DFW core, not as a standalone county deal.",
+      "Dallas reads as more than a thesis-only market. Synaptic (Elashi, ~8–9 DFW sites on its own site, no outside capital found) appears to be the local platform. KidSpeak and Speech Wings present as real boutiques. Oaklin Lane's Lake Highlands clinic is the sponsor's own, not a target. Read Dallas as the DFW core rather than a standalone county deal.",
     risk:
       "Synaptic spans Dallas, Tarrant, and Collin. Ranking Dallas on county density will understate the operator that matters.",
-    nextAction: "Call Elashi. Decide partner, acquire, or compete before any Dallas de-novo talk.",
+    nextAction:
+      "Qualifying call with Elashi. Assess partnership, acquisition, and competitive implications before prioritizing Dallas de novo.",
   },
   "Travis County": {
-    headline: "Austin has named independents — and two platforms already on the ground.",
+    headline: "Austin has named independents — and two scaled platforms already on the ground.",
     rationale:
-      "KidWorks (Rebecca Pokluda, 1999), Line Leader (Sharon Wisnieski, 2009), and Children's Therapeutics of Austin (Gabriele Rose on NPI; retired 2020) are the Travis independents. Cole and NAPA are already here. This is a selective add-on market, not a greenfield.",
+      "KidWorks (Rebecca Pokluda, 1999), Line Leader (Sharon Wisnieski, 2009), and Children's Therapeutics of Austin (Gabriele Rose on NPI; retired 2020) are the Travis independents. Cole and NAPA are already here, which points to a selective add-on market rather than a greenfield.",
     risk:
       "Williamson and Hays are not in this county total. KidSensations closed in May 2025 — NPPES still carries it. CTOA current members after Rose’s retirement are unconfirmed.",
-    nextAction: "KidWorks first. Line Leader second. SOS on CTOA LLC before assuming Rose still owns it.",
+    nextAction:
+      "Suggested call order: KidWorks, then Line Leader. Pull the SOS filing on CTOA LLC before assuming Rose still owns it.",
   },
   "Collin County": {
     headline: "North DFW is where rooftops and multi-site independents already meet.",
     rationale:
-      "Frisco Feeding (Jeanine Roddy, 4 sites, ~22 staff) and The Therapy Spot (4 sites, owner unnamed) are the suburban independents. Cole is in Frisco. This is a share-fight, not an empty suburb.",
+      "Frisco Feeding (Jeanine Roddy, 4 sites, ~22 staff) and The Therapy Spot (4 sites, owner unnamed) are the suburban independents. Cole is in Frisco. That looks like a share fight rather than an empty suburb.",
     risk:
       "Frisco ZIPs split Denton/Collin. Therapy Spot's Denton site is outside this county. A Collin-only density number is the wrong object.",
-    nextAction: "Roddy outreach. SOS on Therapy Spot before anyone calls a generic intake line.",
+    nextAction:
+      "Roddy outreach. Pull the SOS filing on Therapy Spot before anyone calls a generic intake line.",
   },
 };
 
@@ -215,7 +226,8 @@ export function narrativeFor(market: MarketProfile): MarketNarrative {
       headline: "A directional market signal that still needs a clinic census.",
       rationale: `${market.county_name} has ${market.population_under_18?.toLocaleString() ?? "an unknown number of"} residents under 18 and ${market.pediatric_provider_count} captured registry records.`,
       risk: "Registry coverage is incomplete and should not be read as verified local supply.",
-      nextAction: "Verify operating clinics, ownership, service mix, and location count before outreach.",
+      nextAction:
+        "Verify operating clinics, ownership, service mix, and location count before outreach.",
     }
   );
 }
@@ -357,11 +369,11 @@ export const METRO_DEFINITIONS: MetroDefinition[] = [
     narrative: {
       headline: "Treat DFW as one market. The independents already cross the county lines.",
       rationale:
-        "Synaptic, Therapy Spot, Frisco Feeding, and Cole do not operate inside a single county. A Tarrant-only or Collin-only density number is a screening artifact. Combined child population is ~1.5M. Named founder targets: Therapedia (Kitchens), Frisco Feeding (Roddy), Synaptic (Elashi), Anchor (Ruelas), Cowtown (Khammar), Jump Start (Roe).",
+        "Synaptic, Therapy Spot, Frisco Feeding, and Cole do not operate inside a single county, so a Tarrant-only or Collin-only density number is a screening artifact. Combined child population is ~1.5M. Named founder-led preliminary targets: Therapedia (Kitchens), Frisco Feeding (Roddy), Synaptic (Elashi), Anchor (Ruelas), Cowtown (Khammar), Jump Start (Roe) — each still requires ownership and independence confirmation.",
       risk:
-        "Oaklin Lane's own site listed Lake Highlands and Rockwall when checked 2026-09-01 — confirm before relying on it. Cole is in Frisco. Synaptic is adding sites. Read DFW as a consolidation race, not a discovery exercise.",
+        "Oaklin Lane's own site listed Lake Highlands and Rockwall when checked 2026-09-01 — confirm before relying on it. Cole is in Frisco. Synaptic's reported footprint has grown. That pattern suggests an active consolidation market rather than a discovery exercise, and it is a hypothesis to test on the calls, not an established fact.",
       nextAction:
-        "Outreach order: Therapedia → Frisco Feeding → Synaptic. SOS on Therapy Spot. Pass Cole, Oaklin Lane, and hospital/nonprofit names.",
+        "Suggested qualifying-call order: Therapedia → Frisco Feeding → Synaptic. Pull the SOS filing on Therapy Spot. Pass Cole, Oaklin Lane, and hospital/nonprofit names.",
     },
   },
   {
@@ -373,11 +385,11 @@ export const METRO_DEFINITIONS: MetroDefinition[] = [
     narrative: {
       headline: "Treat Houston as one market. The named independents sit next to a local platform.",
       rationale:
-        "Kids Developmental Clinic (Dinn, 4 sites), Pediatric Therapy Center (Knowlton / 113015 Therapy, PLLC), and Wishing Well (Eglinger / MERC) are the Harris independents. Fort Bend and Montgomery add children to the metro total but have no verified clinic in this set — they are not shortlist rows. Cole is the Houston incumbent.",
+        "Kids Developmental Clinic (Dinn, 4 sites), Pediatric Therapy Center (Knowlton / 113015 Therapy, PLLC), and Wishing Well (Eglinger / MERC) are the Harris independents. Fort Bend and Montgomery add children to the metro total but have no verified clinic in this set — they are not shortlist rows. Cole appears to be the largest scaled operator in the metro.",
       risk:
         "NPPES undercounts (missed Cole and KDC). Therapy At The Zone is not one P&L. T2000 is home health. Fort Bend and Montgomery density is not a clinic census.",
       nextAction:
-        "Outreach: KDC → PTC. SOS on Kids DC, LLC and 113015 Therapy, PLLC. Ask Knowlton who the unnamed co-owner is. Pass Cole, the Zone, and hospital/home-health names.",
+        "Suggested qualifying-call order: KDC → PTC. Pull SOS filings on Kids DC, LLC and 113015 Therapy, PLLC. Ask Knowlton who the unnamed co-owner is. Pass Cole, the Zone, and hospital/home-health names.",
     },
   },
   {
@@ -389,11 +401,11 @@ export const METRO_DEFINITIONS: MetroDefinition[] = [
     narrative: {
       headline: "Austin is a selective add-on market with named founders and two platforms already on the ground.",
       rationale:
-        "KidWorks (Pokluda, 1999), Line Leader (Wisnieski, 2009), and CTOA (Rose on NPI, retired 2020) are the Travis independents. Williamson and Hays add children to the metro total but have no verified clinic assigned — they are not shortlist rows. Cole and NAPA are already here.",
+        "KidWorks (Pokluda, 1999), Line Leader (Wisnieski, 2009), and CTOA (Rose on NPI, retired 2020) are the Travis independents. Williamson and Hays add children to the metro total but have no verified clinic assigned — they are not shortlist rows. Cole and NAPA are already here, so treat Austin as a selective add-on market until the calls say otherwise.",
       risk:
         "KidSensations closed May 2025 and still sits in NPPES. CTOA current members after Rose’s retirement are unconfirmed. A Travis-only density number is the wrong object.",
       nextAction:
-        "KidWorks first. Line Leader second. SOS on CTOA LLC before assuming Rose still owns it. Pass Cole, NAPA, and the closed clinic.",
+        "Suggested qualifying-call order: KidWorks, then Line Leader. Pull the SOS filing on CTOA LLC before assuming Rose still owns it. Pass Cole, NAPA, and the closed clinic.",
     },
   },
 ];
@@ -477,20 +489,22 @@ export function buildExecutiveConclusion(shortlist: ShortlistMarket[]): Executiv
   const ranked = [...VERIFIED_CLINICS]
     .filter((clinic) => clinic.outreachRank !== null)
     .sort((a, b) => (a.outreachRank ?? 99) - (b.outreachRank ?? 99));
+  const coverage = portfolioCoverage(VERIFIED_CLINICS);
 
   return {
     thesis:
-      "Start where a named founder, more than one site or a disclosed therapist bench, and no PE press overlap. That list is short: Therapedia, Frisco Feeding, Synaptic, PTA San Antonio, Kids Developmental Clinic. DFW, Houston, and Austin are metro markets. NPPES is a candidate generator — Tarrant had 3 registry rows and 4 verified independents.",
+      "Working hypothesis: start where a named founder, more than one site or a disclosed therapist bench, and no sponsor press overlap. On current evidence that list is short — Therapedia, Frisco Feeding, Synaptic, PTA San Antonio, Kids Developmental Clinic — and every name on it still needs ownership and independence confirmed. DFW, Houston, and Austin are read as metro markets. NPPES is a candidate generator only: Tarrant returned 3 registry rows against 4 verified independents.",
     priorities: ranked.slice(0, 6).map((clinic) => {
       const owner = clinic.ownerName ? ` (${clinic.ownerName})` : "";
       return `${clinic.outreachRank}. ${clinic.name}${owner} — ${clinic.nextAction}`;
     }),
     caveats: [
       `${verifiedMarkets.length} of ${countyMarkets.length} county markets now have a verified clinic layer.`,
-      "Ownership is from practice sites, NPI authorized officials, and LinkedIn — SOS/license rows are dated checks, not pulled filings. 'No PE press found' is not a clearance.",
-      "Clinician counts from LinkedIn/sites are estimates. Confirm on the call.",
+      `Research completeness: ${coverage.ownersNamed} of ${coverage.clinics} classified clinics have a named owner, ${coverage.filingsPulled} have a Texas SOS filing pulled, and ${coverage.licenseRowsPulled} of ${coverage.licenseRowsRecorded} license-board rows were pulled. Ownership is from practice sites, NPI authorized officials, and public profiles. "No PE press found" is not a clearance.`,
+      "Clinician counts from public profiles and clinic sites are estimates. Confirm on the call.",
       "The NPPES name-match returned 64 org records for all of Texas and missed Cole, KDC, Synaptic, Therapy Spot, and Frisco Feeding. Density and fragmentation are shown for transparency and are not used to rank markets.",
       "The six markets are a curated editorial shortlist, not a model output. Hidalgo has the state's second-largest capture and is deliberately not on it — no clinic work was done there.",
+      "Preliminary target counts partly track how much research a market received. Read them next to research coverage, not as a ranking.",
       "Oaklin Lane's own clinics are on the map and in the pass list.",
     ],
   };
@@ -500,8 +514,8 @@ export function buildExecutiveConclusion(shortlist: ShortlistMarket[]): Executiv
  * Reports capture; does not rank markets.
  *
  * The NPPES name-match returns 64 org records statewide, so density across every
- * shortlist market lands between 0.05 and 0.33 per 10k children — one to two
- * orders of magnitude under real supply. A threshold set calibrated to a true
+ * shortlist market lands in a narrow band a fraction of a provider per 10k
+ * children — one to two orders of magnitude under real supply. A threshold set calibrated to a true
  * supply curve would never fire on this data, so there is nothing honest to
  * branch on. State the capture and let the verified clinic layer carry the call.
  */
@@ -519,8 +533,8 @@ export function supplyGapReadout(market: ShortlistMarket): string {
 }
 
 /**
- * The fragmentation proxy reads 100% in 10 of the 12 Texas counties that clear
- * the capture floor, because multi-site brands file their sites under separate
+ * The fragmentation proxy reads 100% in all but two of the Texas counties that
+ * clear the capture floor (21 of 23 on the checked-in extract), because multi-site brands file their sites under separate
  * legal entities and the name-match only catches some of them. A variable with
  * no variance cannot separate markets, so this reports the number and says so
  * rather than dressing it up as a consolidation signal.
@@ -601,10 +615,16 @@ export function buildIcBrief(
     .filter((clinic) => clinic.outreachRank !== null)
     .sort((a, b) => (a.outreachRank ?? 99) - (b.outreachRank ?? 99));
 
+  const coverage = marketCoverage(selected);
+
   const lines = [
     `# Catchment IC brief — ${selected.county_name}`,
     "",
     `Evidence: ${selected.evidence_confidence}. ${selected.metroLabel ?? "County market"}.`,
+    `Research coverage: ${coverage.label} — ${coverage.pct}% of the standing check-list complete across ${coverage.clinicsClassified} classified clinic${coverage.clinicsClassified === 1 ? "" : "s"} (${coverage.ownersNamed} with a named owner, ${coverage.filingsPulled} with an SOS filing pulled). Coverage measures diligence effort, not market quality.`,
+    "",
+    "## Method",
+    METHODOLOGY_STATEMENT,
     "",
     "## Thesis",
     selected.narrative.headline,
@@ -621,7 +641,14 @@ export function buildIcBrief(
   ];
 
   if (ranked.length) {
-    lines.push("## Ranked targets", "");
+    lines.push(
+      `Counts below are preliminary. "Preliminary target" means a named clinic worth a qualifying call on current public evidence — not a confirmation of ownership, independence, or availability.`,
+      ""
+    );
+  }
+
+  if (ranked.length) {
+    lines.push("## Preliminary targets, in suggested call order", "");
     for (const clinic of ranked) {
       lines.push(
         `${clinic.outreachRank}. ${clinic.name} — ${ownershipHeadline(clinic)}. ${clinic.nextAction}`
@@ -654,6 +681,16 @@ export function buildIcBrief(
         lines.push(`  - ${licenseCheckLine(check)} — ${check.note}`);
       }
     }
+    const confidence = ownershipConfidence(clinic);
+    lines.push(`- Ownership confidence: ${confidence.label} — ${confidence.basis}`);
+    lines.push("- Research completeness:");
+    for (const check of clinicChecks(clinic)) {
+      lines.push(
+        `  - ${check.label}: ${CHECK_STATE_LABELS[check.state]}${
+          check.checkedOn ? ` (${check.checkedOn})` : ""
+        } — ${check.detail}`
+      );
+    }
     if (workspaceNote) {
       lines.push(`- Workspace note: ${workspaceNote}`);
     }
@@ -681,10 +718,14 @@ export function buildIcBrief(
   }
 
   lines.push(
+    "## What was not done",
+    ...NOT_DONE.map((line) => `- ${line}`),
+    "",
     "## Caveats",
     "- NPPES is a candidate-generation screen, not a clinic census. Density and fragmentation are reported for transparency, not used to rank markets — see the note under each.",
     "- The six markets are a curated editorial shortlist, not the output of a model. Hidalgo County has the second-largest registry capture in the state and is deliberately not shortlisted; no verified clinic work was done there.",
     "- SOS and license rows are dated checks from this pass. Interactive board/SOS search was not completed — do not read `not_pulled` as unlicensed or uncleared.",
+    "- Preliminary target counts partly reflect how much research a market received. Read them alongside research coverage, not as a market ranking.",
     "- Ownership notes are web/NPI research, not Texas SOS filings.",
     "- “No PE press found” is not clearance.",
     "- Oaklin Lane’s own clinics are the buyer, not targets.",

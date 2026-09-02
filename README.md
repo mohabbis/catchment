@@ -12,10 +12,15 @@ does not use Oaklin Lane proprietary data.
 
 The app is an IC workbench, not a county dashboard:
 
-- Ranked shortlist with **DFW as one metro** (Dallas + Tarrant + Collin), then
-  the six county cuts
-- Website-verified clinics with ownership, size signals, license/SOS lookup
-  links, and a sourcing trail
+- Curated shortlist (editorial, not ranked by score) with **DFW as one metro**
+  (Dallas + Tarrant + Collin), then the six county cuts
+- Website-verified clinics with ownership, ownership *confidence*, size signals,
+  license/SOS lookup links, and a sourcing trail
+- A per-clinic and per-market **research-completeness** read, so a long candidate
+  list is never mistaken for a strong market
+- An in-app **Method** view: the literal query parameters, metric formulas,
+  denominators, deduplication rule (there is none), and an explicit list of what
+  was not done
 - Pass / not-a-target log (Cole, NAPA, Oaklin Lane’s own clinics, closed sites)
 - Workflow states, clinic detail drawer, and a one-click IC brief export
 - Census + NPPES used as **screening only** — never as a clinic census
@@ -54,19 +59,41 @@ Neither is used to order markets, for two reasons that the current capture makes
 unavoidable:
 
 1. The NPPES name-match returns 64 organization records for all of Texas, so
-   density runs 0.05–0.33 per 10k across every shortlist market — one to two
-   orders of magnitude below real supply. Sorting on it ranks query recall, not
-   markets: ascending density puts Tarrant first on 3 captured records and
-   Harris fourth on 11.
-2. The fragmentation proxy reads 100% in 10 of the 12 counties clearing the
-   capture floor, because multi-site brands file their sites under separate
-   legal entities. An axis with no variance cannot separate markets, so the 2x2
-   quadrant abstains rather than labelling everything "fragmented".
+   density across every shortlist market sits at a fraction of a provider per
+   10k children — one to two orders of magnitude below real supply. Sorting on
+   it ranks query recall, not markets: ascending density puts Tarrant first on 3
+   captured records and Harris fourth on 11. The live values are rendered in the
+   app rather than quoted here, so they cannot go stale against the extract.
+2. The fragmentation proxy reads 100% in all but two of the counties clearing
+   the capture floor (21 of 23 on the checked-in extract), because multi-site
+   brands file their sites under separate legal entities. An axis with no
+   variance cannot separate markets, so the 2x2 quadrant abstains rather than
+   labelling everything "fragmented".
 
 Market order in the app is the **curated shortlist** in `lib/workbench.ts` — an
 editorial call about where clinic-level verification was actually done, stated
 as one. Hidalgo County has the state's second-largest capture and is
 deliberately not on it.
+
+The full data dictionary — query parameters, per-metric formula, denominator,
+deduplication rule, geographic assignment, and a `NOT_DONE` list of skipped
+steps — lives in `lib/methodology.ts` and is rendered by the app's **Method**
+view. Figures shown there are computed from the loaded extract at render time.
+
+### What was not done
+
+No Texas Secretary of State filing and no professional-license board record was
+pulled in this pass, for any clinic. Owner names come from practice sites, NPI
+authorized-official fields, and public profiles, and each clinic file grades
+that provenance as **ownership confidence**. A `not pulled` row means the search
+was not completed — not that a clinic is unlicensed or its ownership is in
+doubt. No deduplication or corporate-parent rollup is applied to the registry
+extract, and no revenue, payer, volume, or referral data is used anywhere.
+
+Accordingly the app labels its call list **preliminary outreach candidates** and
+each name a **preliminary target**: a clinic worth a qualifying call on current
+public evidence, not a confirmation of ownership, independence, or availability.
+Catchment does not establish that any Texas market is underserved.
 
 ## Local setup
 

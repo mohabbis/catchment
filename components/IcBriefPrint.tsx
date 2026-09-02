@@ -3,6 +3,8 @@ import {
   SOS_STATUS_LABELS,
   type RejectedRecord,
 } from "@/lib/verified-clinics";
+import { clinicChecks, marketCoverage, ownershipConfidence, CHECK_STATE_LABELS } from "@/lib/coverage";
+import { METHODOLOGY_STATEMENT, NOT_DONE } from "@/lib/methodology";
 import {
   isMetroMarket,
   licenseCheckLine,
@@ -29,6 +31,7 @@ export default function IcBriefPrint({
     .filter((clinic) => clinic.outreachRank !== null)
     .sort((a, b) => (a.outreachRank ?? 99) - (b.outreachRank ?? 99));
   const registryItems = queue.filter((item) => item.kind === "registry");
+  const coverage = marketCoverage(selected);
 
   return (
     <div id="ic-brief" className="ic-brief" data-testid="ic-brief">
@@ -53,6 +56,16 @@ export default function IcBriefPrint({
           Evidence: {selected.evidence_confidence}.{" "}
           {selected.metroLabel ?? (isMetroMarket(selected) ? "Metro market" : "County market")}.
         </p>
+        <p>
+          <strong>Research coverage:</strong> {coverage.label} — {coverage.pct}% of the standing
+          check-list complete across {coverage.clinicsClassified} classified clinic
+          {coverage.clinicsClassified === 1 ? "" : "s"} ({coverage.ownersNamed} with a named owner,{" "}
+          {coverage.filingsPulled} with an SOS filing pulled). Coverage measures diligence effort,
+          not market quality.
+        </p>
+
+        <h2>Method</h2>
+        <p>{METHODOLOGY_STATEMENT}</p>
 
         <h2>Thesis</h2>
         <p className="serif-body">{selected.narrative.headline}</p>
@@ -80,7 +93,12 @@ export default function IcBriefPrint({
 
         {ranked.length ? (
           <>
-            <h2>Ranked targets</h2>
+            <h2>Preliminary targets, in suggested call order</h2>
+            <p>
+              &ldquo;Preliminary target&rdquo; means a named clinic worth a qualifying call on
+              current public evidence — not a confirmation of ownership, independence, or
+              availability.
+            </p>
             <ol>
               {ranked.map((clinic) => (
                 <li key={clinic.id}>
@@ -101,7 +119,11 @@ export default function IcBriefPrint({
                 {clinic.name}
               </h3>
               <ul>
-                <li>Classification: {clinic.classification}</li>
+                <li>Classification: {clinic.classification.replaceAll("_", " ")}</li>
+                <li>
+                  Ownership confidence: {ownershipConfidence(clinic).label} —{" "}
+                  {ownershipConfidence(clinic).basis}
+                </li>
                 <li>
                   Ownership: {ownershipHeadline(clinic)} — {clinic.ownershipSignal}
                 </li>
@@ -133,6 +155,17 @@ export default function IcBriefPrint({
                     ).
                   </li>
                 )}
+                <li>
+                  Research completeness
+                  <ul>
+                    {clinicChecks(clinic).map((check) => (
+                      <li key={`${clinic.id}-${check.label}`}>
+                        {check.label}: {CHECK_STATE_LABELS[check.state]}
+                        {check.checkedOn ? ` (${check.checkedOn})` : ""} — {check.detail}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
                 {note ? <li>Workspace note: {note}</li> : null}
               </ul>
             </section>
@@ -169,9 +202,20 @@ export default function IcBriefPrint({
           </>
         ) : null}
 
+        <h2>What was not done</h2>
+        <ul>
+          {NOT_DONE.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
+
         <h2>Caveats</h2>
         <ul>
           <li>NPPES is a candidate-generation screen, not a clinic census.</li>
+          <li>
+            Preliminary target counts partly reflect how much research a market received. Read them
+            alongside research coverage, not as a market ranking.
+          </li>
           <li>
             SOS and license rows are dated checks from this pass. Interactive board/SOS search was
             not completed — do not read {LICENSE_STATUS_LABELS.not_pulled.toLowerCase()} as
