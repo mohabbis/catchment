@@ -43,6 +43,16 @@ export const SESSION_STEPS = [
 
 export const GLOSSARY = [
   {
+    term: "The 2×2",
+    meaning:
+      "Captured provider density against single-location share, split at the median of the counties that have any captured provider. Low density + high fragmentation is the screen's target read. At the current capture rate the vertical axis is nearly flat, so treat the chart as a density sort with a fragmentation caveat, not a four-box verdict.",
+  },
+  {
+    term: "Lens: Acquire / Build",
+    meaning:
+      "Two different questions over the same rows. Acquire ranks on captured provider count, single-location share, and scale — where there is something to buy. Build ranks child population against low captured density — where there may be room to open. Neither is a recommendation.",
+  },
+  {
     term: "Metro",
     meaning:
       "The deal market. DFW is Dallas + Tarrant + Collin. Houston adds Fort Bend and Montgomery to the child count. Austin adds Williamson and Hays. Those extra counties are not separate shortlist rows unless a verified clinic lives there.",

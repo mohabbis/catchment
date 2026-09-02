@@ -17,7 +17,13 @@ The app is an IC workbench, not a county dashboard:
 - Website-verified clinics with ownership, size signals, license/SOS lookup
   links, and a sourcing trail
 - Pass / not-a-target log (Cole, NAPA, Oaklin Lane’s own clinics, closed sites)
+- An interactive screening 2×2 (captured density vs single-location share) that
+  plots every Texas county with a captured provider and shows its own sample-size
+  limits rather than hiding them
+- An Acquire / Build lens that re-ranks the shortlist against the two different
+  questions, surfacing the M&A and de-novo screen ranks
 - Workflow states, clinic detail drawer, and a one-click IC brief export
+- First-run walkthrough plus an in-app guide and glossary
 - Census + NPPES used as **screening only** — never as a clinic census
 
 ## Stack
@@ -68,6 +74,9 @@ Optional environment variables (Supabase is the live registry source when set):
 - `SUPABASE_SERVICE_ROLE_KEY`: server-only ingestion key. Do not expose in
   client-side code or Vercel public builds unless a server-only workflow needs
   it.
+
+Clinic workflow states and notes are never sent anywhere — they live in the
+browser's localStorage only.
 - `CENSUS_API_KEY`: optional Census API key used by data-fetch scripts.
 
 ## Rebuilding the data

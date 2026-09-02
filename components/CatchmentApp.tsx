@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import GuidePanel from "@/components/GuidePanel";
 import WelcomeOverlay from "@/components/WelcomeOverlay";
 import Workbench from "@/components/Workbench";
-import type { FocusRequest, ShortlistMarket } from "@/lib/workbench";
+import type { CountyScoreRow, FocusRequest, ShortlistMarket } from "@/lib/workbench";
 
 const WELCOME_SEEN_KEY = "catchment-welcome-seen";
 
@@ -24,10 +24,12 @@ function readWelcomeSeen(): boolean {
 
 export default function CatchmentApp({
   shortlist,
+  counties,
   dataSource,
   targetCount,
 }: {
   shortlist: ShortlistMarket[];
+  counties: CountyScoreRow[];
   dataSource: "supabase" | "local";
   targetCount: number;
 }) {
@@ -99,7 +101,7 @@ export default function CatchmentApp({
         </div>
       </header>
 
-      <Workbench shortlist={shortlist} focusRequest={focusRequest} />
+      <Workbench shortlist={shortlist} counties={counties} focusRequest={focusRequest} />
 
       <footer className="shrink-0 border-t border-[var(--line)] px-4 py-2 text-[10px] text-[var(--ink-faint)] lg:px-5">
         NPPES and census screen markets. Clinic facts come from public sites and NPI. Passes

@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import CatchmentMap from "@/components/CatchmentMap";
 import IcBriefPrint from "@/components/IcBriefPrint";
+import QuadrantChart from "@/components/QuadrantChart";
 import { linkStatusHeadline } from "@/lib/clinic-links";
+import { QUADRANT_LABELS } from "@/lib/scoring";
 import {
   LICENSE_STATUS_LABELS,
   REJECTED_RECORDS,
@@ -12,12 +14,12 @@ import {
   type WorkflowState,
 } from "@/lib/verified-clinics";
 import {
-  hydrateWorkspace,
+  getServerWorkspaceSnapshot,
+  getWorkspaceSnapshot,
   notesFromWorkspace,
-  persistWorkspaceEntry,
-  writeLocalWorkspace,
+  setWorkspaceEntry,
+  subscribeWorkspace,
   type WorkspaceEntry,
-  type WorkspaceMap,
 } from "@/lib/workspace";
 import {
   buildDiligenceQueue,
@@ -30,14 +32,26 @@ import {
   rejectedForMarket,
   sosCheckLine,
   supplyGapReadout,
+  type CountyScoreRow,
   type DiligenceItem,
   type DiligenceStatus,
   type FocusRequest,
   type ShortlistMarket,
+  type StrategyMode,
 } from "@/lib/workbench";
 
 type PipelineFilter = "all" | DiligenceStatus;
-type CenterView = "thesis" | "compare" | "passes" | "map";
+type CenterView = "thesis" | "compare" | "quadrant" | "passes" | "map";
+
+const STRATEGY_LABELS: Record<StrategyMode, string> = {
+  ma: "Acquire",
+  deNovo: "Build",
+};
+
+const STRATEGY_BLURB: Record<StrategyMode, string> = {
+  ma: "Ranked on captured provider count, single-location share, and market scale — where there is something to buy.",
+  deNovo: "Ranked on child population against low captured density — where there may be room to open.",
+};
 type MobilePane = "markets" | "thesis" | "pipeline";
 type DetailSelection =
   | { kind: "verified"; item: Extract<DiligenceItem, { kind: "verified" }> }
@@ -112,33 +126,30 @@ function asVerifiedItem(
 
 export default function Workbench({
   shortlist,
+  counties,
   focusRequest = null,
 }: {
   shortlist: ShortlistMarket[];
+  counties: CountyScoreRow[];
   focusRequest?: FocusRequest | null;
 }) {
   const [selectedCounty, setSelectedCounty] = useState(shortlist[0]?.county_name ?? "");
   const [compareCounty, setCompareCounty] = useState<string | null>(null);
   const [pipelineFilter, setPipelineFilter] = useState<PipelineFilter>("target_candidate");
   const [centerView, setCenterView] = useState<CenterView>("thesis");
+  const [strategy, setStrategy] = useState<StrategyMode>("ma");
   const [mobilePane, setMobilePane] = useState<MobilePane>("thesis");
   const [showAllRejected, setShowAllRejected] = useState(false);
   const [showMoreLists, setShowMoreLists] = useState(false);
   const [detail, setDetail] = useState<DetailSelection | null>(null);
   const [exported, setExported] = useState(false);
   const [printOpen, setPrintOpen] = useState(false);
-  const [workspace, setWorkspace] = useState<WorkspaceMap>({});
-  const persistTimers = useRef<Record<string, number>>({});
-
-  useEffect(() => {
-    let cancelled = false;
-    hydrateWorkspace().then((map) => {
-      if (!cancelled) setWorkspace(map);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  // localStorage read as an external store: no mount effect, no hydration flash.
+  const workspace = useSyncExternalStore(
+    subscribeWorkspace,
+    getWorkspaceSnapshot,
+    getServerWorkspaceSnapshot
+  );
 
   // Adjusting state during render rather than in an effect: this reacts to a new
   // request from the parent, and an effect here would render the stale market first.
@@ -230,19 +241,12 @@ export default function Workbench({
   }
 
   function patchWorkspace(clinicId: string, patch: Partial<WorkspaceEntry>) {
-    const nextEntry: WorkspaceEntry = {
+    setWorkspaceEntry(clinicId, {
       note: workspace[clinicId]?.note ?? "",
       workflow: workspace[clinicId]?.workflow,
       ...patch,
       updatedAt: new Date().toISOString(),
-    };
-    const next = { ...workspace, [clinicId]: nextEntry };
-    setWorkspace(next);
-    writeLocalWorkspace(next);
-    window.clearTimeout(persistTimers.current[clinicId]);
-    persistTimers.current[clinicId] = window.setTimeout(() => {
-      void persistWorkspaceEntry(clinicId, nextEntry);
-    }, 400);
+    });
   }
 
   function setClinicWorkflow(clinicId: string, state: WorkflowState) {
@@ -391,6 +395,7 @@ export default function Workbench({
               [
                 ["thesis", "Overview"],
                 ["compare", "Compare"],
+                ["quadrant", "2×2"],
                 ["passes", "Passed"],
                 ["map", "Map"],
               ] as const
@@ -406,8 +411,26 @@ export default function Workbench({
                 {label}
               </button>
             ))}
+            <div className="ml-auto flex items-center gap-1.5" data-testid="strategy-toggle">
+              <span className="text-xs text-[var(--ink-faint)]">Lens</span>
+              {(["ma", "deNovo"] as const).map((mode) => (
+                <button
+                  key={mode}
+                  type="button"
+                  data-testid={`strategy-${mode}`}
+                  aria-pressed={strategy === mode}
+                  title={STRATEGY_BLURB[mode]}
+                  onClick={() => setStrategy(mode)}
+                  className={`btn btn-ghost !px-2 !py-1 !text-[11px] ${
+                    strategy === mode ? "is-active" : ""
+                  }`}
+                >
+                  {STRATEGY_LABELS[mode]}
+                </button>
+              ))}
+            </div>
             {centerView === "thesis" ? (
-              <label className="ml-auto flex items-center gap-2 text-xs text-[var(--ink-soft)]">
+              <label className="flex items-center gap-2 text-xs text-[var(--ink-soft)]">
                 Compare with
                 <select
                   value={compareCounty ?? ""}
@@ -431,6 +454,15 @@ export default function Workbench({
             <CompareAllTable
               shortlist={shortlist}
               selectedName={selected.county_name}
+              strategy={strategy}
+              onSelect={selectMarket}
+            />
+          ) : centerView === "quadrant" ? (
+            <QuadrantChart
+              counties={counties}
+              shortlistNames={shortlist.map((market) => market.county_name)}
+              selectedName={selected.county_name}
+              strategy={strategy}
               onSelect={selectMarket}
             />
           ) : centerView === "passes" ? (
@@ -662,6 +694,11 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--ink-faint)]">
             {isMetroMarket(market) ? "Deal market" : "County slice"}
+            {market.quadrant ? (
+              <span className="ml-2 normal-case tracking-normal text-[var(--forest)]">
+                {QUADRANT_LABELS[market.quadrant]}
+              </span>
+            ) : null}
           </p>
           <h2
             data-testid="thesis-title"
@@ -736,22 +773,49 @@ function ThesisCard({ market, muted }: { market: ShortlistMarket; muted?: boolea
   );
 }
 
+function screenRank(market: ShortlistMarket, strategy: StrategyMode): number | null {
+  return strategy === "deNovo" ? market.de_novo_rank : market.ma_rank;
+}
+
 function CompareAllTable({
   shortlist,
   selectedName,
+  strategy,
   onSelect,
 }: {
   shortlist: ShortlistMarket[];
   selectedName: string;
+  strategy: StrategyMode;
   onSelect: (countyName: string) => void;
 }) {
+  // Metros are rollups with no statewide rank of their own, so they stay on top
+  // rather than sorting to the bottom as nulls.
+  const ordered = [...shortlist].sort((a, b) => {
+    const metroA = isMetroMarket(a) ? 0 : 1;
+    const metroB = isMetroMarket(b) ? 0 : 1;
+    if (metroA !== metroB) return metroA - metroB;
+    const rankA = screenRank(a, strategy) ?? Number.POSITIVE_INFINITY;
+    const rankB = screenRank(b, strategy) ?? Number.POSITIVE_INFINITY;
+    if (rankA !== rankB) return rankA - rankB;
+    return a.county_name.localeCompare(b.county_name);
+  });
+
   return (
     <div className="panel overflow-x-auto">
+      <p className="border-b border-[var(--line)] px-4 py-2.5 text-xs text-[var(--ink-soft)]">
+        Sorted by the <span className="font-semibold text-[var(--ink)]">{STRATEGY_LABELS[strategy]}</span>{" "}
+        screen. {STRATEGY_BLURB[strategy]}
+      </p>
       <table className="min-w-full text-left text-sm">
         <thead className="bg-[var(--paper)] text-[10px] uppercase tracking-[0.12em] text-[var(--ink-faint)]">
           <tr>
             <th className="px-4 py-3 font-semibold">Market</th>
             <th className="px-4 py-3 font-semibold">Kind</th>
+            <th className="px-4 py-3 font-semibold" title="Statewide rank on the active screen">
+              Screen #
+            </th>
+            <th className="px-4 py-3 font-semibold">Density /10k</th>
+            <th className="px-4 py-3 font-semibold">Evidence</th>
             <th className="px-4 py-3 font-semibold">Children</th>
             <th className="px-4 py-3 font-semibold">Targets</th>
             <th className="px-4 py-3 font-semibold">Classified</th>
@@ -760,7 +824,7 @@ function CompareAllTable({
           </tr>
         </thead>
         <tbody>
-          {shortlist.map((market) => (
+          {ordered.map((market) => (
             <tr
               key={market.county_name}
               className={`cursor-pointer border-t border-[var(--line)] ${
@@ -773,6 +837,15 @@ function CompareAllTable({
               <td className="px-4 py-3 font-medium">{countyLabel(market.county_name)}</td>
               <td className="px-4 py-3 text-[var(--ink-soft)]">
                 {isMetroMarket(market) ? "Metro" : "County"}
+              </td>
+              <td className="px-4 py-3 tabular-nums text-[var(--ink-soft)]">
+                {screenRank(market, strategy) ?? "—"}
+              </td>
+              <td className="px-4 py-3 tabular-nums text-[var(--ink-soft)]">
+                {market.density_per_10k ?? "—"}
+              </td>
+              <td className="px-4 py-3 text-xs text-[var(--ink-soft)]">
+                {market.evidence_confidence}
               </td>
               <td className="px-4 py-3 tabular-nums">{formatChildren(market.population_under_18)}</td>
               <td className="px-4 py-3 tabular-nums">{market.targetCount}</td>

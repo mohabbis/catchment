@@ -1,8 +1,12 @@
 -- catchment: TX pediatric therapy market-fragmentation analysis
 -- providers + county_scores are public read-only; writes go through the
 -- ingestion scripts using the service role key.
--- clinic_workspace is a demo-only public notepad (no auth). Anyone with
--- the URL can read/write. Do not store secrets or treat it as a CRM.
+--
+-- There is deliberately no table for clinic notes. Workflow states and notes
+-- are per-browser localStorage only (see lib/workspace.ts). An earlier
+-- clinic_workspace table was world-readable through the anon key while the UI
+-- promised notes stayed local; rather than bolt auth onto a feature nobody
+-- needed, the sync was removed. Do not add it back without real per-user auth.
 
 create table if not exists providers (
   npi text primary key,
@@ -50,32 +54,3 @@ create policy "public read county_scores"
 -- No insert/update/delete policies on providers / county_scores for
 -- anon/authenticated: writes only happen via the service role key from
 -- the ingestion scripts, which bypasses RLS by design.
-
-create table if not exists clinic_workspace (
-  clinic_id text not null,
-  workspace_key text not null,
-  workflow text,
-  note text,
-  updated_at timestamptz not null default now(),
-  primary key (clinic_id, workspace_key)
-);
-
-create index if not exists clinic_workspace_key_idx on clinic_workspace (workspace_key);
-
-alter table clinic_workspace enable row level security;
-
-create policy "public read clinic_workspace"
-  on clinic_workspace for select
-  to anon, authenticated
-  using (true);
-
-create policy "public insert clinic_workspace"
-  on clinic_workspace for insert
-  to anon, authenticated
-  with check (true);
-
-create policy "public update clinic_workspace"
-  on clinic_workspace for update
-  to anon, authenticated
-  using (true)
-  with check (true);

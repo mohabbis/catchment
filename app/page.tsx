@@ -2,6 +2,7 @@ import CatchmentApp from "@/components/CatchmentApp";
 import { VERIFIED_CLINICS } from "@/lib/verified-clinics";
 import { hasSupabaseEnv, loadLocalCountyScores, loadLocalRegistryCandidates } from "@/lib/local-data";
 import { getSupabaseClient } from "@/lib/supabase";
+import { scoredCounties } from "@/lib/scoring";
 import {
   buildDisplayShortlist,
   type CountyScoreRow,
@@ -81,6 +82,11 @@ export default async function Home() {
   ).length;
 
   return (
-    <CatchmentApp shortlist={shortlist} dataSource={source} targetCount={targetCount} />
+    <CatchmentApp
+      shortlist={shortlist}
+      counties={scoredCounties(counties)}
+      dataSource={source}
+      targetCount={targetCount}
+    />
   );
 }

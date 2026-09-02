@@ -115,6 +115,37 @@ function median(values: number[]): number {
   return sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 : sorted[mid];
 }
 
+export type QuadrantThresholds = {
+  densityMedian: number;
+  fragmentationMedian: number;
+  /** How many counties the medians were taken over. Small n = weak split. */
+  sampleSize: number;
+};
+
+/** Counties the quadrant split is defined over: at least one captured provider. */
+export function scoredCounties<T extends CountyScore>(scores: T[]): T[] {
+  return scores.filter(
+    (s) =>
+      s.pediatric_provider_count > 0 &&
+      s.density_per_10k !== null &&
+      s.single_location_pct !== null
+  );
+}
+
+/**
+ * The median split the 2x2 is drawn around. Exported so the chart draws the
+ * same crosshair the classifier used, rather than recomputing its own.
+ */
+export function quadrantThresholds(scores: CountyScore[]): QuadrantThresholds | null {
+  const withProviders = scoredCounties(scores);
+  if (withProviders.length === 0) return null;
+  return {
+    densityMedian: median(withProviders.map((s) => s.density_per_10k!)),
+    fragmentationMedian: median(withProviders.map((s) => s.single_location_pct!)),
+    sampleSize: withProviders.length,
+  };
+}
+
 /**
  * Labels each county with providers by whether it's above/below the
  * median density and median fragmentation among counties that actually
@@ -122,13 +153,9 @@ function median(values: number[]): number {
  * zero-provider counties would just split "zero vs. zero").
  */
 function assignQuadrants(scores: CountyScore[]): CountyScore[] {
-  const withProviders = scores.filter(
-    (s) => s.pediatric_provider_count > 0 && s.density_per_10k !== null && s.single_location_pct !== null
-  );
-  if (withProviders.length === 0) return scores;
-
-  const densityMedian = median(withProviders.map((s) => s.density_per_10k!));
-  const fragmentationMedian = median(withProviders.map((s) => s.single_location_pct!));
+  const thresholds = quadrantThresholds(scores);
+  if (!thresholds) return scores;
+  const { densityMedian, fragmentationMedian } = thresholds;
 
   return scores.map((s) => {
     if (s.pediatric_provider_count === 0 || s.density_per_10k === null || s.single_location_pct === null) {
@@ -151,3 +178,24 @@ export const QUADRANT_LABELS: Record<Quadrant, string> = {
   saturated_fragmented: "Higher Density & Fragmented",
   saturated_consolidated: "Higher Density & Less Fragmented",
 };
+
+/** What each quadrant means for a buyer, in one line. */
+export const QUADRANT_READS: Record<Quadrant, string> = {
+  underserved_fragmented:
+    "The target read: thin captured supply, and what supply exists is small operators rather than a scaled competitor.",
+  underserved_consolidated:
+    "Thin captured supply, but a multi-site operator is already there — a share fight, not an open market.",
+  saturated_fragmented:
+    "Supply is visible and small-operator heavy. Roll-up logic, not greenfield.",
+  saturated_consolidated:
+    "Visible supply already under multi-site ownership. The least attractive screen result.",
+};
+
+/**
+ * Fragmentation is a share, so a county with one captured provider is always
+ * 100% single-location. That is arithmetic, not evidence — flag it rather than
+ * letting it read as a finding.
+ */
+export function fragmentationIsTrivial(score: CountyScore): boolean {
+  return score.pediatric_provider_count <= 1;
+}

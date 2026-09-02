@@ -26,7 +26,10 @@ separated — do not blur them:
 
 1. **Screening layer (quantitative, weak).** NPPES + Census, aggregated in
    `lib/scoring.ts` into a density × fragmentation 2×2. Screening only — never
-   present it as a clinic census.
+   present it as a clinic census. `quadrantThresholds()` exports the median split
+   so the chart draws the same crosshair the classifier used; `scoredCounties()`
+   is the county universe the split is defined over; `fragmentationIsTrivial()`
+   flags counties where a single provider forces a 100% single-location share.
 2. **Verified layer (editorial, the real product).** `lib/verified-clinics.ts` is a
    hand-curated 1,200-line constant: named clinics, owners, dated SOS/license checks,
    sources, outreach ranks, plus `REJECTED_RECORDS` (the pass log). This file is the
@@ -50,6 +53,11 @@ client `CatchmentApp` → `Workbench`.
   / clinics (right); on mobile a 1-2-3 pane switcher. Also owns the clinic drawer.
 - `components/GuidePanel.tsx` + `lib/guide-copy.ts` — all onboarding prose lives in
   `guide-copy.ts`; keep copy there, not inline in components.
+- `components/QuadrantChart.tsx` — hand-rolled SVG scatter of the screening 2×2.
+  No chart library. Dot size is the captured provider count; shortlisted markets
+  are labelled and clickable. When the fragmentation median lands at 100% the
+  chart switches from four quadrants to two halves and says why — do not "fix"
+  that by hiding the caveat.
 - `components/CatchmentMap.tsx` — hand-rolled SVG equirectangular projection of TX.
   No map library. City-level, approximate on purpose.
 - `components/IcBriefPrint.tsx` — print/PDF view, driven by `@media print` rules at
@@ -57,9 +65,13 @@ client `CatchmentApp` → `Workbench`.
 
 ### Workspace state
 
-Clinic workflow states and notes live in `lib/workspace.ts`: localStorage first,
-with optional Supabase sync keyed by an anonymous `workspace_key` UUID. Writes are
-debounced 400ms. It is not a CRM and should not become one.
+Clinic workflow states and notes live in `lib/workspace.ts`, in localStorage and
+nowhere else. Components read it through `useSyncExternalStore`, so there is no
+mount effect and no hydration flash. It is not a CRM and should not become one.
+
+An earlier version synced to a `clinic_workspace` Supabase table that the anon key
+could read in full, while the UI promised notes stayed local. The sync was removed
+rather than given auth. Do not reintroduce a shared table behind that copy.
 
 ## Conventions
 
@@ -70,7 +82,10 @@ debounced 400ms. It is not a CRM and should not become one.
 - Ghost/primary buttons are the `.btn .btn-ghost` / `.btn .btn-primary` classes.
 - Never invent a fact for display. If a check was not run, the UI says "not pulled"
   — see `sosCheckLine`, `licenseCheckLine`, `linkStatusHeadline`. Preserve that
-  discipline in any new surface.
+  discipline in any new surface, charts included: a number thin enough to mislead
+  gets its sample size shown next to it, not a footnote in the guide.
+- Onboarding prose lives in `lib/guide-copy.ts` and is rendered by `WelcomeOverlay`
+  (first run, localStorage-gated, replayable) and `GuidePanel`. Add copy there.
 
 ## Data regeneration
 
