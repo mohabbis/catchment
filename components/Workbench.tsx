@@ -32,6 +32,7 @@ import {
   supplyGapReadout,
   type DiligenceItem,
   type DiligenceStatus,
+  type FocusRequest,
   type ShortlistMarket,
 } from "@/lib/workbench";
 
@@ -79,10 +80,6 @@ function formatChildren(value: number | null) {
   return value.toLocaleString();
 }
 
-function formatDensity(value: number | null) {
-  return value === null ? "—" : value.toFixed(2).replace(/\.?0+$/, "");
-}
-
 function countyLabel(name: string) {
   return name.replace(" County", "");
 }
@@ -115,10 +112,10 @@ function asVerifiedItem(
 
 export default function Workbench({
   shortlist,
-  focusMarket = null,
+  focusRequest = null,
 }: {
   shortlist: ShortlistMarket[];
-  focusMarket?: string | null;
+  focusRequest?: FocusRequest | null;
 }) {
   const [selectedCounty, setSelectedCounty] = useState(shortlist[0]?.county_name ?? "");
   const [compareCounty, setCompareCounty] = useState<string | null>(null);
@@ -143,13 +140,18 @@ export default function Workbench({
     };
   }, []);
 
-  useEffect(() => {
-    if (!focusMarket) return;
-    setSelectedCounty(focusMarket);
-    setCenterView("thesis");
-    setMobilePane("thesis");
-    setDetail(null);
-  }, [focusMarket]);
+  // Adjusting state during render rather than in an effect: this reacts to a new
+  // request from the parent, and an effect here would render the stale market first.
+  const [appliedFocus, setAppliedFocus] = useState(focusRequest);
+  if (focusRequest !== appliedFocus) {
+    setAppliedFocus(focusRequest);
+    if (focusRequest) {
+      setSelectedCounty(focusRequest.market);
+      setCenterView("thesis");
+      setMobilePane("thesis");
+      setDetail(null);
+    }
+  }
 
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
@@ -506,7 +508,11 @@ export default function Workbench({
               </button>
               <button
                 type="button"
-                onClick={() => setShowMoreLists((value) => !value)}
+                onClick={() => {
+                  const next = !showMoreLists;
+                  setShowMoreLists(next);
+                  if (!next) setPipelineFilter("target_candidate");
+                }}
                 className={`btn btn-ghost !px-2 !py-1 !text-[10px] ${showMoreLists ? "is-active" : ""}`}
               >
                 More lists
@@ -538,13 +544,15 @@ export default function Workbench({
           </div>
 
           <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-3 py-3">
-            <PipelineGroup
-              title="To call"
-              empty="No call-list clinics in this market."
-              items={groupedPipeline.targets}
-              selectedKey={detail ? itemKey(detail.item) : null}
-              onOpen={setDetail}
-            />
+            {pipelineFilter === "all" || pipelineFilter === "target_candidate" ? (
+              <PipelineGroup
+                title="To call"
+                empty="No call-list clinics in this market."
+                items={groupedPipeline.targets}
+                selectedKey={detail ? itemKey(detail.item) : null}
+                onOpen={setDetail}
+              />
+            ) : null}
             {pipelineFilter === "all" ||
             pipelineFilter === "verified_operator" ||
             pipelineFilter === "competitor_benchmark" ? (

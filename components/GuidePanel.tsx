@@ -4,10 +4,12 @@ export default function GuidePanel({
   dataSource,
   onClose,
   onOpenDfw,
+  onReplayIntro,
 }: {
   dataSource: "supabase" | "local";
   onClose: () => void;
   onOpenDfw: () => void;
+  onReplayIntro: () => void;
 }) {
   return (
     <div
@@ -78,9 +80,19 @@ export default function GuidePanel({
             </p>
           </div>
 
-          <button type="button" className="btn btn-primary" onClick={onOpenDfw}>
-            Go to DFW
-          </button>
+          <div className="flex flex-wrap items-center gap-2">
+            <button type="button" className="btn btn-primary" onClick={onOpenDfw}>
+              Go to DFW
+            </button>
+            <button
+              type="button"
+              data-testid="replay-intro"
+              className="btn btn-ghost"
+              onClick={onReplayIntro}
+            >
+              Replay the intro
+            </button>
+          </div>
         </div>
       </aside>
     </div>

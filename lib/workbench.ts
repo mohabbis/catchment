@@ -159,6 +159,12 @@ export type ShortlistMarket = MarketProfile & {
   unmatchedRegistryCount: number;
 };
 
+/** A request to focus a market. `nonce` makes repeat requests for the same market distinct. */
+export type FocusRequest = {
+  market: string;
+  nonce: number;
+};
+
 export function isMetroMarket(market: ShortlistMarket) {
   return market.kind === "metro" || market.county_fips === "dfw";
 }
@@ -328,13 +334,16 @@ export function buildDiligenceQueue(shortlist: ShortlistMarket[]): DiligenceItem
     registry_candidate: 3,
   };
 
+  // Outreach rank ahead of alphabetical: the call list is a queue, not an index.
+  const rankOf = (item: DiligenceItem) =>
+    item.kind === "verified" ? (item.outreachRank ?? Number.POSITIVE_INFINITY) : Number.POSITIVE_INFINITY;
+
   return items.sort((a, b) => {
-    const statusA = a.kind === "verified" ? a.status : a.status;
-    const statusB = b.kind === "verified" ? b.status : b.status;
-    if (statusOrder[statusA] !== statusOrder[statusB]) {
-      return statusOrder[statusA] - statusOrder[statusB];
+    if (statusOrder[a.status] !== statusOrder[b.status]) {
+      return statusOrder[a.status] - statusOrder[b.status];
     }
-    return a.kind === "verified" ? a.name.localeCompare(b.name) : a.name.localeCompare(b.name);
+    if (rankOf(a) !== rankOf(b)) return rankOf(a) - rankOf(b);
+    return a.name.localeCompare(b.name);
   });
 }
 
